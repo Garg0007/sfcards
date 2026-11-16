@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ज्ञानू AI - कक्षा 10वीं RBSE विज्ञान (सभी 13 अध्याय: 820 Flashcards & PYQs - v2)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-blue: #0052b4;
+      --dark-blue: #00377e;
+      --accent-orange: #f5821f;
+      --bg-page: #dde6f3;
+      --bg-app: #f3f7fc;
+      --bg-card-front: #ffffff;
+      --bg-card-back: linear-gradient(145deg, #f0fdf4, #ffffff);
+      --text-main: #1a2332;
+      --text-muted: #5a687c;
+      --border-soft: #cbd5e1;
+      --card-front-border: #7b1fa2;
+      --card-back-border: #2e7d32;
+      --surface-pill: #e2e8f0;
+      --hint-bg: #fff8e1;
+      --hint-border: #ffb300;
+      --hint-text: #6d4c00;
+      --shadow-card: 0 12px 28px rgba(0, 35, 80, 0.12);
+    }
+
+    body.dark-mode {
+      --bg-page: #090d16;
+      --bg-app: #111827;
+      --bg-card-front: #1e293b;
+      --bg-card-back: linear-gradient(145deg, #063925, #1e293b);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-soft: #334155;
+      --card-front-border: #c084fc;
+      --card-back-border: #34d399;
+      --surface-pill: #1f2937;
+      --hint-bg: #2e2410;
+      --hint-border: #f59e0b;
+      --hint-text: #fde68a;
+      --shadow-card: 0 14px 32px rgba(0, 0, 0, 0.55);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      transition: background-color 0.25s ease;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 500px;
+      background-color: var(--bg-app);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ================= HEADER ================= */
+    .hero-header {
+      background: linear-gradient(110deg, var(--primary-blue) 0%, var(--primary-blue) 57%, var(--accent-orange) 57.4%, #ff9838 100%);
+      padding: 14px;
+      color: #ffffff;
+      border-bottom-left-radius: 22px;
+      border-bottom-right-radius: 22px;
+      box-shadow: 0 4px 16px rgba(0, 82, 180, 0.28);
+      z-index: 2;
+    }
+
+    .header-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+    .brand-title { font-size: 1.65rem; font-weight: 800; line-height: 1.1; text-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+    .brand-title span { color: #ffd166; font-family: 'Poppins', sans-serif; }
+    .brand-sub { font-size: 0.78rem; font-weight: 600; color: #e6f0ff; margin-top: 2px; margin-bottom: 8px; }
+
+    .utility-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+    .util-btn {
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.38);
+      color: #fff;
+      border-radius: 8px;
+      padding: 4px 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .util-btn:active { transform: scale(0.94); }
+
+    .header-right { display: flex; flex-direction: column; align-items: flex-end; text-align: right; min-width: 112px; }
+    .logo-circle { width: 54px; height: 54px; border-radius: 50%; background: #fff; padding: 2px; border: 2px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.25); overflow: hidden; margin-bottom: 4px; }
+    .logo-circle img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .class-tag { font-size: 0.74rem; font-weight: 800; line-height: 1.15; text-shadow: 0 1px 2px rgba(0,0,0,0.2); }
+
+    /* ================= MODE SWITCH TABS ================= */
+    .mode-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 12px 14px 4px;
+    }
+
+    .mode-tab-btn {
+      padding: 10px 8px;
+      border-radius: 12px;
+      border: 2px solid var(--border-soft);
+      background: var(--bg-card-front);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .mode-tab-btn.active {
+      background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+      color: #ffffff;
+      border-color: var(--primary-blue);
+      box-shadow: 0 4px 12px rgba(0, 82, 180, 0.25);
+    }
+
+    /* ================= CONTROLS SECTION ================= */
+    .controls-section { padding: 8px 14px 4px; }
+
+    .filter-row { display: flex; flex-direction: column; gap: 8px; margin-bottom: 8px; }
+    .chapter-select, .search-input {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: 11px;
+      border: 1.8px solid var(--border-soft);
+      background: var(--bg-card-front);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.84rem;
+      font-weight: 700;
+      outline: none;
+    }
+
+    .stats-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-bottom: 8px; }
+    .stat-pill {
+      background: var(--bg-card-front);
+      border: 1.5px solid var(--border-soft);
+      border-radius: 11px;
+      padding: 5px 4px;
+      text-align: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .stat-pill.active-filter { border-color: var(--accent-orange); box-shadow: 0 0 0 2px rgba(245,130,31,0.25); }
+    .stat-pill strong { display: block; font-size: 0.9rem; font-weight: 800; }
+    .stat-known strong { color: #16a34a; }
+    .stat-review strong { color: #ea580c; }
+    .stat-total strong { color: #2563eb; }
+    .stat-board strong { color: #d97706; }
+
+    /* Q&A Filter Pills */
+    .qa-filter-bar {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .qa-filter-btn {
+      padding: 7px 6px;
+      border-radius: 10px;
+      border: 1.5px solid var(--border-soft);
+      background: var(--bg-card-front);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-align: center;
+    }
+    .qa-filter-btn.active {
+      background: #fef3c7;
+      border-color: #f59e0b;
+      color: #92400e;
+    }
+
+    .progress-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; font-weight: 700; color: var(--text-muted); margin-bottom: 4px; }
+    .progress-track { width: 100%; height: 7px; background: var(--border-soft); border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent-orange), #8e24aa, #16a34a); width: 2%; transition: width 0.3s ease; }
+
+    /* ================= 3D FLASHCARD SCENE ================= */
+    #flashcardSection { display: flex; flex-direction: column; flex: 1; }
+    .card-scene { flex: 1; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; perspective: 1100px; position: relative; user-select: none; }
+    .flashcard { width: 100%; min-height: 295px; position: relative; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(0.38, 0.2, 0.2, 1); cursor: pointer; }
+    .flashcard.is-flipped { transform: rotateY(180deg); }
+
+    .card-face {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      border-radius: 20px; padding: 16px 16px 12px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      box-shadow: var(--shadow-card);
+    }
+    .card-front { background: var(--bg-card-front); border: 2.5px solid var(--card-front-border); }
+    .card-back { background: var(--bg-card-back); border: 2.5px solid var(--card-back-border); transform: rotateY(180deg); }
+
+    /* Highlight border when a Flashcard is an authentic Board Exam question */
+    .card-front.board-special-card {
+      border-color: #f59e0b;
+      box-shadow: 0 12px 28px rgba(245, 158, 11, 0.22);
+    }
+
+    .face-top { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+    .badge-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .card-num-badge { background: var(--primary-blue); color: #fff; font-size: 0.76rem; font-weight: 800; padding: 4px 10px; border-radius: 20px; }
+    .vip-badge {
+      background: linear-gradient(135deg, #f59e0b, #d9381e);
+      color: #fff;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(217, 56, 30, 0.35);
+      display: none;
+    }
+
+    .icon-action-btn { background: var(--surface-pill); border: 1px solid var(--border-soft); color: var(--text-main); width: 36px; height: 36px; border-radius: 50%; font-size: 1rem; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .icon-action-btn:active { transform: scale(0.9); }
+
+    /* UPGRADED LARGER TYPOGRAPHY FOR FLASHCARD QUESTION & ANSWER */
+    .card-body {
+      margin: auto 0;
+      padding: 12px 6px;
+      text-align: center;
+      overflow-y: auto;
+      max-height: 185px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .q-text {
+      font-size: 1.42rem;
+      font-weight: 800;
+      line-height: 1.42;
+      color: var(--text-main);
+      letter-spacing: -0.2px;
+    }
+
+    .q-text.medium-q {
+      font-size: 1.26rem;
+    }
+
+    .q-text.long-q {
+      font-size: 1.14rem;
+    }
+
+    .a-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #16a34a;
+      letter-spacing: 0.6px;
+      margin-bottom: 8px;
+    }
+
+    .a-text {
+      font-size: 1.44rem;
+      font-weight: 800;
+      line-height: 1.42;
+      color: var(--text-main);
+    }
+
+    .a-text.medium-a {
+      font-size: 1.24rem;
+    }
+
+    .formula-pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #ede9fe, #dbeafe);
+      color: #1e3a8a;
+      border: 1.5px solid #818cf8;
+      padding: 2px 9px;
+      border-radius: 8px;
+      font-family: 'Poppins', monospace;
+      font-weight: 800;
+      font-size: 0.96em;
+      margin: 2px 2px;
+    }
+
+    .hint-box {
+      background: var(--hint-bg); border: 1.5px dashed var(--hint-border); color: var(--hint-text);
+      padding: 8px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: 600; margin-top: 10px; display: none; text-align: left; line-height: 1.35;
+    }
+    .hint-box.show { display: block; }
+
+    .face-bottom { display: flex; justify-content: space-between; align-items: center; gap: 6px; padding-top: 8px; border-top: 1px solid var(--border-soft); }
+    .mini-chip-btn {
+      background: var(--surface-pill); border: 1px solid var(--border-soft); color: var(--text-main);
+      padding: 5px 10px; border-radius: 20px; font-family: inherit; font-size: 0.73rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+    }
+    .mini-chip-btn.hint-btn { background: #fef3c7; border-color: #f59e0b; color: #92400e; }
+    .mini-chip-btn.wa-share-btn { background: #dcfce7; border-color: #22c55e; color: #166534; }
+    .flip-prompt { font-size: 0.71rem; font-weight: 700; color: var(--text-muted); }
+
+    .assessment-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 2px 14px 8px; }
+    .assess-btn {
+      padding: 9px 10px; border-radius: 12px; border: none; font-family: inherit; font-size: 0.82rem; font-weight: 800; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+    }
+    .btn-need-rev { background: #ffedd5; color: #c2410c; border: 1.5px solid #fdba74; }
+    .btn-got-it { background: #dcfce7; color: #15803d; border: 1.5px solid #86efac; }
+
+    .nav-row { display: grid; grid-template-columns: 1fr 1.15fr 1fr 0.55fr; gap: 8px; padding: 2px 14px 12px; }
+    .nav-btn {
+      padding: 10px 8px; border: none; border-radius: 12px; font-family: inherit; font-size: 0.82rem; font-weight: 800; color: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 5px; box-shadow: 0 3px 8px rgba(0,0,0,0.14);
+    }
+    .btn-prev, .btn-next { background: var(--primary-blue); }
+    .btn-flip-main { background: linear-gradient(135deg, #8e24aa, #6a1b9a); }
+    .btn-shuffle { background: var(--accent-orange); }
+
+    /* ================= Q&A + EXACT YEAR PYQ SECTION ================= */
+    #qaSection {
+      display: none;
+      flex-direction: column;
+      padding: 6px 14px 16px;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .qa-card {
+      background: var(--bg-card-front);
+      border: 1.8px solid var(--border-soft);
+      border-radius: 14px;
+      padding: 13px 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .qa-card.pyq-highlight {
+      border: 2px solid #f59e0b;
+      background: linear-gradient(145deg, var(--bg-card-front), rgba(254, 243, 199, 0.22));
+    }
+
+    .qa-cat-badge {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .qa-card.pyq-highlight .qa-cat-badge {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #92400e;
+      border: 1.5px solid #f59e0b;
+    }
+
+    .qa-question {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.45;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .qa-answer {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.55;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border-soft);
+    }
+
+    /* ================= MODAL & TOAST ================= */
+    .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,0.72); display: none; align-items: center; justify-content: center; z-index: 50; padding: 16px; }
+    .modal-overlay.open { display: flex; }
+    .modal-card { background: var(--bg-card-front); color: var(--text-main); width: 100%; max-width: 440px; border-radius: 20px; padding: 16px; max-height: 82vh; display: flex; flex-direction: column; }
+    .modal-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 10px; border-bottom: 1px solid var(--border-soft); font-weight: 800; }
+    .grid-numbers { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; padding: 14px 2px; overflow-y: auto; }
+    .num-cell { padding: 9px 4px; border-radius: 10px; border: 1.5px solid var(--border-soft); background: var(--surface-pill); color: var(--text-main); font-weight: 800; font-size: 0.78rem; text-align: center; cursor: pointer; position: relative; }
+    .num-cell.cell-known { background: #dcfce7; border-color: #22c55e; color: #166534; }
+    .num-cell.cell-review { background: #ffedd5; border-color: #f97316; color: #9a3412; }
+    .num-cell.cell-board { border-color: #f59e0b; }
+    .num-cell.cell-current { outline: 2.5px solid var(--primary-blue); }
+
+    #confettiCanvas { position: fixed; inset: 0; pointer-events: none; z-index: 60; }
+    .milestone-toast {
+      position: fixed; top: 18px; left: 50%; transform: translateX(-50%) translateY(-120px);
+      background: linear-gradient(135deg, #16a34a, #15803d); color: #fff; padding: 12px 18px; border-radius: 50px; font-size: 0.84rem; font-weight: 800;
+      box-shadow: 0 10px 25px rgba(22,163,74,0.4); z-index: 70; transition: transform 0.4s ease; white-space: nowrap;
+    }
+    .milestone-toast.show { transform: translateX(-50%) translateY(0); }
+
+    /* ================= FOOTER ================= */
+    .support-bar {
+      margin-top: auto; background: #e8f8ef; border-top: 1.5px solid #b7ebc9; padding: 9px 12px;
+      display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none; color: #124d2c; font-size: 0.78rem; font-weight: 700;
+    }
+    .whatsapp-badge { background: #25D366; color: #fff; padding: 3px 9px; border-radius: 20px; font-size: 0.76rem; font-weight: 800; display: inline-flex; align-items: center; gap: 4px; }
+    .footer-bar { background: linear-gradient(115deg, #fff 0%, #fff 64%, var(--primary-blue) 64.5%, var(--dark-blue) 100%); padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #dce5f2; }
+    .footer-motto { font-size: 0.78rem; font-weight: 800; color: #1a2332; }
+    .footer-brand { font-size: 0.86rem; font-weight: 800; color: #fff; }
+    .footer-brand span { color: #ff9f2e; }
+  </style>
+</head>
+<body>
+
+  <canvas id="confettiCanvas"></canvas>
+  <div id="milestoneToast" class="milestone-toast">🌟 शाबाश! लक्ष्य प्राप्त हुआ!</div>
+
+  <div class="app-container">
+    <!-- HEADER -->
+    <header class="hero-header">
+      <div class="header-top">
+        <div>
+          <h1 class="brand-title">ज्ञानू <span>AI</span></h1>
+          <p class="brand-sub">✨ ऋषि सर द्वारा तैयार | कक्षा 10वीं RBSE विज्ञान</p>
+          <div class="utility-bar">
+            <button class="util-btn" onclick="toggleDarkMode()" id="themeBtn">🌙 Night Mode</button>
+            <button class="util-btn" onclick="toggleSound()" id="soundBtn">🔊 Sound On</button>
+            <button class="util-btn" onclick="openGridModal()" id="gridBtn">🔢 सभी कार्ड्स</button>
+            <button class="util-btn" onclick="resetProgress()">🔄 Reset</button>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="logo-circle">
+            <img src="channels4_profile (1).jpg" alt="Gyanu By Rishi Sir" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><rect width=%22120%22 height=%22120%22 rx=%2260%22 fill=%22%232b3440%22/><text x=%2260%22 y=%2262%22 font-family=%22Arial%22 font-weight=%22bold%22 font-size=%2217%22 fill=%22%23ff9800%22 text-anchor=%22middle%22>Gyanu AI</text><text x=%2260%22 y=%2282%22 font-family=%22Arial%22 font-weight=%22bold%22 font-size=%2211%22 fill=%22%2300e5ff%22 text-anchor=%22middle%22>By Rishi Sir</text></svg>';" />
+          </div>
+          <div class="class-tag">कक्षा 10वीं RBSE<br>संपूर्ण 13 अध्याय</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MODE TABS: 1. 3D FLASHCARDS (820 Cards) | 2. Q&A + PYQs (2024-2026) -->
+    <div class="mode-tabs">
+      <button class="mode-tab-btn active" id="tabFlashcards" onclick="switchMode('fc')">
+        <span>🃏 3D फ्लैश कार्ड्स (820)</span>
+      </button>
+      <button class="mode-tab-btn" id="tabQA" onclick="switchMode('qa')">
+        <span>📝 प्रश्नोत्तर व PYQs (3 वर्ष)</span>
+      </button>
+    </div>
+
+    <!-- CHAPTER SELECTOR & SEARCH -->
+    <section class="controls-section">
+      <div class="filter-row">
+        <select id="chapterSelect" class="chapter-select" onchange="changeChapter()">
+          <option value="1">अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण (Chemical Reactions)</option>
+          <option value="2">अध्याय 2: अम्ल, क्षारक एवं लवण (Acids, Bases and Salts)</option>
+          <option value="3">अध्याय 3: धातु एवं अधातु (Metals and Non-metals)</option>
+          <option value="4">अध्याय 4: कार्बन एवं उसके यौगिक (Carbon and its Compounds)</option>
+          <option value="5">अध्याय 5: जैव प्रक्रम (Life Processes)</option>
+          <option value="6">अध्याय 6: नियंत्रण एवं समन्वय (Control and Coordination)</option>
+          <option value="7">अध्याय 7: जीव जनन कैसे करते हैं? (How do Organisms Reproduce?)</option>
+          <option value="8">अध्याय 8: आनुवंशिकता एवं जैव विकास (Heredity and Evolution)</option>
+          <option value="9">अध्याय 9: प्रकाश - परावर्तन तथा अपवर्तन (Light)</option>
+          <option value="10">अध्याय 10: मानव नेत्र तथा रंग-बिरंगा संसार (Human Eye)</option>
+          <option value="11">अध्याय 11: विद्युत (Electricity)</option>
+          <option value="12">अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव (Magnetic Effects)</option>
+          <option value="13">अध्याय 13: हमारा पर्यावरण (Our Environment)</option>
+        </select>
+        <input type="text" id="searchBox" class="search-input" placeholder="🔍 इस अध्याय में प्रश्न या शब्द खोजें..." oninput="applyFilters()" />
+      </div>
+
+      <!-- STATS BAR (Visible in Flashcard Mode) -->
+      <div id="fcStatsContainer">
+        <div class="stats-bar">
+          <div class="stat-pill stat-total active-filter" id="pillAll" onclick="setStatusFilter('all')">
+            <strong id="countTotal">0</strong>
+            <span>📚 कुल कार्ड्स</span>
+          </div>
+          <div class="stat-pill stat-board" id="pillBoard" onclick="setStatusFilter('board')">
+            <strong id="countBoard">0</strong>
+            <span>🏆 बोर्ड प्रश्न</span>
+          </div>
+          <div class="stat-pill stat-known" id="pillKnown" onclick="setStatusFilter('known')">
+            <strong id="countKnown">0</strong>
+            <span>✅ याद हो गया</span>
+          </div>
+          <div class="stat-pill stat-review" id="pillReview" onclick="setStatusFilter('review')">
+            <strong id="countReview">0</strong>
+            <span>⏳ फिर से पढ़ें</span>
+          </div>
+        </div>
+
+        <div class="progress-meta">
+          <span id="subTopicLabel">अध्याय 1</span>
+          <span id="cardCounterText">Card 1 of 80</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressBar"></div>
+        </div>
+      </div>
+
+      <!-- FILTER BAR FOR Q&A MODE -->
+      <div id="qaFilterBar" class="qa-filter-bar">
+        <button class="qa-filter-btn active" id="qaBtnAll" onclick="setQAFilter('all')">📚 सभी प्रश्न</button>
+        <button class="qa-filter-btn" id="qaBtnPYQ" onclick="setQAFilter('pyq')">🏆 बोर्ड PYQs (24-26)</button>
+        <button class="qa-filter-btn" id="qaBtnBook" onclick="setQAFilter('book')">📘 पाठ्यपुस्तक प्रश्न</button>
+      </div>
+    </section>
+
+    <!-- ================= VIEW 1: 3D FLASHCARDS ================= -->
+    <div id="flashcardSection">
+      <main class="card-scene" id="touchArea">
+        <div class="flashcard" id="flashcard" onclick="flipCard()">
+          <!-- FRONT: QUESTION -->
+          <div class="card-face card-front" id="cardFrontFace">
+            <div class="face-top">
+              <div class="badge-group">
+                <span class="card-num-badge" id="cardNumberBadge">#1</span>
+                <span class="vip-badge" id="vipBadge"></span>
+                <span id="statusIndicator"></span>
+              </div>
+              <button class="icon-action-btn" onclick="speakCard(event, 'q')" title="प्रश्न सुनें">🔊</button>
+            </div>
+            <div class="card-body">
+              <div class="q-text" id="questionDisplay">लोड हो रहा है...</div>
+              <div class="hint-box" id="hintBox"></div>
+            </div>
+            <div class="face-bottom">
+              <button class="mini-chip-btn hint-btn" onclick="toggleHint(event)">💡 ऋषि सर की हिंट</button>
+              <span class="flip-prompt">👆 उत्तर हेतु टैप/स्वाइप करें</span>
+              <button class="mini-chip-btn wa-share-btn" onclick="shareOnWhatsApp(event)">📲 दोस्त से पूछें</button>
+            </div>
+          </div>
+
+          <!-- BACK: ANSWER -->
+          <div class="card-face card-back">
+            <div class="face-top">
+              <div class="badge-group">
+                <span class="card-num-badge" style="background:#15803d;" id="cardNumberBadgeBack">#1</span>
+                <span class="vip-badge" id="vipBadgeBack" style="background:#0d9488; display:inline-block;">✓ सटीक बोर्ड उत्तर</span>
+              </div>
+              <button class="icon-action-btn" onclick="speakCard(event, 'a')" title="उत्तर सुनें">🔊</button>
+            </div>
+            <div class="card-body">
+              <div class="a-label">सही उत्तर (Answer)</div>
+              <div class="a-text" id="answerDisplay">लोड हो रहा है...</div>
+            </div>
+            <div class="face-bottom">
+              <span class="flip-prompt">🔄 प्रश्न पर जाने के लिए टैप करें</span>
+              <button class="mini-chip-btn wa-share-btn" onclick="shareOnWhatsApp(event)">📲 शेयर करें</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <div class="assessment-row">
+        <button class="assess-btn btn-need-rev" onclick="markCardStatus('review')">⏳ फिर से पढ़ें (Revise)</button>
+        <button class="assess-btn btn-got-it" onclick="markCardStatus('known')">✅ याद हो गया (Got It)</button>
+      </div>
+
+      <div class="nav-row">
+        <button class="nav-btn btn-prev" onclick="prevCard()">⬅️ पिछला</button>
+        <button class="nav-btn btn-flip-main" onclick="flipCard()">🔄 पलटें (Flip)</button>
+        <button class="nav-btn btn-next" onclick="nextCard()">अगला ➡️</button>
+        <button class="nav-btn btn-shuffle" onclick="shuffleDeck()" title="कार्ड शफल करें">🔀</button>
+      </div>
+    </div>
+
+    <!-- ================= VIEW 2: CHAPTER Q&A + 2024-2026 BOARD PYQs ================= -->
+    <div id="qaSection"></div>
+
+    <!-- WHATSAPP SUPPORT & FOOTER -->
+    <a href="https://wa.me/919251477188?text=नमस्ते%20ऋषि%20सर,%20मुझे%20कक्षा%2010वीं%20RBSE%20विज्ञान%20अध्ययन%20सामग्री%20में%20सहायता%20चाहिए।"
+       target="_blank" rel="noopener noreferrer" class="support-bar">
+      <span>💬 किसी भी सहायता (Support) के लिए WhatsApp करें:</span>
+      <span class="whatsapp-badge">9251477188</span>
+    </a>
+
+    <footer class="footer-bar">
+      <div class="footer-motto">🚀 बोर्ड परीक्षा में 100% सफलता की ओर!</div>
+      <div class="footer-brand">GYANU <span>AI</span></div>
+    </footer>
+  </div>
+
+  <!-- QUICK JUMP GRID MODAL -->
+  <div class="modal-overlay" id="gridModal" onclick="closeGridModal()">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <span id="modalTitleText">🔢 कार्ड सूची (Jump to Card)</span>
+        <button class="mini-chip-btn" onclick="closeGridModal()">✖ बंद करें</button>
+      </div>
+      <div class="grid-numbers" id="gridNumbersContainer"></div>
+    </div>
+  </div>
+
+  <script>
+    // Complete 13 Chapters Flashcards Data (820 Flashcards with Selective Authentic Board Exam Year Tags)
+    const masterFlashcards = {"1": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "रासायनिक अभिक्रिया का एक भौतिक लक्षण क्या है?", "a": "अवस्था में परिवर्तन", "type": "fc", "badge": ""}, {"q": "अभिक्रिया में तापमान परिवर्तन किसका संकेत है?", "a": "रासायनिक अभिक्रिया", "type": "fc", "badge": ""}, {"q": "किसी अभिक्रिया में भाग लेने वाले पदार्थ क्या कहलाते हैं?", "a": "अभिकारक", "type": "fc", "badge": ""}, {"q": "अभिक्रिया के फलस्वरूप बनने वाले नए पदार्थ क्या हैं?", "a": "उत्पाद", "type": "fc", "badge": ""}, {"q": "मैग्नीशियम रिबन को जलाने से पहले साफ़ क्यों करते हैं?", "a": "ऑक्साइड परत हटाना", "type": "fc", "badge": ""}, {"q": "मैग्नीशियम रिबन किस रंग की लौ के साथ जलता है?", "a": "चमकदार श्वेत", "type": "fc", "badge": ""}, {"q": "मैग्नीशियम का वायु में दहन होने पर क्या बनता है?", "a": "मैग्नीशियम ऑक्साइड", "type": "fc", "badge": ""}, {"q": "मैग्नीशियम ऑक्साइड का रासायनिक सूत्र क्या है?", "a": "$MgO$", "type": "fc", "badge": ""}, {"q": "रासायनिक समीकरण को संतुलित करना किस नियम पर आधारित है?", "a": "द्रव्यमान संरक्षण नियम", "type": "fc", "badge": ""}, {"q": "द्रव्यमान संरक्षण नियम के अनुसार किसका विनाश नहीं होता?", "a": "द्रव्यमान का", "type": "fc", "badge": ""}, {"q": "जिंक और सल्फ्यूरिक अम्ल की क्रिया से कौन सी गैस निकलती है?", "a": "हाइड्रोजन गैस", "type": "fc", "badge": ""}, {"q": "समीकरण संतुलित करने की सबसे सरल विधि का नाम क्या है?", "a": "हिट एंड ट्रायल", "type": "fc", "badge": ""}, {"q": "भौतिक अवस्था 'जलीय विलयन' के लिए कौन सा संकेत है?", "a": "$(aq)$", "type": "fc", "badge": ""}, {"q": "गैसीय अवस्था को समीकरण में किस संकेत से दर्शाते हैं?", "a": "$(g)$", "type": "fc", "badge": ""}, {"q": "ठोस अवस्था के लिए समीकरण में प्रयुक्त संकेत क्या है?", "a": "$(s)$", "type": "fc", "badge": ""}, {"q": "द्रव अवस्था के लिए समीकरण में क्या लिखा जाता है?", "a": "$(l)$", "type": "fc", "badge": ""}, {"q": "जब दो अभिकारक मिलकर एकल उत्पाद बनाएँ, तो वह कौन सी अभिक्रिया है?", "a": "संयोजन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "बिना बुझे हुए चूने का रासायनिक नाम क्या है?", "a": "कैल्सियम ऑक्साइड", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "बुझे हुए चूने का रासायनिक सूत्र क्या है?", "a": "$Ca(OH)_2$", "type": "fc", "badge": ""}, {"q": "कैल्सियम ऑक्साइड की जल के साथ क्रिया किस प्रकार की है?", "a": "ऊष्माक्षेपी अभिक्रिया", "type": "fc", "badge": ""}, {"q": "जिन अभिक्रियाओं में उत्पाद के साथ ऊष्मा निकलती है, उन्हें क्या कहते हैं?", "a": "ऊष्माक्षेपी अभिक्रिया", "type": "fc", "badge": ""}, {"q": "श्वसन किस प्रकार की रासायनिक अभिक्रिया है?", "a": "ऊष्माक्षेपी", "type": "fc", "badge": ""}, {"q": "सफ़ेदी करने के बाद दीवारों पर चमक किस पदार्थ के कारण आती है?", "a": "कैल्सियम कार्बोनेट", "type": "fc", "badge": ""}, {"q": "संगमरमर का रासायनिक सूत्र क्या है?", "a": "$CaCO_3$", "type": "fc", "badge": ""}, {"q": "कोयले का दहन किस प्रकार की अभिक्रिया है?", "a": "संयोजन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "प्राकृतिक गैस (मेथेन) के दहन से क्या प्राप्त होता है?", "a": "$CO_2$ और जल", "type": "fc", "badge": ""}, {"q": "एकल अभिकारक के टूटकर छोटे उत्पाद देने वाली अभिक्रिया क्या है?", "a": "वियोजन अभिक्रिया", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "फेरस सल्फेट क्रिस्टल का रंग कैसा होता है?", "a": "हरा", "type": "fc", "badge": ""}, {"q": "ऊष्मा के द्वारा की गई वियोजन अभिक्रिया को क्या कहते हैं?", "a": "ऊष्मीय वियोजन", "type": "fc", "badge": ""}, {"q": "चूना पत्थर का कैल्सियम ऑक्साइड में बदलना किसका उदाहरण है?", "a": "ऊष्मीय वियोजन", "type": "fc", "badge": ""}, {"q": "लेड नाइट्रेट को गर्म करने पर किस रंग का धुआँ निकलता है?", "a": "भूरा धुआँ", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "लेड नाइट्रेट के वियोजन से कौन सी भूरी गैस निकलती है?", "a": "नाइट्रोजन डाइऑक्साइड", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "जल के विद्युत अपघटन में कैथोड पर कौन सी गैस बनती है?", "a": "हाइड्रोजन", "type": "fc", "badge": ""}, {"q": "जल के विद्युत अपघटन में एनोड पर कौन सी गैस निकलती है?", "a": "ऑक्सीजन", "type": "fc", "badge": ""}, {"q": "सूर्य के प्रकाश में सिल्वर क्लोराइड किस रंग का हो जाता है?", "a": "धूसर", "type": "fc", "badge": ""}, {"q": "सिल्वर क्लोराइड का सूर्य के प्रकाश में वियोजन क्या देता है?", "a": "सिल्वर और क्लोरीन", "type": "fc", "badge": ""}, {"q": "श्याम-श्वेत फोटोग्राफी में किस पदार्थ का उपयोग होता है?", "a": "सिल्वर ब्रोमाइड", "type": "fc", "badge": ""}, {"q": "जिन अभिक्रियाओं में ऊर्जा अवशोषित होती है, उन्हें क्या कहते हैं?", "a": "ऊष्माशोषी अभिक्रिया", "type": "fc", "badge": ""}, {"q": "लोहे की कील को कॉपर सल्फेट विलयन में डालने पर वह कैसी हो जाती है?", "a": "भूरे रंग की", "type": "fc", "badge": ""}, {"q": "कॉपर सल्फेट के विलयन का नीला रंग मलीन क्यों पड़ जाता है?", "a": "विस्थापन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "अधिक क्रियाशील तत्व द्वारा कम क्रियाशील तत्व को हटाना क्या है?", "a": "विस्थापन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "अभिकारकों के बीच आयनों का आदान-प्रदान किस अभिक्रिया में होता है?", "a": "द्विविस्थापन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "सोडियम सल्फेट और बेरियम क्लोराइड की क्रिया से क्या बनता है?", "a": "बेरियम सल्फेट", "type": "fc", "badge": ""}, {"q": "बेरियम सल्फेट का अवक्षेप किस रंग का होता है?", "a": "श्वेत", "type": "fc", "badge": ""}, {"q": "किसी अभिक्रिया में ऑक्सीजन की वृद्धि क्या कहलाती है?", "a": "उपचयन", "type": "fc", "badge": ""}, {"q": "किसी पदार्थ से ऑक्सीजन का ह्रास होना क्या कहलाता है?", "a": "अपचयन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "जिस अभिक्रिया में उपचयन और अपचयन साथ हों, उसे क्या कहते हैं?", "a": "रेडॉक्स अभिक्रिया", "type": "fc", "badge": ""}, {"q": "कॉपर चूर्ण को गर्म करने पर उस पर कैसी परत चढ़ती है?", "a": "काली परत", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "कॉपर पर काली परत किस यौगिक के कारण बनती है?", "a": "कॉपर ऑक्साइड", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "लोहे पर जंग लगना किसका उदाहरण है?", "a": "संक्षारण", "type": "fc", "badge": ""}, {"q": "चाँदी के ऊपर काली परत चढ़ना क्या कहलाता है?", "a": "संक्षारण", "type": "fc", "badge": ""}, {"q": "ताँबे के ऊपर चढ़ने वाली हरी परत का कारण क्या है?", "a": "संक्षारण", "type": "fc", "badge": ""}, {"q": "वसायुक्त खाद्य पदार्थों का स्वाद और गंध बदलना क्या है?", "a": "विकृतगंधिता", "type": "fc", "badge": ""}, {"q": "चिप्स की थैली में उपचयन रोकने के लिए कौन सी गैस भरते हैं?", "a": "नाइट्रोजन", "type": "fc", "badge": ""}, {"q": "खाद्य पदार्थों को विकृतगंधिता से बचाने के लिए क्या मिलाते हैं?", "a": "प्रति-ऑक्सीकारक", "type": "fc", "badge": ""}, {"q": "लोहे की वस्तुओं को संक्षारण से बचाने के लिए क्या करते हैं?", "a": "पेंट", "type": "fc", "badge": ""}, {"q": "नाइट्रोजन गैस खाद्य पदार्थों को किससे बचाती है?", "a": "उपचयन", "type": "fc", "badge": ""}, {"q": "$Zn + CuSO_4 \\rightarrow ZnSO_4 + Cu$ किस प्रकार की अभिक्रिया है?", "a": "विस्थापन", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "$C + O_2 \\rightarrow CO_2$ किस प्रकार की अभिक्रिया है?", "a": "संयोजन", "type": "fc", "badge": ""}, {"q": "जल के अणुओं में हाइड्रोजन और ऑक्सीजन का आयतन अनुपात?", "a": "$2:1$", "type": "fc", "badge": ""}, {"q": "फेरस सल्फेट क्रिस्टल को गर्म करने पर निकलने वाली गैसें?", "a": "$SO_2$ और $SO_3$", "type": "fc", "badge": ""}, {"q": "बिना बुझे चूने ($CaO$) का प्रमुख उपयोग कहाँ होता है?", "a": "सीमेंट निर्माण", "type": "fc", "badge": ""}, {"q": "ग्लूकोज का ऑक्सीजन से मिलकर ऊर्जा देना क्या है?", "a": "श्वसन", "type": "fc", "badge": ""}, {"q": "साक-सब्जियों का विघटित होकर कंपोस्ट बनना कैसी अभिक्रिया है?", "a": "ऊष्माक्षेपी", "type": "fc", "badge": ""}, {"q": "अविलेय लवण प्राप्त होने वाली अभिक्रिया को क्या कहते हैं?", "a": "अवक्षेपण अभिक्रिया", "type": "fc", "badge": ""}, {"q": "हाइड्रोजन का योग होना क्या कहलाता है?", "a": "अपचयन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "हाइड्रोजन का ह्रास होना क्या कहलाता है?", "a": "उपचयन", "type": "fc", "badge": ""}, {"q": "$PbO + C \\rightarrow Pb + CO$ में अपचयित पदार्थ कौन सा है?", "a": "लेड ऑक्साइड", "type": "fc", "badge": ""}, {"q": "चमकदार भूरे रंग का तत्व 'X' जिसे गर्म करने पर काला होता है?", "a": "कॉपर", "type": "fc", "badge": ""}, {"q": "समीकरण में तीर का सिरा किस ओर होता है?", "a": "उत्पाद की ओर", "type": "fc", "badge": ""}, {"q": "समीकरण संतुलित करते समय हम क्या नहीं बदल सकते?", "a": "रासायनिक सूत्र", "type": "fc", "badge": ""}, {"q": "अभिक्रिया की परिस्थितियाँ तीर के कहाँ दर्शाई जाती हैं?", "a": "ऊपर या नीचे", "type": "fc", "badge": ""}, {"q": "सिल्वर ब्रोमाइड का सूर्य के प्रकाश में रंग कैसा होता है?", "a": "धूसर", "type": "fc", "badge": ""}, {"q": "समीकरण के दोनों ओर परमाणुओं की संख्या समान हो तो वह क्या है?", "a": "संतुलित समीकरण", "type": "fc", "badge": ""}, {"q": "कंकाली समीकरण क्या होता है?", "a": "असंतुलित समीकरण", "type": "fc", "badge": ""}, {"q": "कॉपर ऑक्साइड पर हाइड्रोजन गैस प्रवाहित करने पर क्या मिलता है?", "a": "कॉपर और जल", "type": "fc", "badge": ""}, {"q": "$H_2 + Cl_2 \\rightarrow 2HCl$ कैसी अभिक्रिया है?", "a": "संयोजन", "type": "fc", "badge": ""}, {"q": "$AgNO_3 + NaCl \\rightarrow AgCl + NaNO_3$ कैसी अभिक्रिया है?", "a": "द्विविस्थापन", "type": "fc", "badge": ""}, {"q": "अम्ल और क्षार की क्रिया से लवण और जल बनना क्या है?", "a": "उदासीनीकरण", "type": "fc", "badge": ""}], "2": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "भोजन का खट्टा स्वाद किसके कारण होता है?", "a": "अम्ल", "type": "fc", "badge": ""}, {"q": "भोजन का कड़वा स्वाद किसके कारण होता है?", "a": "क्षारक", "type": "fc", "badge": ""}, {"q": "अम्ल नीले लिटमस पत्र को किस रंग में बदल देते हैं?", "a": "लाल", "type": "fc", "badge": ""}, {"q": "क्षारक लाल लिटमस पत्र को किस रंग में बदल देते हैं?", "a": "नीला", "type": "fc", "badge": ""}, {"q": "लिटमस विलयन किस पौधे से निकाला जाता है?", "a": "लाइकेन", "type": "fc", "badge": ""}, {"q": "हल्दी क्षारक के साथ कैसा रंग देती है?", "a": "भूरा-लाल", "type": "fc", "badge": ""}, {"q": "एक संश्लेषित (Synthetic) सूचक का नाम बताइए।", "a": "मेथिल ऑरेंज", "type": "fc", "badge": ""}, {"q": "गंधीय (Olfactory) सूचक का एक उदाहरण दीजिए।", "a": "वैनिला या प्याज", "type": "fc", "badge": ""}, {"q": "धातु अम्ल के साथ अभिक्रिया कर कौन सी गैस उत्सर्जित करती है?", "a": "$H_{2}$ गैस", "type": "fc", "badge": ""}, {"q": "हाइड्रोजन गैस की जाँच जलती मोमबत्ती से करने पर कैसी ध्वनि आती है?", "a": "फट-फट (Pop) ध्वनि", "type": "fc", "badge": ""}, {"q": "अम्ल और क्षारक की अभिक्रिया से क्या प्राप्त होता है?", "a": "लवण एवं जल", "type": "fc", "badge": ""}, {"q": "अम्ल और क्षारक के बीच होने वाली अभिक्रिया को क्या कहते हैं?", "a": "उदासीनीकरण अभिक्रिया", "type": "fc", "badge": ""}, {"q": "धातु कार्बोनेट अम्ल के साथ कौन सी गैस बनाते हैं?", "a": "$CO_{2}$ गैस", "type": "fc", "badge": ""}, {"q": "चूने के पानी में $CO_{2}$ प्रवाहित करने पर वह कैसा हो जाता है?", "a": "दूधिया", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "अत्यधिक $CO_{2}$ प्रवाहित करने पर चूने के पानी का श्वेत अवक्षेप किसमें बदल जाता है?", "a": "जल में विलयशील", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "धात्विक ऑक्साइडों की प्रकृति कैसी होती है?", "a": "क्षारकीय", "type": "fc", "badge": ""}, {"q": "अधात्विक ऑक्साइडों की प्रकृति कैसी होती है?", "a": "अम्लीय", "type": "fc", "badge": ""}, {"q": "सभी अम्लों में कौन सा आयन समान होता है?", "a": "$H^{+}$ आयन", "type": "fc", "badge": ""}, {"q": "क्षारक जल में कौन सा आयन उत्पन्न करते हैं?", "a": "$OH^{-}$ आयन", "type": "fc", "badge": ""}, {"q": "जल में घुलनशील क्षारक को क्या कहते हैं?", "a": "क्षार (Alkali)", "type": "fc", "badge": ""}, {"q": "अम्ल या क्षारक को जल में मिलाने की प्रक्रिया क्या कहलाती है?", "a": "तनूकरण", "type": "fc", "badge": ""}, {"q": "अम्ल को तनुकृत करते समय उसे किसमें मिलाना चाहिए?", "a": "जल में", "type": "fc", "badge": ""}, {"q": "pH स्केल में 'p' का क्या अर्थ है?", "a": "पुसांस (Potenz)", "type": "fc", "badge": ""}, {"q": "उदासीन विलयन का pH मान कितना होता है?", "a": "7", "type": "fc", "badge": ""}, {"q": "अम्लीय विलयन का pH मान 7 से _____ होता है।", "a": "कम", "type": "fc", "badge": ""}, {"q": "क्षारकीय विलयन का pH मान 7 से _____ होता है।", "a": "अधिक", "type": "fc", "badge": ""}, {"q": "हमारा शरीर किस pH परास के बीच कार्य करता है?", "a": "7.0 से 7.8", "type": "fc", "badge": ""}, {"q": "अम्लीय वर्षा का pH मान कितना होता है?", "a": "5.6 से कम", "type": "fc", "badge": ""}, {"q": "मुँह का pH मान कितने से कम होने पर दाँतों का क्षय प्रारंभ होता है?", "a": "5.5", "type": "fc", "badge": ""}, {"q": "एनेटैसिड (Antacid) का एक उदाहरण दीजिए।", "a": "मिल्क ऑफ मैग्नीशिया", "type": "fc", "badge": ""}, {"q": "मधुमक्खी के डंक में कौन सा अम्ल होता है?", "a": "मेथेनोइक अम्ल", "type": "fc", "badge": ""}, {"q": "सिरका में कौन सा अम्ल पाया जाता है?", "a": "एसीटिक अम्ल", "type": "fc", "badge": ""}, {"q": "संतरा और नींबू में कौन सा अम्ल होता है?", "a": "साइट्रिक अम्ल", "type": "fc", "badge": ""}, {"q": "इमली में कौन सा अम्ल पाया जाता है?", "a": "टार्टरिक अम्ल", "type": "fc", "badge": ""}, {"q": "टमाटर में कौन सा प्राकृतिक अम्ल होता है?", "a": "ऑक्सैलिक अम्ल", "type": "fc", "badge": ""}, {"q": "खट्टे दूध (दही) में कौन सा अम्ल होता है?", "a": "लैक्टिक अम्ल", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "नेटल (Nettle) के डंक में कौन सा अम्ल होता है?", "a": "मेथेनोइक अम्ल", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "साधारण नमक का रासायनिक सूत्र क्या है?", "a": "$NaCl$", "type": "fc", "badge": ""}, {"q": "सोडियम हाइड्रोक्साइड बनाने की प्रक्रिया क्या कहलाती है?", "a": "क्लोरो-क्षार प्रक्रिया", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "विरंजक चूर्ण (Bleaching Powder) का रासायनिक सूत्र क्या है?", "a": "$CaOCl_{2}$", "type": "fc", "badge": ""}, {"q": "बेकिंग सोडा का रासायनिक नाम क्या है?", "a": "सोडियम हाइड्रोजनकार्बोनेट", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "बेकिंग सोडा का रासायनिक सूत्र क्या है?", "a": "$NaHCO_{3}$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "धोने के सोडे का रासायनिक सूत्र क्या है?", "a": "$Na_{2}CO_{3} \\cdot 10H_{2}O$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "प्लास्टर ऑफ पेरिस का रासायनिक सूत्र क्या है?", "a": "$CaSO_{4} \\cdot \\frac{1}{2}H_{2}O$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "जिप्सम को कितने तापमान पर गर्म करने पर प्लास्टर ऑफ पेरिस बनता है?", "a": "373 K", "type": "fc", "badge": ""}, {"q": "जिप्सम का रासायनिक सूत्र क्या है?", "a": "$CaSO_{4} \\cdot 2H_{2}O$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "कठोर जल को मृदु करने के लिए किस सोडियम यौगिक का उपयोग होता है?", "a": "धोने का सोडा", "type": "fc", "badge": ""}, {"q": "शुक्र ग्रह का वायुमंडल किस अम्ल के बादलों से बना है?", "a": "सल्फ्यूरिक अम्ल", "type": "fc", "badge": ""}, {"q": "लिटमस पत्र उदासीन होने पर किस रंग का होता है?", "a": "बैंगनी", "type": "fc", "badge": ""}, {"q": "सोडियम हाइड्रोक्साइड के विलयन का pH मान लगभग कितना है?", "a": "14", "type": "fc", "badge": ""}, {"q": "जठर रस का pH मान लगभग कितना होता है?", "a": "1.2", "type": "fc", "badge": ""}, {"q": "शुद्ध जल और रक्त का pH मान कितना है?", "a": "7.4", "type": "fc", "badge": ""}, {"q": "क्लोरो-क्षार प्रक्रिया में एनोड पर कौन सी गैस निकलती है?", "a": "क्लोरीन गैस", "type": "fc", "badge": ""}, {"q": "क्लोरो-क्षार प्रक्रिया में कैथोड पर कौन सी गैस निकलती है?", "a": "हाइड्रोजन गैस", "type": "fc", "badge": ""}, {"q": "बेकिंग सोडा को गर्म करने पर क्या प्राप्त होता है?", "a": "सोडियम कार्बोनेट", "type": "fc", "badge": ""}, {"q": "पीने के पानी को कीटाणुमुक्त करने के लिए किसका उपयोग होता है?", "a": "विरंजक चूर्ण", "type": "fc", "badge": ""}, {"q": "टूटी हड्डियों को स्थिर रखने के लिए किसका उपयोग होता है?", "a": "प्लास्टर ऑफ पेरिस", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "क्रिस्टलन का जल रखने वाले एक लवण का नाम बताइए।", "a": "नीला थोथा", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "सोडा-अम्ल अग्निशामक में किसका उपयोग किया जाता है?", "a": "सोडियम हाइड्रोजनकार्बोनेट", "type": "fc", "badge": ""}, {"q": "प्रबल अम्ल और दुर्बल क्षारक का लवण कैसा होता है?", "a": "अम्लीय", "type": "fc", "badge": ""}, {"q": "प्रबल क्षारक और दुर्बल अम्ल का लवण कैसा होता है?", "a": "क्षारकीय", "type": "fc", "badge": ""}, {"q": "खड़िया और संगमरमर किसके विविध रूप हैं?", "a": "कैल्शियम कार्बोनेट", "type": "fc", "badge": ""}, {"q": "नेटल के डंक के इलाज के लिए किस पौधे का उपयोग होता है?", "a": "डाक (Dock) पौधा", "type": "fc", "badge": ""}, {"q": "अम्ल जल में घुलकर कौन सा आयन बनाते हैं?", "a": "हाइड्रोनियम आयन ($H_{3}O^{+}$)", "type": "fc", "badge": ""}, {"q": "नीला थोथा (कॉपर सल्फेट) में क्रिस्टलन के जल के कितने अणु होते हैं?", "a": "5 अणु", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "मिल्क ऑफ मैग्नीशिया का pH मान कितना होता है?", "a": "10", "type": "fc", "badge": ""}, {"q": "अम्लराज (Aqua-regia) किन दो अम्लों का मिश्रण है?", "a": "$HCl$ और $HNO_{3}$", "type": "fc", "badge": ""}, {"q": "अम्लराज में सांद्र $HCl$ और सांद्र $HNO_{3}$ का अनुपात क्या है?", "a": "3:1", "type": "fc", "badge": ""}, {"q": "रसोई घर में स्वादिष्ट खस्ता पकोड़े बनाने के लिए क्या उपयोग होता है?", "a": "बेकिंग सोडा", "type": "fc", "badge": ""}], "3": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "शुद्ध रूप में धातु की सतह का चमकदार होना क्या कहलाता है?", "a": "धात्विक चमक", "type": "fc", "badge": ""}, {"q": "धातुओं को पीटकर पतली चादर बनाने के गुण को क्या कहते हैं?", "a": "आघातवर्ध्यता", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सबसे अधिक आघातवर्ध्य धातुएँ कौन सी हैं?", "a": "सोना और चाँदी", "type": "fc", "badge": ""}, {"q": "धातु को पतले तार के रूप में खींचने की क्षमता क्या कहलाती है?", "a": "तन्यता", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सबसे अधिक तन्य धातु कौन सी है?", "a": "सोना", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "$1\\text{ g}$ सोने से लगभग कितना लंबा तार बनाया जा सकता है?", "a": "$2\\text{ km}$", "type": "fc", "badge": ""}, {"q": "ऊष्मा के सबसे अच्छे चालक कौन से हैं?", "a": "सिल्वर और कॉपर", "type": "fc", "badge": ""}, {"q": "ऊष्मा के कुचालक धातुओं के उदाहरण दें।", "a": "लेड और मरकरी", "type": "fc", "badge": ""}, {"q": "बिजली के तारों पर किस सामग्री की परत चढ़ी होती है?", "a": "$\\text{PVC}$ या रबड़", "type": "fc", "badge": ""}, {"q": "कठोर सतह से टकराकर आवाज़ उत्पन्न करने वाली धातुएँ क्या कहलाती हैं?", "a": "ध्वानिक (सोनोरस)", "type": "fc", "badge": ""}, {"q": "द्रव अवस्था में पाई जाने वाली एकमात्र धातु कौन सी है?", "a": "मरकरी (पारा)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "हथेली पर रखने पर पिघलने वाली धातुएँ कौन सी हैं?", "a": "गैलियम और सीज़ियम", "type": "fc", "badge": ""}, {"q": "चमकीली अधातु कौन सी है?", "a": "आयोडीन", "type": "fc", "badge": ""}, {"q": "प्रकृति का सबसे कठोर पदार्थ कौन सा है?", "a": "हीरा", "type": "fc", "badge": ""}, {"q": "विद्युत की सुचालक अधातु कौन सी है?", "a": "ग्रेफाइट", "type": "fc", "badge": ""}, {"q": "चाकू से आसानी से काटी जा सकने वाली धातुएँ कौन सी हैं?", "a": "सोडियम, पोटैशियम, लीथियम", "type": "fc", "badge": ""}, {"q": "अधिकतर अधातुएँ जल में घुलकर कैसा विलयन बनाती हैं?", "a": "अम्लीय", "type": "fc", "badge": ""}, {"q": "धातुएँ ऑक्सीजन के साथ मिलकर क्या बनाती हैं?", "a": "धातु ऑक्साइड", "type": "fc", "badge": ""}, {"q": "कॉपर को वायु में गर्म करने पर बने काले रंग के पदार्थ का नाम क्या है?", "a": "कॉपर ($\\text{II}$) ऑक्साइड", "type": "fc", "badge": ""}, {"q": "अम्ल और क्षारक दोनों से अभिक्रिया करने वाले ऑक्साइड क्या कहलाते हैं?", "a": "उभयधर्मी ऑक्साइड", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "किन्हीं दो उभयधर्मी ऑक्साइडों के सूत्र लिखिए।", "a": "$Al_{2}O_{3}$ और $ZnO$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सोडियम और पोटैशियम को किसमें डुबोकर रखा जाता है?", "a": "किरोसिन तेल", "type": "fc", "badge": ""}, {"q": "ऐलुमिनियम पर मोटी ऑक्साइड की परत बनाने की प्रक्रिया क्या है?", "a": "ऐनोडीकरण", "type": "fc", "badge": ""}, {"q": "धातु और जल की अभिक्रिया से कौन सी गैस निकलती है?", "a": "हाइड्रोजन गैस", "type": "fc", "badge": ""}, {"q": "कौन सी धातुएँ ठंडे जल के साथ तेज़ी से अभिक्रिया करती हैं?", "a": "सोडियम और पोटैशियम", "type": "fc", "badge": ""}, {"q": "जल के साथ अभिक्रिया करने पर कैल्सियम क्यों तैरने लगता है?", "a": "$H_{2}$ बुलबुले चिपकने से", "type": "fc", "badge": ""}, {"q": "मैग्नीशियम किस प्रकार के जल के साथ अभिक्रिया करता है?", "a": "गर्म जल", "type": "fc", "badge": ""}, {"q": "भाप के साथ अभिक्रिया करने वाली धातुओं के नाम बताएँ।", "a": "ऐलुमिनियम, आयरन, जिंक", "type": "fc", "badge": ""}, {"q": "जल के साथ बिल्कुल अभिक्रिया न करने वाली धातुएँ कौन सी हैं?", "a": "लेड, कॉपर, सिल्वर", "type": "fc", "badge": ""}, {"q": "धातु और तनु अम्ल की क्रिया से क्या प्राप्त होता है?", "a": "लवण और हाइड्रोजन", "type": "fc", "badge": ""}, {"q": "किस अम्ल के साथ अभिक्रिया करने पर हाइड्रोजन गैस उत्सर्जित नहीं होती?", "a": "नाइट्रिक अम्ल ($HNO_{3}$)", "type": "fc", "badge": ""}, {"q": "एक्वा रेजिया में सांद्र $HCl$ और सांद्र $HNO_{3}$ का अनुपात क्या है?", "a": "$3:1$", "type": "fc", "badge": ""}, {"q": "गोल्ड और प्लैटिनम को गलाने में समर्थ मिश्रण का नाम क्या है?", "a": "एक्वा रेजिया", "type": "fc", "badge": ""}, {"q": "अधिक अभिक्रियाशील धातु द्वारा कम अभिक्रियाशील धातु को हटाना क्या कहलाता है?", "a": "विस्थापन अभिक्रिया", "type": "fc", "badge": ""}, {"q": "धातुओं की क्रियाशीलता को अवरोही क्रम में व्यवस्थित सूची क्या है?", "a": "सक्रियता श्रेणी", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "सक्रियता श्रेणी में सबसे ऊपर स्थित धातु कौन सी है?", "a": "पोटैशियम ($K$)", "type": "fc", "badge": ""}, {"q": "विपरीत आवेशित आयनों के आकर्षण से बने यौगिक क्या कहलाते हैं?", "a": "आयनिक यौगिक", "type": "fc", "badge": ""}, {"q": "आयनिक यौगिकों के गलनांक और क्वथनांक कैसे होते हैं?", "a": "बहुत उच्च", "type": "fc", "badge": ""}, {"q": "आयनिक यौगिक सामान्यतः किस विलायक में घुलनशील होते हैं?", "a": "जल में", "type": "fc", "badge": ""}, {"q": "आयनिक यौगिक किस अवस्था में विद्युत का चालन करते हैं?", "a": "गलित अवस्था", "type": "fc", "badge": ""}, {"q": "पृथ्वी से खनिज अयस्कों में उपस्थित अशुद्धियाँ क्या कहलाती हैं?", "a": "गैंग", "type": "fc", "badge": ""}, {"q": "सल्फाइड अयस्क को वायु की उपस्थिति में गर्म करना क्या कहलाता है?", "a": "भर्जन", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "कार्बोनेट अयस्क को सीमित वायु में गर्म करना क्या कहलाता है?", "a": "निस्तापन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "आयरन ($\\text{III}$) ऑक्साइड और ऐलुमिनियम की अभिक्रिया क्या कहलाती है?", "a": "थर्मिट अभिक्रिया", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "थर्मिट अभिक्रिया का मुख्य उपयोग क्या है?", "a": "रेल पटरी जोड़ना", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "उच्च अभिक्रियाशील धातुओं का निष्कर्षण किस विधि से होता है?", "a": "विद्युत अपघटनी अपचयन", "type": "fc", "badge": ""}, {"q": "विद्युत अपघटनी परिष्करण में अशुद्ध धातु को क्या बनाया जाता है?", "a": "ऐनोड", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विद्युत अपघटनी परिष्करण में ऐनोड के नीचे जमा अशुद्धियाँ क्या हैं?", "a": "ऐनोड पंक", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "लोहे को जंग से बचाने के लिए उस पर जस्ते की परत चढ़ाना क्या है?", "a": "यशदलेपन (गैल्वेनीकरण)", "type": "fc", "badge": ""}, {"q": "दो या दो से अधिक धातुओं के समांगी मिश्रण को क्या कहते हैं?", "a": "मिश्रधातु", "type": "fc", "badge": ""}, {"q": "शुद्ध लोहे में कठोरता लाने के लिए क्या मिलाया जाता है?", "a": "कार्बन ($0.05\\%$ लगभग)", "type": "fc", "badge": ""}, {"q": "स्टेनलेस इस्पात में लोहे के साथ क्या मिलाया जाता है?", "a": "निकैल और क्रोमियम", "type": "fc", "badge": ""}, {"q": "यदि मिश्रधातु में एक धातु पारद (मरकरी) हो, तो उसे क्या कहते हैं?", "a": "अमलगम", "type": "fc", "badge": ""}, {"q": "पीतल किन धातुओं की मिश्रधातु है?", "a": "कॉपर और जिंक", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "काँसा (ब्रोंज) किन धातुओं का मिश्रण है?", "a": "कॉपर और टिन", "type": "fc", "badge": ""}, {"q": "विद्युत तारों की वेल्डिंग के लिए प्रयुक्त मिश्रधातु कौन सी है?", "a": "सोल्डर", "type": "fc", "badge": ""}, {"q": "शुद्ध सोने की शुद्धता कितने कैरट होती है?", "a": "$24$ कैरट", "type": "fc", "badge": ""}, {"q": "आभूषण बनाने के लिए सामान्यतः कितने कैरट सोने का उपयोग होता है?", "a": "$22$ कैरट", "type": "fc", "badge": ""}, {"q": "कुतुब मीनार के पास स्थित प्रसिद्ध लौह स्तंभ की ऊँचाई कितनी है?", "a": "$8\\text{ m}$", "type": "fc", "badge": ""}, {"q": "लोहे पर जंग लगने के लिए किन दो परिस्थितियों का होना आवश्यक है?", "a": "वायु और नमी", "type": "fc", "badge": ""}, {"q": "सिनाबार किस धातु का अयस्क है?", "a": "मरकरी (पारा)", "type": "fc", "badge": ""}, {"q": "अयस्क से धातु प्राप्त करने का वैज्ञानिक प्रक्रम क्या कहलाता है?", "a": "धातुकर्म", "type": "fc", "badge": ""}, {"q": "विद्युत अपघटनी परिष्करण में शुद्ध धातु कहाँ निक्षेपित होती है?", "a": "कैथोड पर", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "सोना प्रकृति में किस अवस्था में पाया जाता है?", "a": "स्वतंत्र अवस्था", "type": "fc", "badge": ""}], "4": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "कार्बन की परमाणु संख्या क्या है?", "a": "6", "type": "fc", "badge": ""}, {"q": "कार्बन के बाहरी कोश में कितने इलेक्ट्रॉन होते हैं?", "a": "4", "type": "fc", "badge": ""}, {"q": "कार्बन के यौगिकों में किस प्रकार का आबंध पाया जाता है?", "a": "सहसंयोजी आबंध", "type": "fc", "badge": ""}, {"q": "कार्बन के स्वयं के साथ आबंध बनाने के गुण को क्या कहते हैं?", "a": "शृंखलन (Catenation)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "प्रकृति में पाया जाने वाला सर्वाधिक कठोर पदार्थ कौन सा है?", "a": "हीरा", "type": "fc", "badge": ""}, {"q": "कार्बन का कौन सा अपररूप विद्युत का सुचालक है?", "a": "ग्रेफाइट", "type": "fc", "badge": ""}, {"q": "फुटबॉल के आकार में व्यवस्थित कार्बन परमाणु क्या कहलाते हैं?", "a": "फुलेरीन ($C_{60}$)", "type": "fc", "badge": ""}, {"q": "हाइड्रोजन के अणु ($H_2$) में कितने आबंध होते हैं?", "a": "एकल आबंध", "type": "fc", "badge": ""}, {"q": "नाइट्रोजन के अणु ($N_2$) में किस प्रकार का आबंध होता है?", "a": "त्रि-आबंध", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "ऑक्सीजन के अणु ($O_2$) में कितने आबंध पाए जाते हैं?", "a": "दोहरा आबंध", "type": "fc", "badge": ""}, {"q": "मेथेन का आणविक सूत्र क्या है?", "a": "$CH_4$", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "एथेन का आणविक सूत्र क्या है?", "a": "$C_2H_6$", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "प्रयोगशाला में यूरिया का निर्माण सर्वप्रथम किसने किया?", "a": "फ्रेडरिक वोहलर", "type": "fc", "badge": ""}, {"q": "केवल एकल आबंध वाले कार्बन यौगिक क्या कहलाते हैं?", "a": "संतृप्त यौगिक", "type": "fc", "badge": ""}, {"q": "द्वि-आबंध या त्रि-आबंध वाले कार्बन यौगिक क्या कहलाते हैं?", "a": "असंतृप्त यौगिक", "type": "fc", "badge": ""}, {"q": "संतृप्त हाइड्रोकार्बन श्रेणी को क्या कहा जाता है?", "a": "एल्केन", "type": "fc", "badge": ""}, {"q": "द्वि-आबंध वाले असंतृप्त हाइड्रोकार्बन क्या कहलाते हैं?", "a": "एल्कीन", "type": "fc", "badge": ""}, {"q": "त्रि-आबंध वाले असंतृप्त हाइड्रोकार्बन क्या कहलाते हैं?", "a": "एल्काइन", "type": "fc", "badge": ""}, {"q": "एल्केन का सामान्य सूत्र क्या है?", "a": "$C_nH_{2n+2}$", "type": "fc", "badge": ""}, {"q": "एल्कीन का सामान्य सूत्र क्या है?", "a": "$C_nH_{2n}$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "एल्काइन का सामान्य सूत्र क्या है?", "a": "$C_nH_{2n-2}$", "type": "fc", "badge": ""}, {"q": "समान आणविक सूत्र लेकिन विभिन्न संरचनाओं वाले यौगिक क्या कहलाते हैं?", "a": "संरचनात्मक समावयवन", "type": "fc", "badge": ""}, {"q": "बेंजीन का आणविक सूत्र क्या है?", "a": "$C_6H_6$", "type": "fc", "badge": ""}, {"q": "एल्कोहल का प्रकार्यात्मक समूह क्या है?", "a": "$-OH$", "type": "fc", "badge": ""}, {"q": "एल्डिहाइड का प्रकार्यात्मक समूह क्या है?", "a": "$-CHO$", "type": "fc", "badge": ""}, {"q": "कीटोन का प्रकार्यात्मक समूह क्या है?", "a": "$>C=O$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "कार्बोक्सिलिक अम्ल का प्रकार्यात्मक समूह क्या है?", "a": "$-COOH$", "type": "fc", "badge": ""}, {"q": "समजातीय श्रेणी के उत्तरोत्तर सदस्यों के बीच क्या अंतर होता है?", "a": "$-CH_2-$ इकाई", "type": "fc", "badge": ""}, {"q": "कार्बन का परमाणु द्रव्यमान क्या है?", "a": "$12 u$", "type": "fc", "badge": ""}, {"q": "दहन पर कार्बन यौगिक कौन सी गैस उत्पन्न करते हैं?", "a": "कार्बन डाइऑक्साइड", "type": "fc", "badge": ""}, {"q": "साबुन के अणुओं में जल में विलेय सिरे को क्या कहते हैं?", "a": "जलरागी सिरा", "type": "fc", "badge": ""}, {"q": "साबुन के अणुओं में हाइड्रोकार्बन में विलेय सिरे को क्या कहते हैं?", "a": "जलविरागी सिरा", "type": "fc", "badge": ""}, {"q": "साबुन के अणुओं के गुच्छों की संरचना को क्या कहा जाता है?", "a": "मिसेल (Micelle)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "कठोर जल में साबुन द्वारा दही जैसा पदार्थ क्यों बनता है?", "a": "$Ca$ एवं $Mg$ लवणों के कारण", "type": "fc", "badge": ""}, {"q": "असंतृप्त कार्बन यौगिक किस प्रकार की ज्वाला के साथ जलते हैं?", "a": "पीली एवं कज्जली ज्वाला", "type": "fc", "badge": ""}, {"q": "संतृप्त हाइड्रोकार्बन सामान्यतः किस प्रकार की ज्वाला के साथ जलते हैं?", "a": "स्वच्छ नीली ज्वाला", "type": "fc", "badge": ""}, {"q": "वनस्पति तेलों का हाइड्रोजनीकरण क्या बनाने में होता है?", "a": "वनस्पति घी", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "एल्कोहल के नामकरण के लिए किस अनुलग्न का उपयोग होता है?", "a": "-ऑल (-ol)", "type": "fc", "badge": ""}, {"q": "कीटोन के नामकरण के लिए किस अनुलग्न का उपयोग होता है?", "a": "-ओन (-one)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "एथेनॉल में कौन सा जहरीला पदार्थ मिलाकर उसे विकृत बनाया जाता है?", "a": "मेथेनॉल", "type": "fc", "badge": ""}, {"q": "कठोर जल में भी प्रभावी रहने वाले यौगिक क्या कहलाते हैं?", "a": "अपमार्जक (Detergents)", "type": "fc", "badge": ""}, {"q": "प्रोपेन का आणविक सूत्र क्या है?", "a": "$C_3H_8$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "ब्युटेन का आणविक सूत्र क्या है?", "a": "$C_4H_{10}$", "type": "fc", "badge": ""}, {"q": "एल्काइनों के प्रथम सदस्य का नाम क्या है?", "a": "एथाइन", "type": "fc", "badge": ""}, {"q": "साइक्लोहेक्सेन का आणविक सूत्र क्या है?", "a": "$C_6H_{12}$", "type": "fc", "badge": ""}, {"q": "जीवाश्मी ईंधन के उदाहरण क्या हैं?", "a": "कोयला तथा पेट्रोलियम", "type": "fc", "badge": ""}, {"q": "कार्बन डाइऑक्साइड की इलेक्ट्रॉन बिंदु संरचना में कितने आबंध होते हैं?", "a": "दो द्वि-आबंध", "type": "fc", "badge": ""}, {"q": "ग्रेफाइट की संरचना किस प्रकार की होती है?", "a": "षट्कोणीय", "type": "fc", "badge": ""}, {"q": "साबुन के घोल का बादल जैसा दिखना किसके कारण है?", "a": "प्रकाश का प्रकीर्णन", "type": "fc", "badge": ""}, {"q": "अपमार्जक सामान्यतः लंबी कार्बन शृंखला वाले कौन से लवण होते हैं?", "a": "अमोनियम या सल्फोनिक", "type": "fc", "badge": ""}, {"q": "संयोजकता के आधार पर कार्बन कैसा तत्व है?", "a": "चतुःसंयोजक", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "यौगिक $CH_3Cl$ में कौन सा विषम परमाणु उपस्थित है?", "a": "क्लोरीन", "type": "fc", "badge": ""}, {"q": "क्या मेथेनॉल पीने योग्य होता है?", "a": "नहीं, यह जहरीला है", "type": "fc", "badge": ""}, {"q": "एथेनॉइक अम्ल का अनुलग्न क्या है?", "a": "-ओइक अम्ल", "type": "fc", "badge": ""}], "5": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "वे सभी प्रक्रम जो सम्मिलित रूप से अनुरक्षण का कार्य करते हैं?", "a": "जैव प्रक्रम", "type": "fc", "badge": ""}, {"q": "ऊर्जा के स्रोत को शरीर के अंदर लेने का प्रक्रम?", "a": "पोषण", "type": "fc", "badge": ""}, {"q": "पृथ्वी पर जीवन किस आधार वाले अणुओं पर निर्भर है?", "a": "कार्बन आधारित", "type": "fc", "badge": ""}, {"q": "खाद्य स्रोत के विखंडन में ऑक्सीजन का उपयोग क्या कहलाता है?", "a": "श्वसन", "type": "fc", "badge": ""}, {"q": "अपशिष्ट उत्पादों को शरीर से बाहर निकालने का प्रक्रम?", "a": "उत्सर्जन", "type": "fc", "badge": ""}, {"q": "जटिल पदार्थों को सरल पदार्थों में खंडित करने वाले जैव-उत्प्रेरक?", "a": "एंजाइम", "type": "fc", "badge": ""}, {"q": "अकार्बनिक स्रोतों से $CO_{2}$ तथा जल प्राप्त करने वाले जीव?", "a": "स्वपोषी जीव", "type": "fc", "badge": ""}, {"q": "स्वपोषी पोषण का मुख्य उदाहरण क्या है?", "a": "हरे पौधे", "type": "fc", "badge": ""}, {"q": "पौधों में कार्बोहाइड्रेट किस रूप में संचित होता है?", "a": "मंड (Starch)", "type": "fc", "badge": ""}, {"q": "मानव शरीर में ऊर्जा किस रूप में संचित होती है?", "a": "ग्लाइकोजन", "type": "fc", "badge": ""}, {"q": "क्लोरोफिल का मुख्य कार्य क्या है?", "a": "प्रकाश ऊर्जा अवशोषित करना", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "पत्ती की सतह पर मौजूद सूक्ष्म छिद्र क्या कहलाते हैं?", "a": "रंध्र (Stomata)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "रंध्रों का खुलना और बंद होना किसका कार्य है?", "a": "द्वार कोशिकाएँ", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "प्रकाश संश्लेषण के लिए कौन-सी गैस अनिवार्य है?", "a": "कार्बन डाइऑक्साइड", "type": "fc", "badge": ""}, {"q": "प्रोटीन संश्लेषण के लिए आवश्यक तत्व कौन-सा है?", "a": "नाइट्रोजन", "type": "fc", "badge": ""}, {"q": "कवक (जैसे मशरूम) में पोषण की विधि क्या है?", "a": "विषमपोषी पोषण", "type": "fc", "badge": ""}, {"q": "अमीबा भोजन को किसकी मदद से ग्रहण करता है?", "a": "पादाभ (कूटपाद)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "अमीबा में भोजन का पाचन कहाँ होता है?", "a": "खाद्य रिक्तिका", "type": "fc", "badge": ""}, {"q": "लार में मौजूद एंजाइम का नाम क्या है?", "a": "लार एमिलेस", "type": "fc", "badge": ""}, {"q": "लार एमिलेस मंड को किसमें परिवर्तित करता है?", "a": "सरल शर्करा", "type": "fc", "badge": ""}, {"q": "आहार नली में भोजन की नियमित गति क्या कहलाती है?", "a": "क्रमाकुंचक गति", "type": "fc", "badge": ""}, {"q": "आमाशय में प्रोटीन पाचक एंजाइम कौन-सा है?", "a": "पेप्सिन", "type": "fc", "badge": ""}, {"q": "आमाशय की भित्ति की अम्ल से रक्षा कौन करता है?", "a": "श्लेष्मा (Mucus)", "type": "fc", "badge": ""}, {"q": "आहारनाल का सबसे लंबा भाग कौन-सा है?", "a": "क्षुद्रांत्र (छोटी आँत)", "type": "fc", "badge": ""}, {"q": "शाकाहारियों को सेल्युलोज पचाने के लिए कैसी क्षुद्रांत्र चाहिए?", "a": "लंबी", "type": "fc", "badge": ""}, {"q": "क्षुद्रांत्र में वसा का इमल्सीकरण कौन करता है?", "a": "पित्त लवण", "type": "fc", "badge": ""}, {"q": "अग्न्याशय से निकलने वाला प्रोटीन पाचक एंजाइम?", "a": "ट्रिप्सिन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "क्षुद्रांत्र में अवशोषण की सतह बढ़ाने वाले प्रवध्र्?", "a": "दीर्घरोम (Villi)", "type": "fc", "badge": ""}, {"q": "ग्लूकोज का पायरुवेट में विखंडन कहाँ होता है?", "a": "कोशिकाद्रव्य", "type": "fc", "badge": ""}, {"q": "ऑक्सीजन की अनुपस्थिति में होने वाला श्वसन?", "a": "अवायवीय श्वसन", "type": "fc", "badge": ""}, {"q": "यीस्ट में किण्वन के दौरान क्या बनता है?", "a": "इथेनॉल और $CO_{2}$", "type": "fc", "badge": ""}, {"q": "कोशिकीय श्वसन द्वारा ऊर्जा किस अणु के रूप में बनती है?", "a": "$ATP$", "type": "fc", "badge": ""}, {"q": "माइटोकॉन्ड्रिया में पायरुवेट के विखंडन से क्या प्राप्त होता है?", "a": "$CO_{2}$, जल, ऊर्जा", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "मांसपेशियों में अचानक ऐंठन किस अम्ल के कारण होती है?", "a": "लैक्टिक अम्ल", "type": "fc", "badge": ""}, {"q": "जलीय जीवों की श्वसन दर स्थलीय जीवों से कैसी होती है?", "a": "द्रुत (तेज)", "type": "fc", "badge": ""}, {"q": "मछली श्वसन के लिए किसका उपयोग करती है?", "a": "क्लोम (Gills)", "type": "fc", "badge": ""}, {"q": "मानव श्वसन तंत्र में गैसों का विनिमय कहाँ होता है?", "a": "कूपिका (Alveoli)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "रुधिर में ऑक्सीजन का वहन कौन करता है?", "a": "लाल रुधिर कणिकाएँ", "type": "fc", "badge": ""}, {"q": "मानव में श्वसन वर्णक का नाम क्या है?", "a": "हीमोग्लोबिन", "type": "fc", "badge": ""}, {"q": "रुधिर का तरल माध्यम क्या कहलाता है?", "a": "प्लाज्मा", "type": "fc", "badge": ""}, {"q": "हृदय का कौन-सा कोष्ठ ऑक्सीजन प्रचुर रुधिर प्राप्त करता है?", "a": "बायाँ अलिंद", "type": "fc", "badge": ""}, {"q": "रुधिर को शरीर के अंगों तक पंप करने वाला कोष्ठ?", "a": "निलय", "type": "fc", "badge": ""}, {"q": "रुधिर वाहिकाएं जो रुधिर को हृदय से दूर ले जाती हैं?", "a": "धमनी", "type": "fc", "badge": ""}, {"q": "कौन-सी वाहिकाएं रुधिर को अंगों से हृदय की ओर लाती हैं?", "a": "शिरा", "type": "fc", "badge": ""}, {"q": "रुधिर के थक्के बनाने में मदद करने वाली कोशिकाएं?", "a": "प्लेटलेट्स", "type": "fc", "badge": ""}, {"q": "रक्तचाप मापने वाले यंत्र का नाम क्या है?", "a": "स्फाइग्नोमैनोमीटर", "type": "fc", "badge": ""}, {"q": "पादपों में जल का वहन कौन-सा ऊतक करता है?", "a": "जाइलम", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "पादपों में भोजन का स्थानांतरण कौन करता है?", "a": "फ्लोएम", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "पत्तियों से जल का वाष्प के रूप में निकलना?", "a": "वाष्पोत्सर्जन", "type": "fc", "badge": ""}, {"q": "फ्लोएम में स्थानांतरण के लिए किसकी ऊर्जा चाहिए?", "a": "$ATP$", "type": "fc", "badge": ""}, {"q": "मानव उत्सर्जन तंत्र की मुख्य इकाई क्या है?", "a": "वृक्काणु (Nephron)", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "वृक्क में छना हुआ मूत्र कहाँ एकत्रित होता है?", "a": "मूत्राशय", "type": "fc", "badge": ""}, {"q": "रुधिर से यूरिया अलग करने का कार्य कौन करता है?", "a": "वृक्क (Kidney)", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "कृत्रिम वृक्क द्वारा नाइट्रोजन अपशिष्ट हटाने का प्रक्रम?", "a": "अपोहन (Dialysis)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "पादप अतिरिक्त जल से कैसे छुटकारा पाते हैं?", "a": "वाष्पोत्सर्जन द्वारा", "type": "fc", "badge": ""}, {"q": "पुराने जाइलम में अपशिष्ट किस रूप में संचित होते हैं?", "a": "रेजिन तथा गोंद", "type": "fc", "badge": ""}, {"q": "लार ग्रंथियों से निकलने वाला रस?", "a": "लार (Saliva)", "type": "fc", "badge": ""}, {"q": "अग्न्याशय से निकलने वाला वसा पाचक एंजाइम?", "a": "लाइपेज", "type": "fc", "badge": ""}, {"q": "पायरुवेट में कितने कार्बन अणु होते हैं?", "a": "तीन", "type": "fc", "badge": ""}, {"q": "ग्लूकोज में कितने कार्बन अणु होते हैं?", "a": "छह", "type": "fc", "badge": ""}, {"q": "कूपिकाओं की सतह का अनुमानित क्षेत्रफल?", "a": "80 वर्ग मीटर", "type": "fc", "badge": ""}, {"q": "धूम्रपान से नष्ट होने वाली बालों जैसी संरचनाएं?", "a": "सिलिया", "type": "fc", "badge": ""}, {"q": "मछली में जल से ऑक्सीजन कौन लेता है?", "a": "रुधिर (Gills में)", "type": "fc", "badge": ""}, {"q": "अमरबेल किस प्रकार के पोषण का उदाहरण है?", "a": "परजीवी पोषण", "type": "fc", "badge": ""}], "6": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "जीवों में नियंत्रण और समन्वय का कार्य कौन से ऊतक करते हैं?", "a": "तंत्रिका और पेशी ऊतक", "type": "fc", "badge": ""}, {"q": "तंत्रिका कोशिका की कार्यात्मक इकाई क्या है?", "a": "न्यूरॉन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सूचनाएँ न्यूरॉन के किस भाग द्वारा प्राप्त की जाती हैं?", "a": "द्रुमिका (डेंड्राइट)", "type": "fc", "badge": ""}, {"q": "द्रुमिका से प्राप्त सूचना कोशिकाकाय तक किस रूप में जाती है?", "a": "विद्युत आवेग", "type": "fc", "badge": ""}, {"q": "न्यूरॉन का वह भाग जिससे होकर आवेग यात्रा करता है?", "a": "तंत्रिकाक्ष (एक्सॉन)", "type": "fc", "badge": ""}, {"q": "दो तंत्रिका कोशिकाओं के बीच के रिक्त स्थान को क्या कहते हैं?", "a": "सिनेप्स (अंतर्ग्रथन)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "सिनेप्स के पार आवेग ले जाने के लिए क्या मुक्त होता है?", "a": "रसायन", "type": "fc", "badge": ""}, {"q": "गंध का पता लगाने वाले ग्राही क्या कहलाते हैं?", "a": "घ्राणग्राही", "type": "fc", "badge": ""}, {"q": "स्वाद का पता लगाने वाले ग्राही क्या कहलाते हैं?", "a": "रस संवेदी ग्राही", "type": "fc", "badge": ""}, {"q": "अचानक और तीव्र गति से होने वाली अनैच्छिक प्रतिक्रिया?", "a": "प्रतिवर्ती क्रिया", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "प्रतिवर्ती चाप का निर्माण कहाँ होता है?", "a": "मेरुरज्जु में", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "सूचनाएँ प्राप्त करने और एकीकृत करने वाला मुख्य अंग?", "a": "मस्तिष्क", "type": "fc", "badge": ""}, {"q": "मस्तिष्क और मेरुरज्जु मिलकर क्या बनाते हैं?", "a": "केंद्रीय तंत्रिका तंत्र ($CNS$)", "type": "fc", "badge": ""}, {"q": "मस्तिष्क का मुख्य सोचने वाला भाग कौन सा है?", "a": "अग्रमस्तिष्क", "type": "fc", "badge": ""}, {"q": "देखने, सुनने और सूंघने के विशिष्ट केंद्र कहाँ होते हैं?", "a": "अग्रमस्तिष्क", "type": "fc", "badge": ""}, {"q": "अग्रमस्तिष्क में भूख से संबंधित केंद्र कौन सा है?", "a": "पृथक क्षेत्र", "type": "fc", "badge": ""}, {"q": "रक्तचाप, लार आना और वमन कैसी क्रियाएँ हैं?", "a": "अनैच्छिक क्रियाएँ", "type": "fc", "badge": ""}, {"q": "अनैच्छिक क्रियाएँ पश्चमस्तिष्क के किस भाग द्वारा नियंत्रित होती हैं?", "a": "मेडुला", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "सीधी रेखा में चलना और साइकिल चलाना किसके द्वारा संभव है?", "a": "अनुमस्तिष्क (सेरिबेलम)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "शरीर की स्थिति और संतुलन के लिए कौन उत्तरदायी है?", "a": "अनुमस्तिष्क", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "मस्तिष्क को झटकों से बचाने वाला तरल कौन सा है?", "a": "कपाल तरल", "type": "fc", "badge": ""}, {"q": "मेरुरज्जु की रक्षा करने वाली हड्डी की संरचना?", "a": "कशेरुक दंड (रीढ़)", "type": "fc", "badge": ""}, {"q": "पेशी कोशिकाओं में आकृति बदलने के लिए क्या होता है?", "a": "विशेष प्रोटीन", "type": "fc", "badge": ""}, {"q": "पौधों में समन्वय किसके द्वारा होता है?", "a": "पादप हार्मोन", "type": "fc", "badge": ""}, {"q": "छुई-मुई के पौधे में गति का कारण क्या है?", "a": "जल की मात्रा परिवर्तन", "type": "fc", "badge": ""}, {"q": "प्रकाश की ओर प्ररोह का मुड़ना क्या कहलाता है?", "a": "प्रकाशानुवर्तन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "जड़ का नीचे की ओर बढ़ना किसका उदाहरण है?", "a": "धनात्मक गुरुत्वानुवर्तन", "type": "fc", "badge": ""}, {"q": "पराग नलिका का बीजांड की ओर बढ़ना क्या कहलाता है?", "a": "रसायनानुवर्तन", "type": "fc", "badge": ""}, {"q": "पौधों की लंबाई में वृद्धि करने वाला मुख्य हार्मोन?", "a": "ऑक्सिन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "तने की वृद्धि में सहायक पादप हार्मोन कौन सा है?", "a": "जिबबेरेलिन", "type": "fc", "badge": ""}, {"q": "कोशिका विभाजन को प्रेरित करने वाला पादप हार्मोन?", "a": "साइटोकाइनिन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "फलों और बीजों में अधिक सांद्रता में मिलने वाला हार्मोन?", "a": "साइटोकाइनिन", "type": "fc", "badge": ""}, {"q": "पौधों में वृद्धि को रोकने वाला हार्मोन कौन सा है?", "a": "एबसिसिक अम्ल", "type": "fc", "badge": ""}, {"q": "पत्तियों का मुरझाना किस हार्मोन के कारण होता है?", "a": "एबसिसिक अम्ल", "type": "fc", "badge": ""}, {"q": "लड़ो या भागो (Emergency) हार्मोन किसे कहते हैं?", "a": "एड्रीनालिन", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "एड्रीनालिन सीधे किसमें स्रावित होता है?", "a": "रुधिर (रक्त) में", "type": "fc", "badge": ""}, {"q": "थायरोक्सिन हार्मोन बनाने के लिए क्या आवश्यक है?", "a": "आयोडीन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "गॉइटर (घेंघा) रोग किसकी कमी से होता है?", "a": "आयोडीन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "शरीर की वृद्धि और विकास को नियंत्रित करने वाला हार्मोन?", "a": "वृद्धि हार्मोन", "type": "fc", "badge": ""}, {"q": "वृद्धि हार्मोन किस ग्रंथि से स्रावित होता है?", "a": "पीयूष ग्रंथि", "type": "fc", "badge": ""}, {"q": "नर में यौवनारंभ के लक्षण कौन पैदा करता है?", "a": "टेस्टोस्टेरोन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "मादा में मासिक चक्र का नियमन कौन करता है?", "a": "एस्ट्रोजन", "type": "fc", "badge": ""}, {"q": "इंसुलिन हार्मोन का उत्पादन कहाँ होता है?", "a": "अग्न्याशय", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "रक्त में शर्करा (शुगर) के स्तर का नियमन कौन करता है?", "a": "इंसुलिन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "मधुमेह के रोगियों को किसका इंजेक्शन दिया जाता है?", "a": "इंसुलिन", "type": "fc", "badge": ""}, {"q": "हार्मोन स्राव के समय और मात्रा का नियंत्रण तंत्र?", "a": "पुनर्भरण क्रियाविधि", "type": "fc", "badge": ""}, {"q": "मस्तिष्क का सबसे बड़ा और जटिल भाग?", "a": "प्रमस्तिष्क", "type": "fc", "badge": ""}, {"q": "गर्दन का फूलना किस बीमारी का लक्षण है?", "a": "ग़ॉइटर (घेंघा)", "type": "fc", "badge": ""}, {"q": "पौधों का प्रकाश की विपरीत दिशा में मुड़ना क्या है?", "a": "ऋणात्मक प्रकाशानुवर्तन", "type": "fc", "badge": ""}, {"q": "प्रतान का आधार से लिपट जाना किस हार्मोन के कारण है?", "a": "ऑक्सिन", "type": "fc", "badge": ""}, {"q": "अंतःस्रावी ग्रंथियों से निकलने वाले रसायन क्या कहलाते हैं?", "a": "हार्मोन", "type": "fc", "badge": ""}, {"q": "हृदय की धड़कन किस हार्मोन के कारण बढ़ जाती है?", "a": "एड्रीनालिन", "type": "fc", "badge": ""}, {"q": "अवटु ग्रंथि कहाँ स्थित होती है?", "a": "गर्दन (कंठ) में", "type": "fc", "badge": ""}, {"q": "पीयूष ग्रंथि को और किस नाम से जानते हैं?", "a": "मास्टर ग्रंथि", "type": "fc", "badge": ""}, {"q": "हार्मोन स्राव को प्रेरित करने वाला हार्मोन क्या कहलाता है?", "a": "मोचक हार्मोन", "type": "fc", "badge": ""}, {"q": "मेरुरज्जु कहाँ से निकलती है?", "a": "मेडुला से", "type": "fc", "badge": ""}, {"q": "मस्तिष्क की रक्षा करने वाली बाहरी हड्डी की परत?", "a": "कपाल (खोपड़ी)", "type": "fc", "badge": ""}, {"q": "न्यूरॉन में विद्युत संकेतों का रासायनिक संकेत में परिवर्तन कहाँ होता है?", "a": "सिनेप्स पर", "type": "fc", "badge": ""}, {"q": "जलानुवर्तन के लिए जड़ों की गति किस ओर होती है?", "a": "जल की ओर", "type": "fc", "badge": ""}, {"q": "अग्न्याशय से स्रावित शर्करा कम करने वाला हार्मोन?", "a": "इंसुलिन", "type": "fc", "badge": ""}, {"q": "वृषण से स्रावित होने वाला नर हार्मोन?", "a": "टेस्टोस्टेरोन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "अंडाशय से स्रावित होने वाला मादा हार्मोन?", "a": "एस्ट्रोजन", "type": "fc", "badge": ""}, {"q": "अवटु ग्रंथि (Thyroid) द्वारा स्रावित हार्मोन?", "a": "थायरोक्सिन", "type": "fc", "badge": ""}, {"q": "मस्तिष्क का कौन सा भाग शरीर की मुद्रा को नियंत्रित करता है?", "a": "अनुमस्तिष्क", "type": "fc", "badge": ""}], "7": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "जनन की मूल घटना क्या है?", "a": "DNA प्रतिकृति बनाना", "type": "fc", "badge": ""}, {"q": "DNA का पूरा नाम क्या है?", "a": "डी-ऑक्सीराइबोन्यूक्लिक अम्ल", "type": "fc", "badge": ""}, {"q": "कोशिका के केंद्रक में क्या पाए जाते हैं?", "a": "गुणसूत्र (DNA)", "type": "fc", "badge": ""}, {"q": "DNA प्रतिकृति में त्रुटि का क्या परिणाम है?", "a": "विभिन्नता", "type": "fc", "badge": ""}, {"q": "स्पीशीज की उत्तरजीविता के लिए क्या आवश्यक है?", "a": "विभिन्नता", "type": "fc", "badge": ""}, {"q": "अमीबा में कोशिका विभाजन किस तल से होता है?", "a": "किसी भी तल से", "type": "fc", "badge": ""}, {"q": "लेस्मानिया में विखंडन किस तल से होता है?", "a": "एक निर्धारित तल से", "type": "fc", "badge": ""}, {"q": "प्लाज्मोडियम में जनन की विधि क्या है?", "a": "बहुखंडन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "स्पाइरोगाइरा किस विधि से जनन करता है?", "a": "खंडन", "type": "fc", "badge": ""}, {"q": "पुनरुद्भवन की क्षमता रखने वाले जीव का नाम?", "a": "प्लेनेरिया (या हाइड्रा)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "हाइड्रा में जनन की अलैंगिक विधि?", "a": "मुकुलन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "पत्तियों की कोर पर कलिकाएँ किसमें बनती हैं?", "a": "ब्रायोफ़िलम", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "आलू की सतह पर पाए जाने वाले गर्त?", "a": "आँख (कलिका)", "type": "fc", "badge": ""}, {"q": "राइजोपस में जनन भाग कौन सा है?", "a": "बीजाणु", "type": "fc", "badge": ""}, {"q": "ऊतक संवर्धन में कोशिकाओं का समूह?", "a": "कैलस", "type": "fc", "badge": ""}, {"q": "पुष्प का नर जननांग कौन सा है?", "a": "पुंकेसर", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "पुष्प का मादा जननांग कौन सा है?", "a": "स्त्रीकेसर", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "परागकोश क्या उत्पादित करते हैं?", "a": "परागकण", "type": "fc", "badge": ""}, {"q": "स्त्रीकेसर का आधार वाला उभरा भाग?", "a": "अंडाशय", "type": "fc", "badge": ""}, {"q": "स्त्रीकेसर का चिपचिपा शीर्ष भाग?", "a": "वर्तिकाग्र", "type": "fc", "badge": ""}, {"q": "अंडाशय के अंदर क्या पाए जाते हैं?", "a": "बीजांड", "type": "fc", "badge": ""}, {"q": "परागकणों का वर्तिकाग्र तक स्थानांतरण?", "a": "परागण", "type": "fc", "badge": ""}, {"q": "एक ही पुष्प में होने वाला परागण?", "a": "स्व-परागण", "type": "fc", "badge": ""}, {"q": "निषेचन के पश्चात क्या बनता है?", "a": "युग्मनज (Zygote)", "type": "fc", "badge": ""}, {"q": "बीज के भविष्य की जड़?", "a": "मूलांकुर", "type": "fc", "badge": ""}, {"q": "बीज के भविष्य का प्ररोह?", "a": "प्रांकुर", "type": "fc", "badge": ""}, {"q": "लड़कों में यौवनारंभ का मुख्य हार्मोन?", "a": "टेस्टोस्टेरोन", "type": "fc", "badge": ""}, {"q": "लड़कियों में होने वाला मासिक चक्र?", "a": "ऋतुस्राव (रजोधर्म)", "type": "fc", "badge": ""}, {"q": "नर जनन कोशिका (शुक्राणु) कहाँ बनते हैं?", "a": "वृषण में", "type": "fc", "badge": ""}, {"q": "शुक्राणु उत्पादन हेतु आवश्यक ताप?", "a": "शरीर से कम", "type": "fc", "badge": ""}, {"q": "शुक्राणु और मूत्र का उभय मार्ग?", "a": "मूत्रमार्ग", "type": "fc", "badge": ""}, {"q": "मादा जनन कोशिका (अंड) का निर्माण?", "a": "अंडाशय में", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "निषेचन की क्रिया कहाँ होती है?", "a": "अंडवाहिका (फैलोपियन ट्यूब)", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "भ्रूण कहाँ स्थापित होता है?", "a": "गर्भाशय में", "type": "fc", "badge": ""}, {"q": "माँ से भ्रूण को पोषण देना वाली संरचना?", "a": "प्लैसेंटा (अपरा)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "मानव में गर्भ काल की अवधि?", "a": "लगभग 9 मास", "type": "fc", "badge": ""}, {"q": "रजोधर्म की अवधि कितने दिन होती है?", "a": "2 से 8 दिन", "type": "fc", "badge": ""}, {"q": "जीवाणु जनित यौन रोग का उदाहरण?", "a": "गोनेरिया (या सिफलिस)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "वायरस जनित यौन रोग का उदाहरण?", "a": "HIV-AIDS (या मस्सा)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "गर्भ रोकने की यांत्रिक अवरोध विधि?", "a": "कंडोम", "type": "fc", "badge": ""}, {"q": "गर्भाशय में लगाई जाने वाली गर्भनिरोधक युक्ति?", "a": "कॉपर-टी (Copper-T)", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "नर की शुक्रवाहिकाओं को अवरुद्ध करना?", "a": "नसबंदी (Vasectomy)", "type": "fc", "badge": ""}, {"q": "मादा की अंडवाहिनी को अवरुद्ध करना?", "a": "ट्यूबेक्टोमी", "type": "fc", "badge": ""}, {"q": "गैरकानूनी लिंग परीक्षण क्या है?", "a": "भ्रूण लिंग निर्धारण", "type": "fc", "badge": ""}, {"q": "अकेले जीव द्वारा नई पीढ़ी का सृजन?", "a": "अलैंगिक जनन", "type": "fc", "badge": ""}, {"q": "उभयलिंगी पुष्प का उदाहरण?", "a": "सरसों (या गुड़हल)", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "एकलिंगी पुष्प का उदाहरण?", "a": "पपीता (या तरबूज)", "type": "fc", "badge": ""}, {"q": "कलम और रोपण किसकी तकनीकें हैं?", "a": "कायिक प्रवर्धन", "type": "fc", "badge": ""}, {"q": "बीजाणु के चारों ओर की रक्षा परत?", "a": "मोटी भित्ति", "type": "fc", "badge": ""}, {"q": "निषेचन के बाद बीजांड क्या बनता है?", "a": "बीज", "type": "fc", "badge": ""}, {"q": "निषेचन के बाद अंडाशय क्या बनता है?", "a": "फल", "type": "fc", "badge": ""}, {"q": "यौवनारंभ के दौरान त्वचा का तैलीय होना?", "a": "मुहाँसे निकलना", "type": "fc", "badge": ""}, {"q": "गर्भाशय का मुख कहाँ खुलता है?", "a": "योनि में", "type": "fc", "badge": ""}, {"q": "अपशिष्ट पदार्थों का निपटान किसके माध्यम से?", "a": "प्लैसेंटा", "type": "fc", "badge": ""}, {"q": "अपरिपक्व अंड कहाँ संचित होते हैं?", "a": "अंडाशय में", "type": "fc", "badge": ""}, {"q": "यौन क्रियाओं के दौरान रोगों का संचरण?", "a": "लैंगिक संचरण", "type": "fc", "badge": ""}, {"q": "जनसंख्या का आकार कौन निर्धारित करता है?", "a": "जन्मदर एवं मृत्युदर", "type": "fc", "badge": ""}, {"q": "हाइड्रा की प्रजनन कोशिकाएँ क्या करती हैं?", "a": "नियमित विभाजन", "type": "fc", "badge": ""}, {"q": "प्रोस्टेट ग्रंथि का कार्य क्या है?", "a": "तरल माध्यम प्रदान करना", "type": "fc", "badge": ""}], "8": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "अधिकतम संख्या में सफल विभिन्नताएँ किस जनन द्वारा प्राप्त होती हैं?", "a": "लैंगिक जनन", "type": "fc", "badge": ""}, {"q": "अकेले जीवाणु के विभाजन से उत्पन्न संतति में अंतर का क्या कारण है?", "a": "$DNA$ प्रतिकृति में त्रुटियाँ", "type": "fc", "badge": ""}, {"q": "गन्ने के खेत में व्यक्तिगत पौधों में कैसी विभिन्नताएँ दिखती हैं?", "a": "बहुत कम", "type": "fc", "badge": ""}, {"q": "वंशागति के नियमों का प्रतिपादन किस वैज्ञानिक ने किया?", "a": "ग्रेगर जॉन मेंडल", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "मेंडल ने अपने प्रयोगों के लिए किस पौधे का चयन किया?", "a": "मटर", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "मेंडल के प्रयोग में $F_{1}$ पीढ़ी के सभी पौधे कैसे थे?", "a": "लंबे", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "मटर के दो विपर्यासी लक्षणों का उदाहरण दीजिए।", "a": "गोल और झुर्रीदार बीज", "type": "fc", "badge": ""}, {"q": "लक्षण 'T' और 't' में से प्रभावी लक्षण कौन सा है?", "a": "'T' (लंबाई)", "type": "fc", "badge": ""}, {"q": "मेंडल के $F_{2}$ पीढ़ी में लंबे और बौने पौधों का दृश्य अनुपात क्या था?", "a": "$3:1$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "$F_{2}$ पीढ़ी में $TT, Tt$ तथा $tt$ का अनुपात क्या होता है?", "a": "$1:2:1$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "जो लक्षण स्वयं को केवल समरूप स्थिति में व्यक्त करता है, क्या कहलाता है?", "a": "अप्रभावी लक्षण", "type": "fc", "badge": ""}, {"q": "कोशिका में प्रोटीन संश्लेषण के लिए सूचना स्रोत क्या है?", "a": "$DNA$", "type": "fc", "badge": ""}, {"q": "$DNA$ का वह भाग जिसमें प्रोटीन संश्लेषण की सूचना होती है, क्या कहलाता है?", "a": "जीन", "type": "fc", "badge": ""}, {"q": "पौधों में लंबाई को नियंत्रित करने वाले कारक क्या कहलाते हैं?", "a": "हार्मोन", "type": "fc", "badge": ""}, {"q": "हार्मोन की मात्रा किस प्रक्रम की दक्षता पर निर्भर करती है?", "a": "एंजाइम की दक्षता", "type": "fc", "badge": ""}, {"q": "मानव कोशिका में गुणसूत्रों के कितने जोड़े पाए जाते हैं?", "a": "23 जोड़े", "type": "fc", "badge": ""}, {"q": "मानव में लिंग निर्धारण का आधार क्या है?", "a": "आनुवंशिक आधार", "type": "fc", "badge": ""}, {"q": "स्त्री में लिंग गुणसूत्रों का कौन सा जोड़ा होता है?", "a": "$XX$", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "पुरुष में लिंग गुणसूत्रों का कौन सा जोड़ा होता है?", "a": "$XY$", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "मानव में बच्चे का लिंग किस जनि से प्राप्त गुणसूत्र पर निर्भर करता है?", "a": "पिता पर", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "यदि पिता से 'X' गुणसूत्र वंशानुगत हो, तो संतान क्या होगी?", "a": "लड़की", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "यदि पिता से 'Y' गुणसूत्र वंशानुगत हो, तो संतान क्या होगी?", "a": "लड़का", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सभी बच्चे अपनी माता से कौन सा लिंग गुणसूत्र प्राप्त करते हैं?", "a": "$X$ गुणसूत्र", "type": "fc", "badge": ""}, {"q": "स्वतंत्र रूप से वंशागत होने वाले दो लक्षणों का उदाहरण दें।", "a": "आकृति और रंग", "type": "fc", "badge": ""}, {"q": "घोंघे जैसे प्राणी में लिंग निर्धारण कैसा होता है?", "a": "गैर-आनुवंशिक", "type": "fc", "badge": ""}, {"q": "कुछ सरीसृपों में लिंग निर्धारण किस कारक पर निर्भर करता है?", "a": "पर्यावरण (तापमान)", "type": "fc", "badge": ""}, {"q": "मेंडल ने मटर के पौधों में कितने जोड़े विपर्यासी लक्षणों का अध्ययन किया?", "a": "अनेक जोड़े", "type": "fc", "badge": ""}, {"q": "मेंडल के प्रयोग में $F_{1}$ पौधों के स्व-निषेचन से कौन सी पीढ़ी प्राप्त हुई?", "a": "$F_{2}$ पीढ़ी", "type": "fc", "badge": ""}, {"q": "युग्मक के निर्माण के समय गुणसूत्रों के जोड़े का क्या होता है?", "a": "केवल एक गुणसूत्र जाता", "type": "fc", "badge": ""}, {"q": "युग्मज में गुणसूत्रों की संख्या पुनः सामान्य कैसे होती है?", "a": "युग्मकों के संलयन से", "type": "fc", "badge": ""}, {"q": "प्रोटीन के जीन में परिवर्तन का एंजाइम पर क्या प्रभाव पड़ता है?", "a": "दक्षता कम होना", "type": "fc", "badge": ""}, {"q": "मानव में कितने गुणसूत्र पूर्णरूपेण युग्म में होते हैं?", "a": "22 जोड़े", "type": "fc", "badge": ""}, {"q": "पुरुष में पाया जाने वाला छोटा गुणसूत्र क्या कहलाता है?", "a": "$Y$ गुणसूत्र", "type": "fc", "badge": ""}, {"q": "जीन सेट कहाँ स्थित होते हैं?", "a": "गुणसूत्रों पर", "type": "fc", "badge": ""}, {"q": "कायिक कोशिका में जीन के कितने सेट होते हैं?", "a": "दो सेट", "type": "fc", "badge": ""}, {"q": "मेंडल के अनुसार संतति में प्रत्येक लक्षण के कितने विकल्प होते हैं?", "a": "दो विकल्प", "type": "fc", "badge": ""}, {"q": "किस जनम प्रक्रम में आनुवंशिक पदार्थ का बराबर योगदान होता है?", "a": "लैंगिक जनन", "type": "fc", "badge": ""}, {"q": "वह लक्षण जो प्रथम पीढ़ी में दिखाई नहीं देता, क्या कहलाता है?", "a": "अप्रभावी लक्षण", "type": "fc", "badge": ""}, {"q": "कणपल्लव (ear lobe) के दो प्रकार कौन से हैं?", "a": "स्वतंत्र और जुड़े", "type": "fc", "badge": ""}, {"q": "अलैंगिक जनन में विभिन्नताएँ उत्पन्न होने का मुख्य कारण?", "a": "$DNA$ प्रतिकृति त्रुटि", "type": "fc", "badge": ""}, {"q": "मेंडल का गणितीय ज्ञान उनके किस कार्य में सहायक था?", "a": "वंशागति नियमों में", "type": "fc", "badge": ""}, {"q": "मेंडल ने अपने प्रयोगों का रिकॉर्ड कैसे रखा?", "a": "प्रत्येक पीढ़ी की गणना", "type": "fc", "badge": ""}, {"q": "लिंग गुणसूत्रों का वह जोड़ा जो पूर्ण नहीं होता, किसमें पाया जाता है?", "a": "पुरुष में", "type": "fc", "badge": ""}, {"q": "एक प्रभावी जीन की उपस्थिति में अप्रभावी जीन का क्या होता है?", "a": "व्यक्त नहीं होता", "type": "fc", "badge": ""}, {"q": "स्वतंत्र वंशानुगति का नियम किस क्रॉस द्वारा सिद्ध हुआ?", "a": "द्विसंकरण (Dihybrid cross)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "यदि $F_{2}$ में $tt$ संयोजन प्राप्त हो, तो पौधा कैसा होगा?", "a": "बौना", "type": "fc", "badge": ""}, {"q": "मेंडल के द्वि-संकरण प्रयोग में $F_{2}$ में कितने नए संयोजन मिले?", "a": "दो नए संयोजन", "type": "fc", "badge": ""}, {"q": "जीन किसकी कार्यात्मक इकाई है?", "a": "वंशागति की", "type": "fc", "badge": ""}, {"q": "प्रकृति में विभिन्नताएँ किस प्रकार सहायक हैं?", "a": "अस्तित्व बनाए रखने में", "type": "fc", "badge": ""}], "9": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "प्रकाश सामान्यतः किस पथ पर गमन करता है?", "a": "सरल रेखीय पथ", "type": "fc", "badge": ""}, {"q": "प्रकाश के बहुत छोटे अपारदर्शी वस्तु के किनारों पर मुड़ने की प्रक्रिया?", "a": "विवर्तन", "type": "fc", "badge": ""}, {"q": "वस्तुओं को हमारे लिए दृश्यमान कौन बनाता है?", "a": "प्रकाश", "type": "fc", "badge": ""}, {"q": "परावर्तन के नियम के अनुसार आपतन कोण किसके बराबर होता है?", "a": "परावर्तन कोण", "type": "fc", "badge": ""}, {"q": "आपतित किरण, अभिलंब तथा परावर्तित किरण कहाँ स्थित होते हैं?", "a": "एक ही तल में", "type": "fc", "badge": ""}, {"q": "समतल दर्पण द्वारा बना प्रतिबिंब सदैव कैसा होता है?", "a": "आभासी तथा सीधा", "type": "fc", "badge": ""}, {"q": "समतल दर्पण में प्रतिबिंब का साइज़ बिंब के _____ होता है।", "a": "बराबर", "type": "fc", "badge": ""}, {"q": "समतल दर्पण में प्रतिबिंब दर्पण के _____ उतनी ही दूरी पर बनता है।", "a": "पीछे", "type": "fc", "badge": ""}, {"q": "वह गोलीय दर्पण जिसका परावर्तक पृष्ठ अंदर की ओर वक्रित हो?", "a": "अवतल दर्पण", "type": "fc", "badge": ""}, {"q": "वह गोलीय दर्पण जिसका परावर्तक पृष्ठ बाहर की ओर वक्रित हो?", "a": "उत्तल दर्पण", "type": "fc", "badge": ""}, {"q": "गोलीय दर्पण के परावर्तक पृष्ठ के केंद्र को क्या कहते हैं?", "a": "ध्रुव ($P$)", "type": "fc", "badge": ""}, {"q": "गोलीय दर्पण का परावर्तक पृष्ठ जिस गोले का भाग है, उसका केंद्र?", "a": "वक्रता केंद्र ($C$)", "type": "fc", "badge": ""}, {"q": "ध्रुव ($P$) तथा वक्रता केंद्र ($C$) के बीच की दूरी?", "a": "वक्रता त्रिज्या ($R$)", "type": "fc", "badge": ""}, {"q": "ध्रुव तथा वक्रता त्रिज्या से गुजरने वाली सीधी काल्पनिक रेखा?", "a": "मुख्य अक्ष", "type": "fc", "badge": ""}, {"q": "अवतल दर्पण में मुख्य अक्ष के समांतर किरणें परावर्तन के बाद कहाँ मिलती हैं?", "a": "मुख्य फोकस ($F$)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "ध्रुव ($P$) तथा मुख्य फोकस ($F$) के बीच की दूरी?", "a": "फोकस दूरी ($f$)", "type": "fc", "badge": ""}, {"q": "गोलीय दर्पण के परावर्तक पृष्ठ की वृत्ताकार सीमा रेखा का व्यास?", "a": "दर्पण का द्वारक", "type": "fc", "badge": ""}, {"q": "वक्रता त्रिज्या ($R$) तथा फोकस दूरी ($f$) के बीच संबंध?", "a": "$R = 2f$", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "अवतल दर्पण में बिंब अनंत पर हो, तो प्रतिबिंब कहाँ बनेगा?", "a": "फोकस ($F$) पर", "type": "fc", "badge": ""}, {"q": "अवतल दर्पण में जब बिंब $C$ पर हो, तो प्रतिबिंब का साइज़?", "a": "समान साइज़", "type": "fc", "badge": ""}, {"q": "अवतल दर्पण में बिंब $P$ तथा $F$ के बीच हो, तो प्रतिबिंब?", "a": "आभासी तथा सीधा", "type": "fc", "badge": ""}, {"q": "दाढ़ी बनाने वाले दर्पणों (Shaving mirrors) के रूप में प्रयुक्त दर्पण?", "a": "अवतल दर्पण", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "दंत विशेषज्ञ मरीजों के दाँतों का बड़ा प्रतिबिंब देखने हेतु क्या उपयोग करते हैं?", "a": "अवतल दर्पण", "type": "fc", "badge": ""}, {"q": "सौर भट्टियों में सूर्य के प्रकाश को केंद्रित करने हेतु प्रयुक्त दर्पण?", "a": "अवतल दर्पण", "type": "fc", "badge": ""}, {"q": "वाहनों के पश्च-दृश्य (Rear-view) दर्पण के रूप में प्रयुक्त दर्पण?", "a": "उत्तल दर्पण", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "उत्तल दर्पण वाहनों में क्यों उपयोग किए जाते हैं?", "a": "विस्तृत दृष्टि क्षेत्र हेतु", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "गोलीय दर्पणों हेतु नई कार्तिय चिन्ह परिपाटी में मूल बिंदु किसे मानते हैं?", "a": "ध्रुव ($P$)", "type": "fc", "badge": ""}, {"q": "चिन्ह परिपाटी के अनुसार बिंब दर्पण के किस ओर रखा जाता है?", "a": "बाईं ओर", "type": "fc", "badge": ""}, {"q": "मुख्य अक्ष के लंबवत ऊपर की ओर मापी गई दूरियाँ होती हैं?", "a": "धनात्मक", "type": "fc", "badge": ""}, {"q": "मुख्य अक्ष के लंबवत नीचे की ओर मापी गई दूरियाँ होती हैं?", "a": "ऋणात्मक", "type": "fc", "badge": ""}, {"q": "गोलीय दर्पण हेतु दर्पण सूत्र क्या है?", "a": "$\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "प्रतिबिंब की ऊँचाई तथा बिंब की ऊँचाई का अनुपात?", "a": "आवर्धन ($m$)", "type": "fc", "badge": ""}, {"q": "गोलीय दर्पण हेतु आवर्धन ($m$) का दूरी से संबंधित सूत्र?", "a": "$m = -\\frac{v}{u}$", "type": "fc", "badge": ""}, {"q": "आवर्धन ($m$) का ऋणात्मक मान प्रतिबिंब की किस प्रकृति को दर्शाता है?", "a": "वास्तविक तथा उल्टा", "type": "fc", "badge": ""}, {"q": "प्रकाश के एक पारदर्शी माध्यम से दूसरे में जाने पर दिशा परिवर्तन?", "a": "प्रकाश का अपवर्तन", "type": "fc", "badge": ""}, {"q": "अपवर्तन का दूसरा नियम (स्नेल का नियम) क्या है?", "a": "$\\frac{\\sin i}{\\sin r} = \\text{constant}$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "माध्यम का निरपेक्ष अपवर्तनांक ($n_m$) ज्ञात करने का सूत्र?", "a": "$n_m = \\frac{c}{v}$", "type": "fc", "badge": ""}, {"q": "प्रकाश की चाल निर्वात में कितनी होती है?", "a": "$3 \\times 10^8 \\text{ m/s}$", "type": "fc", "badge": ""}, {"q": "दिए गए माध्यमों में हीरे का अपवर्तनांक कितना है?", "a": "$2.42$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "दो पृष्ठों से घिरा पारदर्शी माध्यम जिसका कम से कम एक पृष्ठ गोलीय हो?", "a": "लेंस", "type": "fc", "badge": ""}, {"q": "वह लेंस जो बीच से मोटा तथा किनारों से पतला हो?", "a": "उत्तल लेंस", "type": "fc", "badge": ""}, {"q": "वह लेंस जो किनारों से मोटा तथा बीच से पतला हो?", "a": "अवतल लेंस", "type": "fc", "badge": ""}, {"q": "उत्तल लेंस को और किस नाम से जाना जाता है?", "a": "अभिसारी लेंस", "type": "fc", "badge": ""}, {"q": "अवतल लेंस को और किस नाम से जाना जाता है?", "a": "अपसारी लेंस", "type": "fc", "badge": ""}, {"q": "लेंस का केंद्रीय बिंदु क्या कहलाता है?", "a": "प्रकाशिक केंद्र ($O$)", "type": "fc", "badge": ""}, {"q": "लेंस के प्रकाशिक केंद्र से गुजरने वाली प्रकाश किरण का क्या होता है?", "a": "बिना विचलन निर्गत", "type": "fc", "badge": ""}, {"q": "उत्तल लेंस में मुख्य अक्ष के समांतर किरणें अपवर्तन के बाद कहाँ मिलती हैं?", "a": "द्वितीय मुख्य फोकस", "type": "fc", "badge": ""}, {"q": "गोलीय लेंस हेतु लेंस सूत्र क्या है?", "a": "$\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "लेंस हेतु आवर्धन ($m$) का सूत्र (दूरी के रूप में)?", "a": "$m = \\frac{v}{u}$", "type": "fc", "badge": ""}, {"q": "किसी लेंस द्वारा प्रकाश किरणों को अभिसरित या अपसरित करने की मात्रा?", "a": "लेंस की क्षमता", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "लेंस की क्षमता ($P$) तथा फोकस दूरी ($f$) में संबंध?", "a": "$P = \\frac{1}{f}$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "लेंस की क्षमता का SI मात्रक क्या है?", "a": "डायोप्टर ($D$)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "1 डायोप्टर क्षमता वाले लेंस की फोकस दूरी कितनी होगी?", "a": "1 मीटर", "type": "fc", "badge": ""}, {"q": "उत्तल लेंस की क्षमता का चिन्ह कैसा होता है?", "a": "धनात्मक", "type": "fc", "badge": ""}, {"q": "अवलत लेंस की क्षमता का चिन्ह कैसा होता है?", "a": "ऋणात्मक", "type": "fc", "badge": ""}, {"q": "संपर्क में रखे लेंसों की कुल क्षमता ($P$) का सूत्र?", "a": "$P = P_1 + P_2 + P_3 + \\dots$", "type": "fc", "badge": ""}, {"q": "प्रकाशिक यंत्रों में प्रतिबिंब को स्पष्ट बनाने हेतु किसका उपयोग होता है?", "a": "लेंसों का संयोजन", "type": "fc", "badge": ""}, {"q": "यदि लेंस की क्षमता $+2.0 D$ है, तो वह कैसा लेंस है?", "a": "उत्तल लेंस", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "अपवर्तनांक का मान किस पर निर्भर करता है?", "a": "प्रकाश की चाल", "type": "fc", "badge": ""}], "10": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "नेत्र में प्रकाश एक पतली झिल्ली से होकर प्रवेश करता है, इसे क्या कहते हैं?", "a": "स्वच्छ मंडल (कॉर्निया)", "type": "fc", "badge": ""}, {"q": "नेत्र गोलक की आकृति कैसी होती है?", "a": "लगभग गोलाकार", "type": "fc", "badge": ""}, {"q": "मानव नेत्र गोलक का व्यास लगभग कितना होता है?", "a": "$2.3$ cm", "type": "fc", "badge": ""}, {"q": "पुतली के साइज को कौन नियंत्रित करता है?", "a": "परितारिका (Iris)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "नेत्र में प्रवेश करने वाले प्रकाश की मात्रा को कौन नियंत्रित करता है?", "a": "पुतली (Pupil)", "type": "fc", "badge": ""}, {"q": "नेत्र का वह प्रकाश-सुग्राही पर्दा जहाँ प्रतिबिंब बनता है?", "a": "दृष्टिपटल (रेटिना)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "अभिनेत्र लेंस रेटिना पर किस प्रकार का प्रतिबिंब बनाता है?", "a": "वास्तविक तथा उल्टा", "type": "fc", "badge": ""}, {"q": "रेटिना की प्रकाश-सुग्राही कोशिकाएं उत्तेजित होकर क्या उत्पन्न करती हैं?", "a": "विद्युत सिग्नल", "type": "fc", "badge": ""}, {"q": "रेटिना से उत्पन्न विद्युत सिग्नलों को मस्तिष्क तक कौन पहुँचाता है?", "a": "दृक् तंत्रिकाएं", "type": "fc", "badge": ""}, {"q": "अभिनेत्र लेंस किस प्रकार के पदार्थ का बना होता है?", "a": "रेशेदार जेलीवत पदार्थ", "type": "fc", "badge": ""}, {"q": "अभिनेत्र लेंस की फोकस दूरी में परिवर्तन किसके द्वारा किया जाता है?", "a": "पक्ष्मभाभी पेशियाँ", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "अभिनेत्र लेंस की अपनी फोकस दूरी को समायोजित करने की क्षमता?", "a": "समंजन क्षमता", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "नेत्र की वह न्यूनतम दूरी जहाँ वस्तु स्पष्ट दिखाई देती है?", "a": "स्पष्ट दर्शन की न्यूनतम दूरी", "type": "fc", "badge": ""}, {"q": "सामान्य दृष्टि के वयस्क के लिए निकट बिंदु की दूरी कितनी है?", "a": "लगभग $25$ cm", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "सामान्य नेत्र के लिए 'दूर-बिंदु' कहाँ स्थित होता है?", "a": "अनंत पर", "type": "fc", "badge": ""}, {"q": "अधिक आयु में क्रिस्टलीय लेंस के दूधिया या धुंधला होने की स्थिति?", "a": "मोतियाबिंद (Cataract)", "type": "fc", "badge": ""}, {"q": "निकट-दृष्टि दोष को अन्य किस नाम से जाना जाता है?", "a": "मायोपिया", "type": "fc", "badge": ""}, {"q": "निकट-दृष्टि दोष से पीड़ित व्यक्ति को कहाँ की वस्तुएँ स्पष्ट नहीं दिखतीं?", "a": "दूर की वस्तुएँ", "type": "fc", "badge": ""}, {"q": "निकट-दृष्टि दोष में वस्तु का प्रतिबिंब रेटिना के कहाँ बनता है?", "a": "दृष्टिपटल के सामने", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "निकट-दृष्टि दोष को संशोधित करने के लिए किस लेंस का उपयोग होता है?", "a": "उपयुक्त क्षमता का अवतल लेंस", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "दीर्घ-दृष्टि दोष का दूसरा नाम क्या है?", "a": "हाइपरमेट्रोपिया", "type": "fc", "badge": ""}, {"q": "दीर्घ-दृष्टि दोष में वस्तु का प्रतिबिंब रेटिना के कहाँ बनता है?", "a": "दृष्टिपटल के पीछे", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "दीर्घ-दृष्टि दोष के निवारण हेतु किस लेंस का उपयोग किया जाता है?", "a": "उत्तल लेंस", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "आयु में वृद्धि के साथ नेत्र की समंजन क्षमता घटने का दोष?", "a": "जरा-दूरदृष्टिता", "type": "fc", "badge": ""}, {"q": "जरा-दूरदृष्टिता दोष के लिए किस प्रकार के लेंस की आवश्यकता होती है?", "a": "द्विफोकसी लेंस (Bi-focal)", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "द्विफोकसी लेंस के ऊपरी भाग में कौन-सा लेंस होता है?", "a": "अवतल लेंस", "type": "fc", "badge": ""}, {"q": "द्विफोकसी लेंस का निचला भाग कौन-सा लेंस होता है?", "a": "उत्तल लेंस", "type": "fc", "badge": ""}, {"q": "प्रिज्म के दो पार्श्व फलकों के बीच के कोण को क्या कहते हैं?", "a": "प्रिज्म कोण", "type": "fc", "badge": ""}, {"q": "निर्गत किरण तथा आपतित किरण की दिशा के बीच बना कोण?", "a": "विचलन कोण ($\\angle D$)", "type": "fc", "badge": ""}, {"q": "श्वेत प्रकाश का इसके अवयवी वर्णों में विभाजन क्या कहलाता है?", "a": "विक्षेपण", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विक्षेपण के पश्चात प्राप्त प्रकाश के रंगीन बैंड को क्या कहते हैं?", "a": "स्पेक्ट्रम", "type": "fc", "badge": ""}, {"q": "वर्णों के क्रम को याद रखने के लिए प्रयुक्त शब्द क्या है?", "a": "VIBGYOR", "type": "fc", "badge": ""}, {"q": "स्पेक्ट्रम में किस रंग का झुकाव सबसे कम होता है?", "a": "लाल रंग", "type": "fc", "badge": ""}, {"q": "स्पेक्ट्रम में किस रंग की किरण सबसे अधिक झुकती है?", "a": "बैंगनी रंग", "type": "fc", "badge": ""}, {"q": "आकाश में इंद्रधनुष सदैव सूर्य की किस दिशा में बनता है?", "a": "विपरीत दिशा में", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "तारों का टिमटिमाना किस प्रकाशिक परिघटना के कारण होता है?", "a": "वायुमंडलीय अपवर्तन", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "वायुमंडलीय अपवर्तन के कारण सूर्य वास्तविक सूर्योदय से कितने समय पूर्व दिखता है?", "a": "$2$ मिनट", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "कोलाइडी कणों द्वारा प्रकाश के प्रकीर्णन की परिघटना क्या है?", "a": "टिंडल प्रभाव", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "स्वच्छ आकाश का रंग नीला क्यों दिखाई देता है?", "a": "प्रकाश का प्रकीर्णन", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "खतरे के संकेत का प्रकाश किस रंग का होता है?", "a": "लाल रंग", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "अत्यधिक ऊँचाई पर उड़ते यात्रियों को आकाश कैसा दिखता है?", "a": "काला", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "मृत्यु के पश्चात कितने समय के भीतर नेत्र निकाल लेने चाहिए?", "a": "$4-6$ घंटे", "type": "fc", "badge": ""}, {"q": "क्या मधुमेह से पीड़ित व्यक्ति नेत्रदान कर सकते हैं?", "a": "हाँ", "type": "fc", "badge": ""}, {"q": "किन रोगों से संक्रमित व्यक्ति नेत्रदान नहीं कर सकते?", "a": "एड्स, हेपेटाइटिस, जलभीति", "type": "fc", "badge": ""}, {"q": "नेत्रदान करने के लिए किसे तुरंत सूचित करना चाहिए?", "a": "समीप के नेत्र बैंक", "type": "fc", "badge": ""}, {"q": "एक जोड़ी नेत्र कॉर्निया अंधता वाले कितने व्यक्तियों को दृष्टि दे सकते हैं?", "a": "चार व्यक्तियों को", "type": "fc", "badge": ""}, {"q": "प्रिज्म द्वारा विक्षेपण का प्रयोग सबसे पहले किस वैज्ञानिक ने किया?", "a": "आइजैक न्यूटन", "type": "fc", "badge": ""}, {"q": "ग्रह क्यों नहीं टिमटिमाते?", "a": "पृथ्वी के अत्यंत निकट", "type": "fc", "badge": ""}, {"q": "वायुमंडल के अभाव में प्रकीर्णन न होने पर आकाश कैसा दिखेगा?", "a": "काला", "type": "fc", "badge": ""}, {"q": "इंद्रधनुष निर्माण में जल की बूंदें किस प्रकार कार्य करती हैं?", "a": "छोटे प्रिज्मों की भाँति", "type": "fc", "badge": ""}, {"q": "वायु में ठंडी परत की तुलना में गरम वायु का अपवर्तनांक कैसा होता है?", "a": "थोड़ा कम", "type": "fc", "badge": ""}, {"q": "आँख बंद करके हम क्या पहचान नहीं सकते?", "a": "वस्तुओं के रंग", "type": "fc", "badge": ""}, {"q": "पक्ष्मभाभी पेशियाँ शिथिल होने पर अभिनेत्र लेंस कैसा हो जाता है?", "a": "पतला", "type": "fc", "badge": ""}, {"q": "अभिनेत्र लेंस मोटा होने पर उसकी फोकस दूरी पर क्या प्रभाव पड़ता है?", "a": "फोकस दूरी घटती है", "type": "fc", "badge": ""}, {"q": "निकट-दृष्टि दोष उत्पन्न होने का मुख्य कारण क्या है?", "a": "अत्यधिक वक्रता या लंबा गोलक", "type": "fc", "badge": ""}, {"q": "दीर्घ-दृष्टि दोष होने का कारण क्या है?", "a": "छोटा गोलक या लंबी फोकस", "type": "fc", "badge": ""}, {"q": "लाल रंग का प्रकीर्णन कोहरे या धुएँ में सबसे कम क्यों होता है?", "a": "अधिक तरंगदैर्ध्य के कारण", "type": "fc", "badge": ""}, {"q": "आँख की पुतली का आकार अंधेरे में कैसा हो जाता है?", "a": "फैलकर बड़ा", "type": "fc", "badge": ""}, {"q": "नेत्र बैंक दान किए गए नेत्रों का मूल्यांकन किस आधार पर करता है?", "a": "उच्च चिकित्सा मानदंडों द्वारा", "type": "fc", "badge": ""}], "11": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "एकांक समय में किसी विशेष क्षेत्र से प्रवाहित आवेश के परिमाण को क्या कहते हैं?", "a": "विद्युत धारा", "type": "fc", "badge": ""}, {"q": "विद्युत आवेश के प्रवाह की दर क्या कहलाती है?", "a": "विद्युत धारा", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "विद्युत धारा का SI मात्रक क्या है?", "a": "एम्पियर ($A$)", "type": "fc", "badge": ""}, {"q": "विद्युत आवेश का SI मात्रक क्या है?", "a": "कूलॉम ($C$)", "type": "fc", "badge": ""}, {"q": "एक इलेक्ट्रॉन पर कितना आवेश होता है?", "a": "$1.6 \\times 10^{-19} C$", "type": "fc", "badge": ""}, {"q": "$1$ कूलॉम आवेश में लगभग कितने इलेक्ट्रॉन होते हैं?", "a": "$6 \\times 10^{18}$", "type": "fc", "badge": ""}, {"q": "विद्युत धारा के सतत तथा बंद पथ को क्या कहते हैं?", "a": "विद्युत परिपथ", "type": "fc", "badge": ""}, {"q": "परिपथ में सेल तथा बल्ब के बीच चालक संबंध कौन जोड़ता है?", "a": "स्विच (कूंजी)", "type": "fc", "badge": ""}, {"q": "परिपथ में विद्युत धारा की दिशा क्या मानी जाती है?", "a": "धन से ऋण", "type": "fc", "badge": ""}, {"q": "इलेक्ट्रॉन के प्रवाह की दिशा विद्युत धारा की दिशा के _____ होती है।", "a": "विपरीत", "type": "fc", "badge": ""}, {"q": "विद्युत धारा का सूत्र क्या है?", "a": "$I = \\frac{Q}{t}$", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "परिपथ में विद्युत धारा मापने के लिए किस यंत्र का उपयोग होता है?", "a": "एमीटर", "type": "fc", "badge": ""}, {"q": "एमीटर को परिपथ में किस क्रम में संयोजित किया जाता है?", "a": "श्रेणीक्रम में", "type": "fc", "badge": ""}, {"q": "$1$ मिलीएम्पियर ($1 mA$) में कितने एम्पियर होते हैं?", "a": "$10^{-3} A$", "type": "fc", "badge": ""}, {"q": "$1$ माइक्रोएम्पियर ($1 \\mu A$) में कितने एम्पियर होते हैं?", "a": "$10^{-6} A$", "type": "fc", "badge": ""}, {"q": "दो बिंदुओं के बीच विभवांतर ($V$) का सूत्र क्या है?", "a": "$V = \\frac{W}{Q}$", "type": "fc", "badge": ""}, {"q": "विद्युत विभवांतर का SI मात्रक क्या है?", "a": "वोल्ट ($V$)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विभवांतर मापने के लिए किस यंत्र का उपयोग किया जाता है?", "a": "वोल्टमीटर", "type": "fc", "badge": ""}, {"q": "वोल्टमीटर को परिपथ में कैसे संयोजित किया जाता है?", "a": "पार्श्वक्रम में", "type": "fc", "badge": ""}, {"q": "किसी चालक के सिरों पर विभवांतर बनाए रखने में कौन सहायता करता है?", "a": "सेल या बैटरी", "type": "fc", "badge": ""}, {"q": "$1$ वोल्ट बराबर होता है _____।", "a": "$1$ जूल / $1$ कूलॉम", "type": "fc", "badge": ""}, {"q": "ओम के नियम के अनुसार $V$ और $I$ में क्या संबंध है?", "a": "$V \\propto I$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "ओम के नियम का गणितीय सूत्र क्या है?", "a": "$V = IR$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "विद्युत प्रतिरोध का SI मात्रक क्या है?", "a": "ओम ($\\Omega$)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "चालक का वह गुण जो आवेश के प्रवाह का विरोध करता है, क्या कहलाता है?", "a": "प्रतिरोध", "type": "fc", "badge": ""}, {"q": "वोल्टता में बिना बदलाव किए धारा को नियंत्रित करने वाला अवयव है _____।", "a": "परिवर्ती प्रतिरोध", "type": "fc", "badge": ""}, {"q": "परिपथ के प्रतिरोध को परिवर्तित करने वाली युक्ति का नाम क्या है?", "a": "धारा नियंत्रक", "type": "fc", "badge": ""}, {"q": "चालक का प्रतिरोध उसकी लंबाई ($l$) के _____ होता है।", "a": "अनुक्रमानुपाती", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "चालक का प्रतिरोध अनुप्रस्थ काट के क्षेत्रफल ($A$) के _____ होता है।", "a": "व्युत्क्रमानुपाती", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "विद्युत प्रतिरोधकता का SI मात्रक क्या है?", "a": "ओम-मीटर ($\\Omega m$)", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "धातुओं और मिश्रधातुओं की प्रतिरोधकता कैसी होती है?", "a": "अत्यंत कम", "type": "fc", "badge": ""}, {"q": "विद्युतरोधी पदार्थों (जैसे काँच) की प्रतिरोधकता का कोटि मान क्या है?", "a": "$10^{12}$ से $10^{17} \\Omega m$", "type": "fc", "badge": ""}, {"q": "विद्युत टोस्टरों और इस्तरी के तापन अवयव किसके बनाए जाते हैं?", "a": "मिश्रधातु के", "type": "fc", "badge": ""}, {"q": "विद्युत बल्बों के तंतुओं के निर्माण में एकमात्र किस धातु का उपयोग होता है?", "a": "टंगस्टन", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "ताँबे और एल्युमीनियम का उपयोग विद्युत संचरण के तारों में क्यों होता है?", "a": "कम प्रतिरोधकता के कारण", "type": "fc", "badge": ""}, {"q": "जब प्रतिरोधक एक सिरे से दूसरा सिरा मिलाकर जुड़े हों, तो वह क्या कहलाता है?", "a": "श्रेणीक्रम संयोजन", "type": "fc", "badge": ""}, {"q": "जब प्रतिरोधक दो बिंदुओं के बीच एक साथ जुड़े हों, तो वह क्या कहलाता है?", "a": "पार्श्वक्रम संयोजन", "type": "fc", "badge": ""}, {"q": "श्रेणीक्रम में जुड़े प्रतिरोधों का तुल्य प्रतिरोध ($R_s$) क्या होता है?", "a": "$R_1 + R_2 + R_3$", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "श्रेणीक्रम संयोजन में परिपथ के हर भाग में क्या समान रहता है?", "a": "विद्युत धारा", "type": "fc", "badge": ""}, {"q": "पार्श्वक्रम संयोजन में प्रत्येक प्रतिरोधक के सिरों पर क्या समान रहता है?", "a": "विभवांतर", "type": "fc", "badge": ""}, {"q": "पार्श्वक्रम में तुल्य प्रतिरोध ($R_p$) का व्युत्क्रम किसके बराबर होता है?", "a": "व्युत्क्रमों के योग", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "घरों के विद्युत परिपथों में श्रेणीक्रम संयोजन का उपयोग क्यों नहीं किया जाता?", "a": "परिपथ टूटने के कारण", "type": "fc", "badge": ""}, {"q": "शुद्ध प्रतिरोधक परिपथ में ऊर्जा पूर्ण रूप से ऊष्मा में बदलती है, इसे क्या कहते हैं?", "a": "धारा का तापीय प्रभाव", "type": "fc", "badge": ""}, {"q": "जूल के तापन नियम के अनुसार ऊष्मा ($H$) का सूत्र क्या है?", "a": "$H = I^2Rt$", "type": "fc", "badge": "🏆 Board Exam 2024, 2025, 2026"}, {"q": "बल्ब के तंतु को नष्ट होने से बचाने के लिए उसमें कौन सी गैस भरी जाती है?", "a": "नाइट्रोजन या आर्गन", "type": "fc", "badge": ""}, {"q": "विद्युत परिपथों और साधित्रों की सुरक्षा के लिए सबसे महत्वपूर्ण युक्ति क्या है?", "a": "फ्यूज", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "फ्यूज को परिपथ में किस क्रम में जोड़ा जाता है?", "a": "श्रेणीक्रम में", "type": "fc", "badge": ""}, {"q": "विद्युत ऊर्जा के उपभुक्त होने की दर क्या कहलाती है?", "a": "विद्युत शक्ति", "type": "fc", "badge": ""}, {"q": "विद्युत शक्ति ($P$) का सूत्र क्या है?", "a": "$P = VI$", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विद्युत शक्ति का SI मात्रक क्या है?", "a": "वाट ($W$)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विद्युत ऊर्जा का व्यापारिक मात्रक क्या है?", "a": "किलोवाट घंटा ($kWh$)", "type": "fc", "badge": "🏆 Board Exam 2025, 2026"}, {"q": "$1 kWh$ ऊर्जा को सामान्य भाषा में क्या कहते हैं?", "a": "$1$ यूनिट", "type": "fc", "badge": ""}, {"q": "$1 kWh$ में कितने जूल होते हैं?", "a": "$3.6 \\times 10^6 J$", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "टंगस्टन का गलनांक कितना होता है?", "a": "$3380 ^\\circ C$", "type": "fc", "badge": ""}, {"q": "प्रतिरोधकता किस कारक पर निर्भर करती है?", "a": "पदार्थ की प्रकृति", "type": "fc", "badge": ""}, {"q": "समान साइज़ के चालकों में किसका प्रतिरोध कम होता है?", "a": "अच्छे चालक का", "type": "fc", "badge": ""}, {"q": "उच्च प्रतिरोध वाला चालक क्या कहलाता है?", "a": "प्रतिरोधक", "type": "fc", "badge": ""}, {"q": "अत्यंत उच्च प्रतिरोध वाला पदार्थ क्या कहलाता है?", "a": "विद्युतरोधी", "type": "fc", "badge": ""}, {"q": "विद्युत हीटर की डोरी क्यों नहीं चमकती जबकि तापन अवयव चमकता है?", "a": "डोरी का प्रतिरोध कम", "type": "fc", "badge": ""}, {"q": "शक्ति ($P$) का प्रतिरोध ($R$) और धारा ($I$) के पदों में सूत्र क्या है?", "a": "$P = I^2R$", "type": "fc", "badge": ""}, {"q": "विद्युत हीटर, टोस्टर और इस्तरी किस प्रभाव पर आधारित हैं?", "a": "धारा का तापीय प्रभाव", "type": "fc", "badge": ""}], "12": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "विद्युत धारा के चुंबकीय प्रभाव की खोज किसने की थी?", "a": "हैंस क्रिश्चियन ऑर्स्टेड", "type": "fc", "badge": ""}, {"q": "ऑर्स्टेड ने विद्युत और चुंबकत्व के संबंध की खोज किस वर्ष की?", "a": "सन् 1820", "type": "fc", "badge": ""}, {"q": "चुंबकीय क्षेत्र की तीव्रता का मात्रक किसके सम्मान में रखा गया है?", "a": "ऑर्स्टेड", "type": "fc", "badge": ""}, {"q": "दिक्सूचक (Compass) की सुई वास्तव में क्या होती है?", "a": "छोटा छड़ चुंबक", "type": "fc", "badge": ""}, {"q": "चुंबक का उत्तर दिशा की ओर संकेत करने वाला सिरा क्या कहलाता है?", "a": "उत्तर ध्रुव", "type": "fc", "badge": ""}, {"q": "चुंबक का दक्षिण दिशा की ओर संकेत करने वाला सिरा कहलाता है _____।", "a": "दक्षिण ध्रुव", "type": "fc", "badge": ""}, {"q": "चुंबक के सजातीय (एक जैसे) ध्रुवों के बीच क्या होता है?", "a": "प्रतिकर्षण", "type": "fc", "badge": ""}, {"q": "चुंबक के विजातीय (असमान) ध्रुवों के बीच क्या होता है?", "a": "आकर्षण", "type": "fc", "badge": ""}, {"q": "चुंबकीय क्षेत्र में परिमाण के साथ-साथ और क्या होती है?", "a": "दिशा", "type": "fc", "badge": ""}, {"q": "चुंबक के बाहर चुंबकीय क्षेत्र रेखाओं की दिशा क्या होती है?", "a": "उत्तर से दक्षिण ध्रुव", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "चुंबक के भीतर चुंबकीय क्षेत्र रेखाओं की दिशा क्या होती है?", "a": "दक्षिण से उत्तर ध्रुव", "type": "fc", "badge": "🏆 Board Exam 2025, 2026"}, {"q": "चुंबकीय क्षेत्र रेखाएँ किस प्रकार का वक्र बनाती हैं?", "a": "बंद वक्र", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "जहाँ चुंबकीय क्षेत्र रेखाएँ अधिक निकट होती हैं, वहाँ क्षेत्र कैसा होता है?", "a": "अधिक प्रबल", "type": "fc", "badge": ""}, {"q": "दो चुंबकीय क्षेत्र रेखाएँ एक-दूसरे को कभी _____ नहीं करतीं।", "a": "प्रतिच्छेद", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "सीधे विद्युत धारावाही चालक के चारों ओर चुंबकीय क्षेत्र का पैटर्न कैसा होता है?", "a": "संकेंद्री वृत्त", "type": "fc", "badge": ""}, {"q": "विद्युत धारावाही चालक से दूरी बढ़ने पर चुंबकीय क्षेत्र पर क्या प्रभाव पड़ता है?", "a": "घटता है", "type": "fc", "badge": ""}, {"q": "विद्युत धारा की दिशा और चुंबकीय क्षेत्र की दिशा बताने वाला नियम?", "a": "दक्षिण-हस्त अंगुष्ठ नियम", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "मैक्सवेल का कॉर्क-स्क्रू नियम किस नियम का दूसरा नाम है?", "a": "दक्षिण-हस्त अंगुष्ठ नियम", "type": "fc", "badge": ""}, {"q": "धारावाही वृत्ताकार पाश के केंद्र पर चुंबकीय क्षेत्र रेखाएँ कैसी होती हैं?", "a": "सरल रेखाएँ", "type": "fc", "badge": ""}, {"q": "यदि कुंडली में $n$ फेरे हों, तो चुंबकीय क्षेत्र एकल फेरे की तुलना में कितना होगा?", "a": "$n$ गुना अधिक", "type": "fc", "badge": ""}, {"q": "पास-पास लिपटे विद्युतरोधी ताँबे के तार की बेलनाकार कुंडली को क्या कहते हैं?", "a": "परिनालिका (Solenoid)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "परिनालिका के भीतर चुंबकीय क्षेत्र रेखाएँ कैसी होती हैं?", "a": "समांतर सरल रेखाएँ", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "परिनालिका के भीतर चुंबकीय क्षेत्र कैसा होता है?", "a": "एकसमान", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "परिनालिका के भीतर नरम लोहे की छड़ रखकर बनाया गया चुंबक?", "a": "विद्युत चुंबक", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "चुंबकीय क्षेत्र में धारावाही चालक पर आरोपित बल की दिशा किस नियम से ज्ञात करते हैं?", "a": "फ्लेमिंग वामहस्त नियम", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "फ्लेमिंग के वामहस्त नियम में तर्जनी क्या दर्शाती है?", "a": "चुंबकीय क्षेत्र", "type": "fc", "badge": ""}, {"q": "फ्लेमिंग के वामहस्त नियम में मध्यमा क्या दर्शाती है?", "a": "विद्युत धारा", "type": "fc", "badge": ""}, {"q": "फ्लेमिंग के वामहस्त नियम में अँगूठा क्या दर्शाता है?", "a": "बल या गति", "type": "fc", "badge": ""}, {"q": "धारावाही चालक पर आरोपित बल अधिकतम कब होता है?", "a": "जब धारा चुंबकीय-क्षेत्र के लंबित हो", "type": "fc", "badge": ""}, {"q": "मानव शरीर के किन दो अंगों में चुंबकीय क्षेत्र का उत्पन्न होना महत्वपूर्ण है?", "a": "हृदय तथा मस्तिष्क", "type": "fc", "badge": ""}, {"q": "शरीर के आंतरिक अंगों के प्रतिबिंब प्राप्त करने की तकनीक?", "a": "MRI", "type": "fc", "badge": ""}, {"q": "MRI का हिंदी में पूर्ण रूप क्या है?", "a": "चुंबकीय अनुनाद प्रतिबिंबन", "type": "fc", "badge": ""}, {"q": "विद्युन्मय तार (Live wire) पर प्रायः किस रंग का आवरण होता है?", "a": "लाल", "type": "fc", "badge": ""}, {"q": "उदासीन तार (Neutral wire) पर किस रंग का आवरण होता है?", "a": "काला", "type": "fc", "badge": ""}, {"q": "भूसंपर्क तार (Earth wire) पर किस रंग का विद्युतरोधी आवरण होता है?", "a": "हरा", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "भारत में विद्युन्मय तथा उदासीन तार के बीच विभवांतर कितना होता है?", "a": "220 $V$", "type": "fc", "badge": ""}, {"q": "भारत में घरेलू प्रत्यावर्ती धारा (AC) की आवृत्ति कितनी है?", "a": "50 $Hz$", "type": "fc", "badge": ""}, {"q": "उच्च शक्ति वाले साधित्रों (गीज़र, कूलर) के लिए कौन-सा परिपथ उपयोग होता है?", "a": "15 $A$ रेटिंग", "type": "fc", "badge": ""}, {"q": "बल्ब और पंखे जैसे कम शक्ति वाले साधित्रों के लिए परिपथ रेटिंग?", "a": "5 $A$ रेटिंग", "type": "fc", "badge": ""}, {"q": "धातु के आवरण वाले विद्युत उपकरणों को सुरक्षा हेतु किससे जोड़ा जाता है?", "a": "भूसंपर्क तार (Earth)", "type": "fc", "badge": ""}, {"q": "घरेलू परिपथ में सभी साधित्रों को किस क्रम में जोड़ा जाता है?", "a": "पार्श्वक्रम (Parallel)", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "विद्युन्मय और उदासीन तार के सीधे संपर्क में आने को क्या कहते हैं?", "a": "लघु-पथन (Short circuit)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "लघु-पथन के समय परिपथ में विद्युत धारा का मान अचानक _____ हो जाता है।", "a": "बहुत अधिक", "type": "fc", "badge": ""}, {"q": "घरेलू परिपथों को अतिभारण और लघु-पथन से बचाने वाली सुरक्षा युक्ति?", "a": "विद्युत फ्यूज", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "फ्यूज तार का गलनांक कैसा होना चाहिए?", "a": "कम", "type": "fc", "badge": ""}, {"q": "एक ही सॉकेट से कई विद्युत उपकरणों को जोड़ने से क्या हो सकता है?", "a": "अतिभारण (Overloading)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "फ्यूज विद्युत धारा के किस प्रभाव पर आधारित है?", "a": "तापीय प्रभाव", "type": "fc", "badge": ""}, {"q": "विद्युत मोटर विद्युत ऊर्जा को किस ऊर्जा में बदलती है?", "a": "यांत्रिक ऊर्जा", "type": "fc", "badge": ""}, {"q": "विद्युत जनित्र (Generator) किस सिद्धांत पर आधारित है?", "a": "वैद्युतचुंबकीय प्रेरण", "type": "fc", "badge": ""}, {"q": "भूसंपर्क तार का मुख्य कार्य क्या है?", "a": "विद्युत आघात से सुरक्षा", "type": "fc", "badge": ""}, {"q": "फ्यूज को परिपथ में किस तार के साथ श्रेणीक्रम में जोड़ा जाता है?", "a": "विद्युन्मय तार", "type": "fc", "badge": ""}, {"q": "चुंबक के चारों ओर का वह क्षेत्र जहाँ उसके बल का अनुभव किया जा सके?", "a": "चुंबकीय क्षेत्र", "type": "fc", "badge": ""}], "13": [{"q": "क्या आप जानते हैं कि यह आपके लिए किसने तैयार किया है?", "a": "हाँ, आपके ऋषि सर", "type": "fc", "badge": "👑 Gyanu AI Special"}, {"q": "पारितंत्र (Ecosystem) के दो मुख्य घटक कौन से हैं?", "a": "जैव और अजैव घटक", "type": "fc", "badge": ""}, {"q": "बगीचा और खेत किस प्रकार के पारितंत्र के उदाहरण हैं?", "a": "मानव निर्मित (कृत्रिम)", "type": "fc", "badge": ""}, {"q": "वन, तालाब और झील किस प्रकार के पारितंत्र हैं?", "a": "प्राकृतिक पारितंत्र", "type": "fc", "badge": ""}, {"q": "वायु, मृदा, प्रकाश और तापमान पारितंत्र के कौन से घटक हैं?", "a": "अजैव घटक", "type": "fc", "badge": ""}, {"q": "पौधे, जंतु और सूक्ष्मजीव पारितंत्र के कौन से घटक हैं?", "a": "जैव घटक", "type": "fc", "badge": ""}, {"q": "सौर ऊर्जा को रासायनिक ऊर्जा में बदलने वाले जीव क्या कहलाते हैं?", "a": "उत्पादक", "type": "fc", "badge": ""}, {"q": "नील-हरित शैवाल किस श्रेणी के जीव हैं?", "a": "उत्पादक", "type": "fc", "badge": ""}, {"q": "उपभोक्ता को भोजन की आदतों के आधार पर कितने भागों में बाँटा गया है?", "a": "चार भाग", "type": "fc", "badge": ""}, {"q": "वे जीव जो सीधे उत्पादकों का भक्षण करते हैं, क्या कहलाते हैं?", "a": "शाकाहारी (प्राथमिक उपभोक्ता)", "type": "fc", "badge": ""}, {"q": "बैक्टीरिया और कवक मृत अवशेषों का अपघटन करते हैं, वे क्या कहलाते हैं?", "a": "अपघटक (अपमार्जक)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "आहार शृंखला (Food Chain) का प्रत्येक चरण क्या कहलाता है?", "a": "पोषी स्तर", "type": "fc", "badge": "🏆 Board Exam 2024"}, {"q": "आहार शृंखला में प्रथम पोषी स्तर पर कौन होते हैं?", "a": "उत्पादक", "type": "fc", "badge": ""}, {"q": "आहार शृंखला में द्वितीय पोषी स्तर पर कौन होते हैं?", "a": "प्राथमिक उपभोक्ता (शाकाहारी)", "type": "fc", "badge": ""}, {"q": "आहार शृंखला में तृतीय पोषी स्तर पर कौन होते हैं?", "a": "द्वितीय उपभोक्ता (मांसाहारी)", "type": "fc", "badge": ""}, {"q": "स्थलीय पारितंत्र में हरे पौधे सौर ऊर्जा का कितना प्रतिशत खाद्य ऊर्जा में बदलते हैं?", "a": "लगभग $1\\%$", "type": "fc", "badge": ""}, {"q": "प्रत्येक पोषी स्तर पर उपलब्ध कार्बनिक पदार्थों का औसतन कितना प्रतिशत अगले स्तर तक पहुँचता है?", "a": "$10\\%$ भाग", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "आहार शृंखला सामान्यतः कितने चरणों की होती है?", "a": "तीन या चार", "type": "fc", "badge": ""}, {"q": "पारितंत्र में ऊर्जा का प्रवाह सदैव कैसा होता है?", "a": "एकदिशिक (Unidirectional)", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "अनेक आहार शृंखलाओं का आपसी जाल क्या कहलाता है?", "a": "आहार जाल (Food Web)", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "हानिकारक रसायनों का पोषी स्तरों में संचित होना क्या कहलाता है?", "a": "जैव-आवर्धन", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "आहार शृंखला में मनुष्य का स्थान कहाँ होता है?", "a": "शीर्षस्थ (सर्वाधिक संचयन)", "type": "fc", "badge": ""}, {"q": "ओज़ोन ($O_3$) के एक अणु में ऑक्सीजन के कितने परमाणु होते हैं?", "a": "तीन परमाणु", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "ओज़ोन परत पृथ्वी को किस हानिकारक विकिरण से बचाती है?", "a": "पराबैंगनी (UV) विकिरण", "type": "fc", "badge": "🏆 Board Exam 2024, 2025"}, {"q": "पराबैंगनी विकिरण मानव में कौन सा गंभीर रोग उत्पन्न कर सकता है?", "a": "त्वचा का कैंसर", "type": "fc", "badge": ""}, {"q": "ओज़ोन परत के क्षय के लिए उत्तरदायी मुख्य रसायन कौन सा है?", "a": "क्लोरोफ्लुओरो कार्बन (CFCs)", "type": "fc", "badge": "🏆 Board Exam 2024, 2026"}, {"q": "UNEP का पूरा नाम क्या है?", "a": "संयुक्त राष्ट्र पर्यावरण कार्यक्रम", "type": "fc", "badge": ""}, {"q": "वे पदार्थ जो जैविक प्रक्रम द्वारा अपघटित हो जाते हैं, क्या कहलाते हैं?", "a": "जैव निम्नीकरणीय", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "प्लास्टिक और पॉलिथीन किस प्रकार के अपशिष्ट पदार्थ हैं?", "a": "अजैव निम्नीकरणीय", "type": "fc", "badge": "🏆 Board Exam 2025"}, {"q": "एन्जाइम (Enzymes) अपनी क्रिया में कैसे होते हैं?", "a": "विशिष्ट (Specific)", "type": "fc", "badge": ""}, {"q": "अजैव निम्नीकरणीय पदार्थ पर्यावरण में किस रूप में बने रहते हैं?", "a": "लंबे समय तक अक्रिय", "type": "fc", "badge": ""}, {"q": "रेलगाड़ियों में मिट्टी के पात्र 'कुलहड़' का उपयोग क्यों बंद कर दिया गया?", "a": "उर्वर मिट्टी की हानि", "type": "fc", "badge": ""}, {"q": "CFCs का उपयोग मुख्य रूप से कहाँ किया जाता है?", "a": "रेफ्रिजरेटर और अग्निशमन", "type": "fc", "badge": ""}, {"q": "स्वपोषी जीव सौर प्रकाश की उपस्थिति में अकार्बनिक पदार्थों से क्या बनाते हैं?", "a": "शर्करा एवं मंड", "type": "fc", "badge": ""}, {"q": "अमरबेल (Cuscuta) उपभोक्ता की किस श्रेणी में आता है?", "a": "परजीवी", "type": "fc", "badge": ""}, {"q": "जटिल कार्बनिक पदार्थों को सरल अकार्बनिक पदार्थों में बदलने वाले सूक्ष्मजीव क्या हैं?", "a": "अपमार्जक (Decomposers)", "type": "fc", "badge": ""}, {"q": "सौर ऊर्जा को ग्रहण कर रासायनिक ऊर्जा में बदलने का कार्य कौन करता है?", "a": "स्वपोषी (उत्पादक)", "type": "fc", "badge": ""}, {"q": "किस पोषी स्तर के बाद उपयोगी ऊर्जा की मात्रा बहुत कम हो जाती है?", "a": "चौथे पोषी स्तर", "type": "fc", "badge": ""}, {"q": "सामान्यतः किस पोषी स्तर पर जीवों की संख्या सर्वाधिक होती है?", "a": "निचले (उत्पादक) स्तर", "type": "fc", "badge": ""}, {"q": "वायुमंडल के उच्चतर स्तर पर $O_2$ अणुओं से ओज़ोन बनाने के लिए क्या आवश्यक है?", "a": "उच्च ऊर्जा UV विकिरण", "type": "fc", "badge": ""}, {"q": "1987 में CFCs के उत्पादन को किस वर्ष के स्तर पर सीमित रखने का समझौता हुआ?", "a": "$1986$ के स्तर पर", "type": "fc", "badge": ""}, {"q": "फलों और सब्जियों के छिलके किस श्रेणी के पदार्थ हैं?", "a": "जैव निम्नीकरणीय", "type": "fc", "badge": ""}, {"q": "डिस्पोजेबल प्लास्टिक कप की तुलना में कागज के कप का उपयोग क्यों बेहतर है?", "a": "पुनर्चक्रण योग्य एवं जैव-निम्नीकरणीय", "type": "fc", "badge": "🏆 Board Exam 2026"}, {"q": "खाए हुए भोजन की मात्रा का लगभग कितना भाग जैव मात्रा में बदलता है?", "a": "केवल $10\\%$", "type": "fc", "badge": ""}, {"q": "वायुमंडल में ओज़ोन की मात्रा में तीव्रता से गिरावट कब से आने लगी?", "a": "$1980$ के दशक से", "type": "fc", "badge": ""}, {"q": "मृदा की प्राकृतिक पुनःपूर्ति में कौन सहायता करता है?", "a": "अपमार्जक (अपघटक)", "type": "fc", "badge": ""}, {"q": "स्वपोषी सौर ऊर्जा का केवल $1\\%$ भाग ही क्यों ग्रहण कर पाते हैं?", "a": "पत्तियों द्वारा अवशोषण क्षमता", "type": "fc", "badge": ""}, {"q": "प्राथमिक उपभोक्ताओं द्वारा खाई गई ऊर्जा का ह्रास किस रूप में होता है?", "a": "ऊष्मा के रूप में", "type": "fc", "badge": ""}, {"q": "आहार जाल में शाखाओं का पैटर्न कैसा होता है?", "a": "शाखावनित (Branched)", "type": "fc", "badge": ""}, {"q": "खाद्य पदार्थों में पीड़कनाशी रसायनों को क्या धोकर अलग किया जा सकता है?", "a": "नहीं", "type": "fc", "badge": ""}, {"q": "पारितंत्र में संतुलन बनाए रखने के लिए किन घटकों में अन्योन्यक्रिया होती है?", "a": "जैव और अजैव घटक", "type": "fc", "badge": ""}, {"q": "जल जीवशाला (Aquarium) किस प्रकार का तंत्र है?", "a": "मानव-निर्मित स्वनिर्वाह तंत्र", "type": "fc", "badge": ""}, {"q": "उच्च मांसाहारी पोषी स्तर के किस चरण का निर्माण करते हैं?", "a": "चतुर्थ पोषी स्तर", "type": "fc", "badge": ""}, {"q": "ऊर्जा प्रवाह का चित्र 13.4 क्या स्पष्ट करता है?", "a": "प्रवाह एकदिशिक है", "type": "fc", "badge": ""}, {"q": "ओज़ोन परत के अपक्षय के लिए जिम्मेदार कृत्रिम रसायन?", "a": "CFCs", "type": "fc", "badge": ""}, {"q": "क्या अजैव निम्नीकरणीय कचरा मृदा प्रदूषण का कारण बनता है?", "a": "हाँ", "type": "fc", "badge": ""}, {"q": "घास के मैदान में टिड्डा किस पोषी स्तर का प्रतिनिधित्व करता है?", "a": "द्वितीय (प्राथमिक उपभोक्ता)", "type": "fc", "badge": ""}, {"q": "अपमार्जक जटिल कार्बनिक पदार्थों को किसमें बदलते हैं?", "a": "सरल अकार्बनिक पदार्थ", "type": "fc", "badge": ""}, {"q": "पौधों में पीड़कनाशी कहाँ से प्रवेश करते हैं?", "a": "मृदा या जल से", "type": "fc", "badge": ""}, {"q": "स्वपोषी द्वारा ग्रहण ऊर्जा वापस सौर ऊर्जा क्यों नहीं बनती?", "a": "प्रवाह एकदिशिक होने के कारण", "type": "fc", "badge": ""}, {"q": "पराबैंगनी किरणें $O_2$ को तोड़कर क्या बनाती हैं?", "a": "स्वतंत्र ऑक्सीजन परमाणु ($O$)", "type": "fc", "badge": ""}, {"q": "क्या घरेलू कचरे में जैव निम्नीकरणीय पदार्थ होते हैं?", "a": "हाँ", "type": "fc", "badge": ""}, {"q": "किस प्रकार की जीवन शैली ने कचरे की मात्रा बढ़ा दी है?", "a": "उपभोगवादी एवं डिस्पोजेबल संस्कृति", "type": "fc", "badge": ""}, {"q": "मृदा के खनिज और प्रकाश किस श्रेणी के घटक हैं?", "a": "अजैव घटक", "type": "fc", "badge": ""}, {"q": "क्या मनुष्य सर्वाहारी (Omnivore) है?", "a": "हाँ", "type": "fc", "badge": ""}, {"q": "आहार जाल में ऊर्जा की हानि प्रत्येक स्तर पर कैसी होती है?", "a": "उत्तरोत्तर ह्रास", "type": "fc", "badge": ""}, {"q": "पीड़कनाशी रसायनों का सबसे अधिक संकेंद्रण कहाँ होता है?", "a": "अंतिम पोषी स्तर", "type": "fc", "badge": ""}, {"q": "अजैविक कारक पारितंत्र में क्या निर्धारित करते हैं?", "a": "भौतिक वातावरण", "type": "fc", "badge": ""}, {"q": "तालाब में उत्पादक कौन होते हैं?", "a": "जलीय पौधे और शैवाल", "type": "fc", "badge": ""}, {"q": "सूक्ष्मजीवों की अनुपस्थिति में क्या होगा?", "a": "कचरे का ढेर जमा", "type": "fc", "badge": ""}, {"q": "पारितंत्र के जैव घटकों में कौन अन्योन्यक्रिया करते हैं?", "a": "सभी सजीव", "type": "fc", "badge": ""}, {"q": "क्या वन एक प्राकृतिक पारितंत्र है?", "a": "हाँ", "type": "fc", "badge": ""}, {"q": "जैव आवर्धन का प्रभाव किस पर सबसे बुरा पड़ता है?", "a": "सर्वोच्च उपभोक्ता (मानव)", "type": "fc", "badge": ""}, {"q": "पर्यावरण में ओज़ोन कहाँ पाई जाती है?", "a": "वायुमंडल के ऊपरी स्तर", "type": "fc", "badge": ""}, {"q": "कचरा प्रबंधन की समस्या को कम करने का एक तरीका?", "a": "पुनर्चक्रण (Recycling)", "type": "fc", "badge": ""}]};
+
+    // Complete 13 Chapters Textbook Q&A + Individual Exact Year 2024, 2025, 2026 Board PYQs
+    const masterQAData = {"1": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "वायु में जलाने से पहले मैग्नीशियम रिबन को साफ़ क्यों किया जाता है?", "a": "मैग्नीशियम नम वायु से क्रिया कर अपनी सतह पर मैग्नीशियम ऑक्साइड ($MgO$) की अक्रिय परत बना लेता है जो जलने में बाधा डालती है। इसे रेगमाल से रगड़कर साफ़ किया जाता है ताकि शुद्ध धातु आसानी से जल सके।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "किसी पदार्थ 'X' के विलयन का उपयोग सफ़ेदी करने के लिए होता है: (i) पदार्थ 'X' का नाम व सूत्र (ii) जल के साथ अभिक्रिया लिखिए।", "a": "(i) पदार्थ 'X': कैल्सियम ऑक्साइड (बिना बुझा चूना), सूत्र: $CaO$<br>(ii) जल से क्रिया: $CaO(s) + H_2O(l) \\rightarrow Ca(OH)_2(aq) + \\text{ऊष्मा}$ (बुझा हुआ चूना)"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "जल के विद्युत अपघटन में एक परखनली में एकत्रित गैस की मात्रा दूसरी से दोगुनी क्यों है? उस गैस का नाम बताइए।", "a": "गैस का नाम: हाइड्रोजन ($H_2$)। जल ($2H_2O \\rightarrow 2H_2 + O_2$) में हाइड्रोजन और ऑक्सीजन का आयतन अनुपात $2:1$ होता है, इसलिए कैथोड पर हाइड्रोजन गैस ऑक्सीजन से दोगुनी एकत्रित होती है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "जब लोहे की कील को कॉपर सल्फेट के विलयन में डुबोया जाता है तो विलयन का रंग क्यों बदल जाता है?", "a": "लोहा ($Fe$), कॉपर ($Cu$) से अधिक क्रियाशील है। यह नीले कॉपर सल्फेट ($CuSO_4$) से कॉपर को विस्थापित कर हल्के हरे रंग का फेरस सल्फेट ($FeSO_4$) बना देता है:<br>$Fe(s) + CuSO_4(aq) \\rightarrow FeSO_4(aq) + Cu(s)$"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 1.5)", "isPYQ": false, "q": "फेरस सल्फेट क्रिस्टल को गर्म करने पर क्या प्रेक्षण प्राप्त होते हैं?", "a": "गर्म करने पर हरा रंग बदलकर श्वेत और फिर लाल-भूरा ($Fe_2O_3$) हो जाता है तथा तीक्ष्ण गंध वाली $SO_2$ व $SO_3$ गैसें निकलती हैं:<br>$2FeSO_4(s) \\xrightarrow{\\Delta} Fe_2O_3(s) + SO_2(g) + SO_3(g)$"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 1.8)", "isPYQ": false, "q": "सूर्य के प्रकाश में सिल्वर क्लोराइड का रंग धूसर (grey) क्यों हो जाता है? इसका उपयोग किसमें होता है?", "a": "श्वेत सिल्वर क्लोराइड सूर्य के प्रकाश में वियोजित होकर सिल्वर (धूसर रंग) व क्लोरीन बनाता है: $2AgCl(s) \\rightarrow 2Ag(s) + Cl_2(g)$। इसका उपयोग श्याम-श्वेत (Black & White) फ़ोटोग्राफ़ी में होता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संतुलित रासायनिक समीकरण क्या है? रासायनिक समीकरण को संतुलित करना क्यों आवश्यक है?", "a": "जिस समीकरण में तीर के दोनों ओर प्रत्येक तत्व के परमाणुओं की संख्या समान हो, उसे संतुलित समीकरण कहते हैं। द्रव्यमान संरक्षण के नियम (द्रव्यमान का न सृजन होता है न विनाश) का पालन करने हेतु इसे संतुलित करना आवश्यक है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "ऊष्माक्षेपी एवं ऊष्माशोषी अभिक्रिया का क्या अर्थ है? उदाहरण दीजिए।", "a": "• ऊष्माक्षेपी: उत्पाद के साथ ऊष्मा भी उत्पन्न होती है (उदा. $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O + \\text{ऊष्मा}$)।<br>• ऊष्माशोषी: अभिकारकों को तोड़ने में ऊष्मा अवशोषित होती है (उदा. $CaCO_3 + \\text{ऊष्मा} \\rightarrow CaO + CO_2$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "श्वसन को ऊष्माक्षेपी अभिक्रिया क्यों कहते हैं?", "a": "कोशिकाओं में ग्लूकोज ऑक्सीजन से मिलकर ऑक्सीकृत होता है और ऊर्जा मुक्त करता है:<br>$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + \\text{ऊर्जा}$"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "विस्थापन एवं द्विविस्थापन अभिक्रियाओं में क्या अंतर है?", "a": "• विस्थापन: अधिक क्रियाशील तत्व कम क्रियाशील तत्व को उसके लवण से हटाता है ($Zn + CuSO_4 \\rightarrow ZnSO_4 + Cu$)।<br>• द्विविस्थापन: अभिकारकों के बीच आयनों का आदान-प्रदान होता है ($Na_2SO_4 + BaCl_2 \\rightarrow BaSO_4\\downarrow + 2NaCl$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संक्षारण व विकृतगंधिता को समझाइए तथा वसायुक्त खाद्य पदार्थों में नाइट्रोजन क्यों भरते हैं?", "a": "• संक्षारण: वायु व नमी से धातु का धीरे-धीरे नष्ट होना (लोहे पर जंग)।<br>• विकृतगंधिता: वसा/तेल के उपचयन से स्वाद व गंध खराब होना। चिप्स की थैली में अक्रिय नाइट्रोजन गैस भरकर उपचयन रोका जाता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "बिना बुझा हुआ चूना का रासायनिक सूत्र लिखिए।", "a": "$CaO$ (कैल्सियम ऑक्साइड)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "संतुलित समीकरण $Fe + H_2O \\rightarrow Fe_3O_4 + H_2$ में $Fe$ का गुणांक क्या है?", "a": "संतुलित समीकरण: $3Fe + 4H_2O \\rightarrow Fe_3O_4 + 4H_2$। अतः $Fe$ का गुणांक $3$ है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "लेड नाइट्रेट के तापन से उत्सर्जित भूरी गैस का नाम व रासायनिक समीकरण लिखिए।", "a": "उत्सर्जित भूरी गैस: नाइट्रोजन डाइऑक्साइड ($NO_2$)।<br>समीकरण: $2Pb(NO_3)_2 \\xrightarrow{\\Delta} 2PbO + 4NO_2 + O_2$"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "रासायनिक अभिक्रिया $Pb + CuCl_2 \\rightarrow [X] + Cu$ में उत्पाद $[X]$ को पहचानिए तथा वियोजन अभिक्रिया को संयोजन अभिक्रिया के विपरीत क्यों कहा जाता है?", "a": "• $[X] = PbCl_2$ (लेड क्लोराइड)।<br>• संयोजन में दो पदार्थ जुड़कर एकल उत्पाद बनाते हैं, जबकि वियोजन में एकल अभिकारक टूटकर दो या अधिक उत्पाद बनाता है, इसलिए यह संयोजन के विपरीत है।"}, {"cat": "🏆 RBSE Board Exam 2024 (4 अंक)", "isPYQ": true, "q": "अपचयन की परिभाषा लिखिए तथा कॉपर चूर्ण के उपचयन को समीकरण सहित समझाइए।", "a": "• अपचयन: किसी पदार्थ से ऑक्सीजन का ह्रास या हाइड्रोजन का योग होना अपचयन कहलाता है।<br>• चाइना डिश में कॉपर चूर्ण को गर्म करने पर उस पर काले रंग की कॉपर (II) ऑक्साइड की परत चढ़ जाती है: $2Cu + O_2 \\xrightarrow{\\Delta} 2CuO$"}], "2": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आपको तीन परखनलियाँ दी गई हैं (आसवित जल, अम्लीय व क्षारीय विलयन)। केवल लाल लिटमस पत्र से पहचान कैसे करेंगे?", "a": "1. लाल लिटमस जिस परखनली में नीला हो जाए, वह क्षारीय विलयन है।<br>2. इस नीले हो चुके लिटमस को शेष दो में डालने पर जिसमें यह पुनः लाल हो जाए, वह अम्लीय है।<br>3. जिसमें कोई रंग परिवर्तन न हो, वह आसवित जल (उदासीन) है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पीतल एवं ताँबे के बर्तनों में दही एवं खट्टे पदार्थ क्यों नहीं रखने चाहिए?", "a": "दही व खट्टे पदार्थों में अम्ल (जैसे लैक्टिक अम्ल) होते हैं, जो पीतल व ताँबे से क्रिया करके विषैले लवण बनाते हैं जिनसे भोजन विषाक्त हो जाता है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अम्ल का जलीय विलयन क्यों विद्युत का चालन करता है, जबकि ग्लूकोज़ व एल्कोहल नहीं करते?", "a": "अम्ल जल में घुलकर मुक्त हाइड्रोजन आयन ($H^+ / H_3O^+$) बनाते हैं जो विद्युत धारा का चालन करते हैं। ग्लूकोज़ और एल्कोहल आयनीकृत होकर $H^+$ आयन नहीं देते।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "शुष्क हाइड्रोक्लोरिक गैस शुष्क लिटमस पत्र के रंग को क्यों नहीं बदलती है?", "a": "जल की अनुपस्थिति में शुष्क $HCl$ गैस से $H^+$ आयन पृथक नहीं हो पाते। मुक्त $H^+$ आयन न बनने से लिटमस का रंग नहीं बदलता।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अम्ल को तनुकृत करते समय अम्ल को जल में मिलाना चाहिए, न कि जल को अम्ल में। क्यों?", "a": "सांद्र अम्ल में जल मिलाना अत्यंत ऊष्माक्षेपी है। यदि अम्ल में जल डालें तो अचानक उत्पन्न तीव्र ऊष्मा से मिश्रण बाहर उछलकर त्वचा जला सकता है और काँच का पात्र टूट सकता है।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 2.5)", "isPYQ": false, "q": "चूने के पानी में $CO_2$ प्रवाहित करने पर क्या होता है? अत्यधिक गैस प्रवाहित करने पर क्या परिवर्तन आता है?", "a": "• कम मात्रा में: अघुलनशील कैल्सियम कार्बोनेट ($CaCO_3$) बनने से पानी दूधिया हो जाता है।<br>• अधिक मात्रा में: जल में विलयशील कैल्सियम हाइड्रोजनकार्बोनेट $[Ca(HCO_3)_2]$ बनने से दूधियापन गायब हो जाता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "ताज़े दूध का pH 6 होता है। दही बनने पर pH में क्या परिवर्तन होगा? ग्वाला ताज़े दूध में थोड़ा बेकिंग सोडा क्यों मिलाता है?", "a": "दही बनने पर लैक्टिक अम्ल के कारण pH 6 से कम हो जाता है। ग्वाला बेकिंग सोडा मिलाकर दूध को हल्का क्षारीय कर देता है ताकि दूध जल्दी खट्टा न हो।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "प्लास्टर ऑफ पेरिस को आर्द्र-रोधी बर्तन में क्यों रखा जाना चाहिए?", "a": "POP ($CaSO_4 \\cdot \\frac{1}{2}H_2O$) नमी के संपर्क में आकर जल अवशोषित कर कठोर जिप्सम ($CaSO_4 \\cdot 2H_2O$) में बदल जाता है और जमने का गुण खो देता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "धोने का सोडा एवं बेकिंग सोडा के दो-दो प्रमुख उपयोग लिखिए।", "a": "• धोने का सोडा ($Na_2CO_3 \\cdot 10H_2O$): (i) काँच, साबुन व कागज़ उद्योग में (ii) जल की स्थायी कठोरता हटाने में।<br>• बेकिंग सोडा ($NaHCO_3$): (i) बेकिंग पाउडर बनाने में (ii) पेट की अम्लता दूर करने (ऐन्टैसिड) में।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "दही (खट्टे दूध) में उपस्थित अम्ल का नाम लिखिए।", "a": "लैक्टिक अम्ल (Lactic Acid)।"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "नेटल (Nettle) के डंक में उपस्थित अम्ल का नाम लिखिए।", "a": "मेथेनॉइक अम्ल (फॉर्मिक अम्ल)।"}, {"cat": "🏆 RBSE Board Exam 2025 (3 अंक)", "isPYQ": true, "q": "क्लोर-क्षार प्रक्रिया किसे कहते हैं? रासायनिक समीकरण लिखिए।", "a": "सोडियम क्लोराइड के जलीय विलयन (लवण जल) में विद्युत प्रवाहित करने पर यह वियोजित होकर सोडियम हाइड्रोक्साइड ($NaOH$), क्लोरीन ($Cl_2$) व हाइड्रोजन ($H_2$) बनाता है:<br>$2NaCl(aq) + 2H_2O(l) \\rightarrow 2NaOH(aq) + Cl_2(g) + H_2(g)$"}, {"cat": "🏆 RBSE Board Exam 2024 (3 अंक)", "isPYQ": true, "q": "प्लास्टर ऑफ पेरिस (POP) का रासायनिक सूत्र तथा इसकी जल के साथ अभिक्रिया का समीकरण लिखिए।", "a": "• सूत्र: $CaSO_4 \\cdot \\frac{1}{2}H_2O$ (कैल्सियम सल्फेट अर्धहाइड्रेट)<br>• जल से अभिक्रिया: $CaSO_4 \\cdot \\frac{1}{2}H_2O + 1\\frac{1}{2}H_2O \\rightarrow CaSO_4 \\cdot 2H_2O$ (जिप्सम)"}, {"cat": "🏆 RBSE Board Exam 2026 (4 अंक)", "isPYQ": true, "q": "क्रिस्टलन का जल किसे कहते हैं? नीले थोथे एवं धोने के सोडे के सूत्र लिखकर उनमें क्रिस्टलन के जल के अणुओं की संख्या बताइए।", "a": "लवण के एक सूत्र इकाई में जल के निश्चित अणुओं की संख्या को क्रिस्टलन का जल कहते हैं।<br>• नीला थोथा ($CuSO_4 \\cdot 5H_2O$): 5 अणु जल<br>• धोने का सोडा ($Na_2CO_3 \\cdot 10H_2O$): 10 अणु जल"}], "3": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आघातवर्ध्य तथा तन्य का अर्थ बताइए। सोडियम को किरोसिन में डुबोकर क्यों रखा जाता है?", "a": "• आघातवर्ध्यता: धातुओं को पीटकर पतली चादर बनाना (सोना, चाँदी)।<br>• तन्यता: धातु से पतले तार खींचना (सोना)।<br>• सोडियम हवा व नमी से तुरंत क्रिया कर आग पकड़ लेता है, इसलिए इसे किरोसिन तेल में डुबोकर रखते हैं।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आयनिक यौगिकों का गलनांक उच्च क्यों होता है?", "a": "आयनिक यौगिकों में विपरीत आवेशित धनायनों एवं ऋणायनों के मध्य अत्यंत मजबूत स्थिर विद्युत आकर्षण बल होता है, जिसे तोड़ने के लिए बहुत अधिक ऊष्मा चाहिए।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "खाद्य पदार्थ के डिब्बों पर जिंक की बजाय टिन का लेप क्यों होता है? तथा गर्म जल का टैंक बनाने में ताँबे का उपयोग क्यों होता है?", "a": "• टिन की अपेक्षा जिंक अधिक अभिक्रियाशील है और खाद्य अम्लों से क्रिया कर सकता है।<br>• ताँबा गर्म जल या भाप से क्रिया नहीं करता, जबकि लोहा भाप से क्रिया कर जंग खा जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "सबसे अधिक तन्य धातु का नाम लिखिए।", "a": "सोना (Gold - $Au$)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "कमरे के ताप पर द्रव अवस्था में पाई जाने वाली अधातु तथा मिश्रधातु पीतल के घटक लिखिए।", "a": "• द्रव अधातु: ब्रोमीन ($Br$)<br>• पीतल (Brass) के घटक: ताँबा ($Cu$) एवं जस्ता ($Zn$)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "धातुओं $Mg, Zn$ तथा $Fe$ को उनकी अभिक्रियाशीलता के घटते क्रम में व्यवस्थित कीजिए।", "a": "$Mg > Zn > Fe$ (मैग्नीशियम > जिंक > आयरन)।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "उभयधर्मी ऑक्साइड (Amphoteric Oxides) किसे कहते हैं? दो उदाहरण दीजिए।", "a": "ऐसे धातु ऑक्साइड जो अम्ल तथा क्षारक दोनों से अभिक्रिया करके लवण एवं जल बनाते हैं, उभयधर्मी ऑक्साइड कहलाते हैं। उदाहरण: ऐलुमिनियम ऑक्साइड ($Al_2O_3$) तथा जिंक ऑक्साइड ($ZnO$)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "थर्मिट अभिक्रिया क्या है? इसका रासायनिक समीकरण व उपयोग लिखिए।", "a": "आयरन (III) ऑक्साइड ($Fe_2O_3$) के साथ ऐलुमिनियम की अत्यधिक ऊष्माक्षेपी अभिक्रिया जिससे गलित लोहा प्राप्त होता है:<br>$Fe_2O_3(s) + 2Al(s) \\rightarrow 2Fe(l) + Al_2O_3(s) + \\text{ऊष्मा}$<br>उपयोग: रेलवे पटरियों एवं मशीनी दरारों को जोड़ने में।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "भर्जन (Roasting) एवं निस्तापन (Calcination) में अंतर उदाहरण सहित स्पष्ट कीजिए।", "a": "• भर्जन: सल्फाइड अयस्क को वायु की उपस्थिति में अधिक ताप पर गर्म कर ऑक्साइड में बदलना ($2ZnS + 3O_2 \\xrightarrow{\\Delta} 2ZnO + 2SO_2$)।<br>• निस्तापन: कार्बोनेट अयस्क को सीमित वायु में गर्म कर ऑक्साइड में बदलना ($ZnCO_3 \\xrightarrow{\\Delta} ZnO + CO_2$)।"}], "4": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पेन्टेन ($C_5H_{12}$) के कितने संरचनात्मक समावयव होते हैं? तथा एथेनॉल से एथेनॉइक अम्ल में परिवर्तन को ऑक्सीकरण क्यों कहते हैं?", "a": "• पेन्टेन के 3 समावयव होते हैं: n-पेन्टेन, आइसोपेन्टेन और नियोपेन्टेन।<br>• क्षारीय $KMnO_4$ की उपस्थिति में एथेनॉल में ऑक्सीजन जुड़ता है ($CH_3CH_2OH + 2[O] \\rightarrow CH_3COOH + H_2O$), अतः यह ऑक्सीकरण है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "प्रयोग द्वारा आप एल्कोहल एवं कार्बोक्सिलिक अम्ल में कैसे अंतर कर सकते हैं?", "a": "सोडियम हाइड्रोजनकार्बोनेट ($NaHCO_3$) परीक्षण: कार्बोक्सिलिक अम्ल में $NaHCO_3$ मिलाने पर तीव्र बुदबुदाहट के साथ $CO_2$ गैस निकलती है, जबकि एल्कोहल कोई अभिक्रिया नहीं देता।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activities)", "isPYQ": false, "q": "एस्टरीकरण (Esterification) एवं साबुनीकरण (Saponification) अभिक्रिया समीकरण सहित समझाइए।", "a": "• एस्टरीकरण: अम्ल की उपस्थिति में एथेनॉइक अम्ल व एथेनॉल मिलकर मीठी फलों जैसी गंध वाला एस्टर बनाते हैं ($CH_3COOH + C_2H_5OH \\rightarrow CH_3COOC_2H_5 + H_2O$)।<br>• साबुनीकरण: एस्टर की $NaOH$ से क्रिया द्वारा साबुन बनने की प्रक्रिया ($CH_3COOC_2H_5 + NaOH \\rightarrow C_2H_5OH + CH_3COONa$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "समजातीय श्रेणी (Homologous Series) क्या है?", "a": "समान प्रकार्यात्मक समूह वाले यौगिकों की ऐसी श्रेणी जिनमें दो क्रमागत सदस्यों के बीच $-CH_2-$ इकाई तथा $14\\text{ u}$ आणविक द्रव्यमान का अंतर होता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "एथेन ($C_2H_6$) के एक अणु में सहसंयोजक आबंधों की संख्या कितनी होती है?", "a": "7 सहसंयोजक आबंध।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "प्रोपेन ($C_3H_8$) में सहसंयोजक आबंधों की संख्या तथा कीटोन का प्रकार्यात्मक समूह लिखिए।", "a": "• प्रोपेन में आबंध = 10 सहसंयोजक आबंध<br>• कीटोन समूह = $>C=O$ (अनुलग्न: -ओन)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "मेथेन ($CH_4$) में सहसंयोजक आबंधों की संख्या तथा यौगिक $CH_3-C\\equiv CH$ का नाम लिखिए।", "a": "• मेथेन में आबंध = 4 सहसंयोजक आबंध<br>• $CH_3-C\\equiv CH$ का नाम = प्रोपाइन (Propyne)"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "कार्बन के दो विशिष्ट गुणधर्म कौन-से हैं जिनके कारण कार्बन यौगिकों की विशाल संख्या पाई जाती है?", "a": "1. शृंखलन (Catenation): कार्बन परमाणुओं का आपस में जुड़कर लंबी शृंखला बनाने का गुण।<br>2. चतुःसंयोजकता (Tetravalency): कार्बन की संयोजकता 4 होना।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "संकलन (हाइड्रोजनीकरण) अभिक्रिया क्या है? इसका औद्योगिक अनुप्रयोग लिखिए।", "a": "निकैल ($Ni$) उत्प्रेरक की उपस्थिति में असंतृप्त हाइड्रोकार्बन (वनस्पति तेल) में हाइड्रोजन जोड़कर संतृप्त हाइड्रोकार्बन (वनस्पति घी) बनाने की क्रिया संकलन अभिक्रिया कहलाती है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "साबुन की मिसेल (Micelle) निर्माण तथा सफाई प्रक्रिया की क्रियाविधि समझाइए।", "a": "साबुन के अणु के दो सिरे होते हैं—जलरागी (आयनिक सिरा) जो जल में घुलता है तथा जलविरागी (हाइड्रोकार्बन पूँछ) जो तैलीय मैल से जुड़ता है। ये मैल के चारों ओर गोलाकार 'मिसेल' बनाते हैं जिससे मैल पानी के साथ बाहर निकल जाता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "नाइट्रोजन अणु ($N_2$) में आबंध का प्रकार बताइए तथा कार्बन द्वारा $C^{4-}$ ऋणायन बनाना क्यों कठिन है?", "a": "• $N_2$ में प्रत्येक नाइट्रोजन परमाणु 3-3 इलेक्ट्रॉनों की साझेदारी कर त्रि-आबंध ($:N\\equiv N:$) बनाता है।<br>• कार्बन के नाभिक में केवल 6 प्रोटॉन होते हैं जिनके लिए 10 इलेक्ट्रॉनों ($C^{4-}$) को धारण करना अत्यंत कठिन होता है।"}], "5": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "स्वपोषी पोषण तथा विषमपोषी पोषण में क्या अंतर है? तथा आमाशय में अम्ल ($HCl$) की क्या भूमिका है?", "a": "• स्वपोषी: $CO_2$ व जल से सूर्य के प्रकाश व क्लोरोफिल द्वारा स्वयं भोजन बनाना (हरे पौधे)। विषमपोषी: दूसरों पर निर्भर रहना (जंतु)।<br>• $HCl$ की भूमिका: माध्यम को अम्लीय बनाकर पेप्सिन एंजाइम को सक्रिय करना तथा भोजन के जीवाणुओं को नष्ट करना।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पचे हुए भोजन को अवशोषित करने के लिए क्षुद्रांत्र को कैसे अभिकल्पित किया गया है?", "a": "क्षुद्रांत्र (छोटी आँत) की आंतरिक भित्ति पर लाखों अंगुलीनुमा प्रवर्ध 'दीर्घरोम' (Villi) होते हैं जो अवशोषण का पृष्ठीय क्षेत्रफल बढ़ा देते हैं और इनमें रुधिर वाहिकाओं का सघन जाल होता है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "ग्लूकोज़ के ऑक्सीकरण से भिन्न जीवों में ऊर्जा प्राप्त करने के तीन पथ लिखिए।", "a": "कोशिकाद्रव्य में ग्लूकोज़ (6C) पायरुवेट (3C) में टूटता है, फिर:<br>1. ऑक्सीजन की अनुपस्थिति में (यीस्ट): इथेनॉल + $CO_2$ + ऊर्जा<br>2. ऑक्सीजन के अभाव में (पेशी कोशिका): लैक्टिक अम्ल + ऊर्जा<br>3. ऑक्सीजन की उपस्थिति में (माइटोकॉन्ड्रिया): $CO_2$ + जल + 38 ATP ऊर्जा"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "वायवीय तथा अवायवीय श्वसन में अंतर तथा दोहरा परिसंचरण का महत्व बताइए।", "a": "• वायवीय श्वसन $O_2$ की उपस्थिति में होता है और ग्लूकोज का पूर्ण विखंडन करता है; अवायवीय $O_2$ के बिना होता है।<br>• दोहरा परिसंचरण ऑक्सीजनित व विऑक्सीजनित रक्त को मिलने से रोकता है जिससे उच्च ऊर्जा मिलती है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "कृत्रिम वृक्क द्वारा नाइट्रोजनी अपशिष्ट उत्पादों को रुधिर से निकालने की युक्ति को क्या कहते हैं?", "a": "अपोहन (Dialysis)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "अमीबा में भोजन का अंतर्ग्रहण किस अंगक द्वारा होता है तथा अग्न्याशय से स्रावित प्रोटीन पाचक एंजाइम का नाम लिखिए।", "a": "• अमीबा में अंतर्ग्रहण: पादाभ / कूटपाद (Pseudopodia)<br>• प्रोटीन पाचक एंजाइम: ट्रिप्सिन (Trypsin)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "मनुष्य में वृक्क एक तंत्र का भाग है जो संबंधित है — तथा पायरुवेट के विखंडन से $CO_2$, जल तथा ऊर्जा किस कोशिकांग में बनती है?", "a": "• वृक्क संबंधित है: उत्सर्जन तंत्र से (नेफ्रॉन इकाई)<br>• पायरुवेट का पूर्ण विखंडन: माइटोकॉन्ड्रिया में"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "पादपों में जाइलम एवं फ्लोएम द्वारा पदार्थों के वहन में क्या अंतर है?", "a": "• जाइलम: जड़ों से जल एवं खनिज लवणों का ऊपर की ओर एकदिशीय वहन करता है।<br>• फ्लोएम: पत्तियों में निर्मित भोजन का पौधे के सभी भागों में दोनों दिशाओं में स्थानांतरण करता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (4 अंक)", "isPYQ": true, "q": "प्रकाश-संश्लेषण प्रक्रम के दौरान होने वाली तीन मुख्य घटनाएँ लिखिए तथा रंध्र के खुलने व बंद होने का नियंत्रण कौन करता है?", "a": "घटनाएँ: (i) क्लोरोफिल द्वारा प्रकाश ऊर्जा का अवशोषण (ii) प्रकाश ऊर्जा को रासायनिक ऊर्जा में बदलना तथा जल का $H_2$ व $O_2$ में अपघटन (iii) $CO_2$ का कार्बोहाइड्रेट में अपचयन।<br>रंध्रों का खुलना व बंद होना 'द्वार कोशिकाएँ' (Guard cells) नियंत्रित करती हैं।"}], "6": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "प्रतिवर्ती क्रिया तथा टहलने के बीच क्या अंतर है? तथा सिनेप्स (अंतर्ग्रथन) में क्या होता है?", "a": "• प्रतिवर्ती क्रिया अनैच्छिक, त्वरित और मेरुरज्जु द्वारा नियंत्रित होती है, जबकि टहलना मस्तिष्क द्वारा नियंत्रित ऐच्छिक क्रिया है।<br>• सिनेप्स पर विद्युत आवेग रसायनों (न्यूरोट्रांसमीटर) का विमोचन कराता है जो अगली तंत्रिका की द्रुमिका में नया आवेग शुरू करते हैं।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "छुई-मुई पादप की गति तथा प्रकाश की ओर प्ररोह की गति में क्या अंतर है?", "a": "छुई-मुई में गति स्पर्श के प्रति जल की मात्रा में परिवर्तन से (वृद्धि से मुक्त और अदिशिक) होती है, जबकि प्ररोह की प्रकाशानुवर्तन गति वृद्धि पर आश्रित और ऑक्सिन हार्मोन द्वारा दिशिक होती है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "एक तंत्रिका कोशिका (न्यूरॉन) के मुख्य भाग व कार्य तथा तंत्रिका एवं हार्मोन क्रियाविधि में अंतर लिखिए।", "a": "• द्रुमिका: सूचना ग्रहण करना; कोशिकाकाय: विद्युत आवेग बनाना; एक्सॉन: आवेग को अंतिम सिरे तक पहुँचाना।<br>• तंत्रिका तंत्र विद्युत आवेग द्वारा तीव्र कार्य करता है जबकि हार्मोन तंत्र रक्त में रसायनों द्वारा धीमा किंतु स्थायी कार्य करता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "कोशिका विभाजन को प्रेरित करने वाले पादप हार्मोन का नाम लिखिए।", "a": "साइटोकाइनिन (Cytokinin)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "शरीर की संस्थिति, संतुलन तथा सीधी रेखा में चलने के लिए मस्तिष्क का कौन-सा भाग उत्तरदायी है?", "a": "अनुमस्तिष्क (Cerebellum - पश्चमस्तिष्क का भाग)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "रक्तदाब, लार आना तथा वमन (उल्टी) जैसी अनैच्छिक क्रियाओं का नियंत्रण मस्तिष्क के किस भाग द्वारा होता है?", "a": "पश्चमस्तिष्क में स्थित मेडुला (Medulla) द्वारा।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "प्रतिवर्ती चाप कहाँ बनते हैं तथा किस हार्मोन को 'लड़ो या भागो' (आपातकालीन) हार्मोन कहते हैं?", "a": "• प्रतिवर्ती चाप मेरुरज्जु (Spinal Cord) में बनते हैं।<br>• आपातकालीन हार्मोन: एड्रीनालिन (अधिवृक्क ग्रंथि से स्रावित)।"}, {"cat": "🏆 RBSE Board Exam 2024 (3 अंक)", "isPYQ": true, "q": "नर में वृषण द्वारा स्रावित हार्मोन का नाम तथा उसके दो प्रमुख कार्य लिखिए।", "a": "हार्मोन: टेस्टोस्टेरोन (Testosterone)।<br>कार्य: (1) शुक्राणुओं के उत्पादन का नियंत्रण करना (2) लड़कों में यौवनारंभ के लक्षणों (दाढ़ी-मूँछ, भारी आवाज) का विकास करना।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "पादपों में प्रकाशानुवर्तन किस प्रकार होता है तथा आयोडीन युक्त नमक के उपयोग की सलाह क्यों दी जाती है?", "a": "• प्रकाश पड़ने पर ऑक्सिन हार्मोन प्ररोह के छाया वाले भाग में विसरित होकर कोशिकाओं की लंबाई बढ़ाता है जिससे तना प्रकाश की ओर मुड़ जाता है।<br>• थायरॉइड ग्रंथि में थायरॉक्सिन हार्मोन बनने के लिए आयोडीन आवश्यक है; इसकी कमी से गॉयटर (घेंघा) रोग हो जाता है।"}], "7": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "डी.एन.ए. प्रतिकृति का प्रजनन में क्या महत्त्व है? तथा द्विखंडन व बहुखंडन में अंतर बताइए।", "a": "• DNA प्रतिकृति से जनक के लक्षण संतति में जाते हैं और सूक्ष्म त्रुटियों से जीवन रक्षक विभिन्नताएँ आती हैं।<br>• द्विखंडन में एक कोशिका दो में बँटती है (अमीबा, लेश्मानिया), जबकि बहुखंडन में एक साथ अनेक कोशिकाओं में बँटती है (प्लैज़्मोडियम)।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "कुछ पौधों को उगाने के लिए कायिक प्रवर्धन का उपयोग क्यों किया जाता है?", "a": "1. बीज की तुलना में कम समय में फूल व फल लगते हैं।<br>2. बीज न बनाने वाले पौधों (केला, गुलाब, गन्ना) को आसानी से उगाया जा सकता है।<br>3. संतति आनुवंशिक रूप से जनक के समान होती है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "परागण व निषेचन में अंतर तथा ऋतुस्राव क्यों होता है?", "a": "• परागकणों का वर्तिकाग्र तक पहुँचना परागण है, जबकि नर व मादा युग्मक का संलयन निषेचन है।<br>• यदि अंड का निषेचन नहीं होता, तो गर्भाशय की मोटी स्पंजी परत रक्त एवं श्लेष्मा के रूप में बाहर निकलती है, जिसे ऋतुस्राव कहते हैं।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "पुनरुद्भवन (Regeneration) की क्षमता रखने वाले एक जीव का नाम लिखिए।", "a": "प्लेनेरिया (या हाइड्रा)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "उभयलिंगी पुष्प के दो उदाहरण लिखिए तथा किस पौधे की पत्तियों की कोर पर कलिकाएँ निकलती हैं?", "a": "• उभयलिंगी पुष्प: सरसों एवं गुड़हल<br>• पत्तियों द्वारा कायिक प्रवर्धन: ब्रायोफ़िलम (पत्थरचट्टा)"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "जीवाणु जनित एवं वायरस जनित दो-दो यौन संचारित रोगों (STDs) के नाम लिखिए।", "a": "• जीवाणु जनित रोग: गोनेरिया तथा सिफलिस<br>• वायरस जनित रोग: लैंगिक मस्सा (Warts) तथा HIV-AIDS"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "माँ के शरीर में गर्भस्थ भ्रूण को पोषण किस प्रकार प्राप्त होता है?", "a": "भ्रूण को माँ के रुधिर से पोषण 'प्लैसेंटा' (अपरा) नामक तश्तरीनुमा विशेष संरचना से मिलता है, जिसके प्रवर्ध माँ के रक्त से ग्लूकोज़ व ऑक्सीजन भ्रूण को पहुँचाते हैं।"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "मादा जनन तंत्र के किन्हीं दो अंगों के कार्य तथा गर्भनिरोधन की तीन विधियाँ लिखिए।", "a": "• अंडाशय: मादा युग्मक (अंड) व एस्ट्रोजन का निर्माण; अंडवाहिका: निषेचन का स्थान।<br>• गर्भनिरोधन विधियाँ: (1) यांत्रिक अवरोध (कंडोम, कॉपर-टी) (2) हार्मोनल गोलियाँ (3) शल्यक्रिया (नसबंदी / ट्यूबेक्टोमी)।"}], "8": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "मेंडल के प्रयोगों द्वारा कैसे पता चला कि लक्षण प्रभावी अथवा अप्रभावी होते हैं?", "a": "शुद्ध लंबे ($TT$) व शुद्ध बौने ($tt$) मटर के संकरण से $F_1$ पीढ़ी में सभी पौधे लंबे ($Tt$) मिले (प्रभावी लक्षण)। परंतु $F_1$ के स्वनिषेचन से $F_2$ पीढ़ी में $25\\%$ पौधे बौने ($tt$) मिले, जो $F_1$ में छिपे रहने के कारण अप्रभावी कहलाए।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संतति में नर एवं मादा जनकों द्वारा आनुवंशिक योगदान में बराबर की भागीदारी कैसे सुनिश्चित होती है?", "a": "अर्धसूत्री विभाजन द्वारा नर व मादा युग्मकों में गुणसूत्रों की संख्या आधी (23-23) रह जाती है। निषेचन के समय दोनों के मिलने से युग्मनज में पुनः 46 (23 जोड़े) गुणसूत्र स्थापित हो जाते हैं।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "वंशागति के नियमों का प्रतिपादन किसने किया तथा उनके द्विसंकर संकरण में $F_2$ पीढ़ी का लक्षण अनुपात क्या था?", "a": "• प्रतिपादक: ग्रेगर जॉन मेंडल<br>• द्विसंकर $F_2$ लक्षण अनुपात = $9:3:3:1$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "मेंडल के एकसंकर संकरण प्रयोग में $F_2$ पीढ़ी का लक्षण प्ररूप (दृश्य) अनुपात तथा जीन प्ररूप अनुपात लिखिए।", "a": "• दृश्य अनुपात (लंबे : बौने) = $3 : 1$ (बौने पौधे = $25\\%$)<br>• जीन प्ररूप अनुपात ($TT : Tt : tt$) = $1 : 2 : 1$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "मानव में बच्चे का लिंग निर्धारण कैसे होता है? आरेख या गुणसूत्रों के आधार पर समझाइए।", "a": "मानव में 23 जोड़े गुणसूत्र होते हैं। स्त्री में लिंग गुणसूत्र $XX$ तथा पुरुष में $XY$ होते हैं। सभी बच्चे माता से सदैव $X$ गुणसूत्र प्राप्त करते हैं। यदि पिता से $X$ गुणसूत्र मिले तो लड़की ($XX$) और यदि पिता से $Y$ गुणसूत्र मिले तो लड़का ($XY$) होगा। अतः लिंग निर्धारण पिता के गुणसूत्र पर निर्भर करता है।"}], "9": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अवतल दर्पण के मुख्य फोकस की परिभाषा लिखिए तथा समतल दर्पण द्वारा बने प्रतिबिंब का आवर्धन +1 होने का क्या अर्थ है?", "a": "• मुख्य अक्ष के समांतर आने वाली किरणें परावर्तन के बाद जिस बिंदु पर मिलती हैं, उसे अवतल दर्पण का मुख्य फोकस ($F$) कहते हैं।<br>• आवर्धन $+1$ में '+' चिन्ह आभासी व सीधा प्रतिबिंब तथा '1' बिंब के बराबर साइज़ दर्शाता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "कार के अग्र-दीप (Headlight) एवं सौर भट्टी में कौन-सा दर्पण प्रयुक्त होता है और क्यों?", "a": "दोनों में अवतल दर्पण प्रयुक्त होता है। अग्र-दीप में बल्ब फोकस पर रखने से शक्तिशाली समांतर किरण पुंज मिलता है और सौर भट्टी में सूर्य की किरणें फोकस पर केंद्रित होकर उच्च ताप उत्पन्न करती हैं।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "'हीरे का अपवर्तनांक 2.42 है' इस कथन का क्या अभिप्राय है तथा लेंस की क्षमता का SI मात्रक लिखिए।", "a": "• इसका अर्थ है कि निर्वात में प्रकाश की चाल तथा हीरे में प्रकाश की चाल का अनुपात $2.42$ है।<br>• लेंस की क्षमता का SI मात्रक = डाइऑप्टर ($D$)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "हम वाहनों में उत्तल दर्पण को पश्च-दृश्य (Rear-view) दर्पण के रूप में वरीयता क्यों देते हैं?", "a": "क्योंकि उत्तल दर्पण सदैव सीधा तथा छोटा प्रतिबिंब बनाता है और बाहर की ओर वक्रित होने के कारण इसका दृष्टि-क्षेत्र (Field of view) बहुत विस्तृत होता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "प्रकाश के अपवर्तन का स्नेल का नियम लिखिए तथा $+4.0\\text{ D}$ क्षमता वाले लेंस की फोकस दूरी व प्रकृति बताइए।", "a": "• स्नेल का नियम: आपतन कोण की ज्या तथा अपवर्तन कोण की ज्या का अनुपात स्थिर होता है ($\\mu = \\frac{\\sin i}{\\sin r}$)।<br>• फोकस दूरी $f = \\frac{1}{+4.0} = +0.25\\text{ m} = +25\\text{ cm}$ (धनात्मक चिन्ह = उत्तल लेंस)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "गोलीय दर्पण सूत्र व लेंस सूत्र लिखिए तथा $16\\text{ cm}$ फोकस दूरी के अवतल दर्पण के सामने $24\\text{ cm}$ पर रखे बिंब के प्रतिबिंब की दूरी ($v$) ज्ञात कीजिए।", "a": "• दर्पण सूत्र: $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$; लेंस सूत्र: $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$<br>• गणना ($f=-16\\text{ cm}, u=-24\\text{ cm}$): $\\frac{1}{v} = \\frac{1}{-16} - \\frac{1}{-24} = \\frac{-3+2}{48} = -\\frac{1}{48} \\implies v = -48\\text{ cm}$ (वास्तविक व उल्टा)।"}], "10": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "नेत्र की समंजन क्षमता से क्या अभिप्राय है? सामान्य नेत्र का निकट बिंदु व दूर बिंदु लिखिए।", "a": "पक्ष्माभी पेशियों द्वारा अभिनेत्र लेंस की फोकस दूरी को समायोजित करने की क्षमता समंजन क्षमता कहलाती है। निकट बिंदु = $25\\text{ cm}$ तथा दूर बिंदु = अनंत ($\\infty$)।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activities)", "isPYQ": false, "q": "प्रिज्म द्वारा श्वेत प्रकाश के विक्षेपण में रंगों का क्रम क्या होता है तथा इंद्रधनुष बनने में कौन-सी तीन घटनाएँ शामिल हैं?", "a": "• बैंगनी रंग सर्वाधिक झुकता है और लाल सबसे कम (VIBGYOR)।<br>• इंद्रधनुष की 3 घटनाएँ: जल की बूँद में (1) अपवर्तन व विक्षेपण (2) आंतरिक परावर्तन (3) बाहर निकलते समय पुनः अपवर्तन।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "नेत्र में प्रवेश करने वाले प्रकाश की मात्रा को कौन नियंत्रित करता है तथा अंतरिक्ष यात्री को आकाश काला क्यों प्रतीत होता है?", "a": "• प्रकाश की मात्रा का नियंत्रण पुतली (Pupil) तथा परितारिका करती है।<br>• अंतरिक्ष में वायुमंडल न होने से प्रकाश का प्रकीर्णन नहीं होता, इसलिए आकाश काला दिखता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "अग्रिम सूर्योदय तथा विलंबित सूर्यास्त का कारण क्या है तथा खतरे के संकेत का प्रकाश लाल रंग का क्यों होता है?", "a": "• कारण: वायुमंडलीय अपवर्तन (सूर्य वास्तविक सूर्योदय से 2 मिनट पूर्व दिखता है)।<br>• लाल रंग की तरंगदैर्ध्य सर्वाधिक होने से कोहरे या धुएँ में इसका प्रकीर्णन सबसे कम होता है और यह दूर से भी साफ़ दिखाई देता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "तारे क्यों टिमटिमाते हैं जबकि ग्रह नहीं टिमटिमाते?", "a": "तारे बहुत दूर होने से बिंदु-स्रोत हैं और वायुमंडलीय अपवर्तन के कारण उनकी आभासी स्थिति बदलती रहती है। ग्रह पृथ्वी के बहुत निकट होने से प्रकाश के विस्तृत स्रोत माने जाते हैं, जिससे टिमटिमाने का कुल औसत प्रभाव शून्य हो जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "निकट-दृष्टि दोष (मायोपिया) एवं दीर्घ-दृष्टि दोष (हाइपरमेट्रोपिया) के कारण तथा निवारण हेतु प्रयुक्त लेंस लिखिए।", "a": "• निकट-दृष्टि दोष: प्रतिबिंब रेटिना के आगे बनता है (कारण: नेत्र गोलक का लंबा होना)। निवारण: अवतल लेंस।<br>• दीर्घ-दृष्टि दोष: प्रतिबिंब रेटिना के पीछे बनता है (कारण: गोलक का छोटा होना)। निवारण: उत्तल लेंस।"}], "11": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "1 ऐम्पियर व 1 वोल्ट की परिभाषा लिखिए।", "a": "• $1\\text{ A}$: यदि किसी चालक से 1 सेकंड में 1 कूलॉम आवेश प्रवाहित हो ($1\\text{ A} = 1\\text{ C}/1\\text{ s}$)।<br>• $1\\text{ V}$: 1 कूलॉम आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में यदि 1 जूल कार्य हो ($1\\text{ V} = 1\\text{ J}/1\\text{ C}$)।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "विद्युत टोस्टर व इस्तरी के तापन अवयव शुद्ध धातु के न बनाकर मिश्रधातु के क्यों बनाए जाते हैं?", "a": "मिश्रधातुओं (जैसे नाइक्रोम) की प्रतिरोधकता शुद्ध धातु से बहुत अधिक होती है तथा उच्च ताप पर भी इनका शीघ्र ऑक्सीकरण (दहन) नहीं होता।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "घरेलू विद्युत परिपथों में उपकरणों को पार्श्वक्रम (समानांतर क्रम) में क्यों जोड़ा जाता है?", "a": "1. सभी उपकरणों को समान वोल्टेज ($220\\text{ V}$) मिलता है।<br>2. एक उपकरण बंद/खराब होने पर बाकी चलते रहते हैं।<br>3. परिपथ का कुल तुल्य प्रतिरोध कम हो जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "विद्युत प्रतिरोधकता का SI मात्रक तथा $1\\text{ kWh}$ (1 यूनिट) में जूल की संख्या लिखिए।", "a": "• प्रतिरोधकता का मात्रक = ओम-मीटर ($\\Omega\\cdot\\text{m}$)<br>• $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "ओम का नियम लिखिए तथा किसी चालक का प्रतिरोध किन चार कारकों पर निर्भर करता है?", "a": "• ओम का नियम: नियत ताप पर चालक के सिरों का विभवांतर उसमें प्रवाहित धारा के समानुपाती होता है ($V = IR$)।<br>• कारक: (1) चालक की लंबाई ($R \\propto l$) (2) अनुप्रस्थ काट क्षेत्रफल ($R \\propto 1/A$) (3) पदार्थ की प्रकृति (4) तापमान।"}, {"cat": "🏆 RBSE Board Exam 2024 (2 अंक)", "isPYQ": true, "q": "जूल का तापन नियम लिखिए तथा $10\\ \\Omega$ प्रतिरोध से $3\\text{ A}$ की धारा $2\\text{ s}$ तक प्रवाहित करने पर उत्पन्न ऊष्मा ज्ञात कीजिए।", "a": "सूत्र: $H = I^2Rt$<br>गणना: $H = (3)^2 \\times 10 \\times 2 = 9 \\times 20 = 180\\text{ J}$ (जूल)।"}, {"cat": "🏆 RBSE Board Exam 2025 & 2026 (3 अंक)", "isPYQ": true, "q": "$800\\text{ W}$ अनुमतांक का एक रेफ्रिजरेटर 4 घंटे/दिन चलाया जाता है। ₹2 प्रति kWh की दर से 30 दिन चलाने का विद्युत खर्च ज्ञात कीजिए।", "a": "कुल उपभुक्त ऊर्जा = $\\frac{800\\text{ W} \\times 4\\text{ h} \\times 30}{1000} = 96\\text{ kWh}$ (यूनिट)।<br>30 दिन का कुल खर्च = $96 \\times 2 = ₹192$।"}], "12": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "चुंबकीय क्षेत्र रेखाओं के गुण लिखिए तथा भूसंपर्क तार (Earth wire) का क्या कार्य है?", "a": "• गुण: ये चुंबक के बाहर N से S तथा भीतर S से N की ओर बंद वक्र बनाती हैं।<br>• भूसंपर्क तार (हरा आवरण) धातु के आवरण वाले साधित्रों में विद्युत क्षरण होने पर उपयोगकर्ता को तीव्र विद्युत आघात से बचाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "दक्षिण-हस्त अंगुष्ठ नियम में अँगूठा किसकी दिशा को दर्शाता है?", "a": "चालक में प्रवाहित विद्युत धारा की दिशा को।"}, {"cat": "🏆 RBSE Board Exam 2025 & 2026 (1 अंक)", "isPYQ": true, "q": "किसी छड़ चुंबक के भीतर चुंबकीय क्षेत्र रेखाओं की दिशा क्या होती है?", "a": "दक्षिणी ध्रुव (South Pole) से उत्तरी ध्रुव (North Pole) की ओर।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "दो चुंबकीय क्षेत्र रेखाएँ एक-दूसरे को प्रतिच्छेद क्यों नहीं करतीं?", "a": "यदि दो चुंबकीय क्षेत्र रेखाएँ एक-दूसरे को प्रतिच्छेद करेंगी, तो प्रतिच्छेदन बिंदु पर दिक्सूचक की सुई दो दिशाओं की ओर संकेत करेगी, जो कि असंभव है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "परिनालिका (Solenoid) किसे कहते हैं? इसके भीतर चुंबकीय क्षेत्र कैसा होता है?", "a": "पास-पास लिपटे विद्युतरोधी ताँबे के तार की बेलनाकार अनेक फेरों वाली कुंडली को परिनालिका कहते हैं। इसके भीतर चुंबकीय क्षेत्र रेखाएँ समांतर सरल रेखाओं के रूप में अर्थात 'एकसमान' (Uniform) होती हैं।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "फ्लेमिंग का वामहस्त नियम लिखिए तथा घरेलू परिपथों में लघुपथन (Short circuit) व विद्युत फ्यूज का महत्व समझाइए।", "a": "• वामहस्त नियम: बाएँ हाथ की तर्जनी चुंबकीय क्षेत्र व मध्यमा विद्युत धारा की दिशा दर्शाए, तो अँगूठा चालक पर लगने वाले बल की दिशा दर्शाता है।<br>• जब विद्युन्मय (लाल) व उदासीन (काला) तार सीधे संपर्क में आते हैं तो लघुपथन होता है। फ्यूज कम गलनांक के कारण पिघलकर परिपथ तोड़ देता है और उपकरणों की रक्षा करता है।"}], "13": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पोषी स्तर क्या है? पारितंत्र में अपमार्जकों (Decomposers) की क्या भूमिका है?", "a": "• आहार शृंखला के प्रत्येक चरण को पोषी स्तर कहते हैं (घास $\\rightarrow$ टिड्डा $\\rightarrow$ मेंढक $\\rightarrow$ साँप)।<br>• अपमार्जक (जीवाणु व कवक) मृत कार्बनिक अवशेषों को सरल अकार्बनिक पदार्थों में बदलकर मिट्टी की उर्वरता बनाए रखते हैं और पर्यावरण साफ करते हैं।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "पारितंत्र में ऊर्जा का प्रवाह एकदिशिक क्यों होता है तथा 10% का नियम क्या है?", "a": "स्वपोषी द्वारा ग्रहण सौर ऊर्जा वापस सूर्य को नहीं जाती और प्रत्येक पोषी स्तर पर केवल $10\\%$ कार्बनिक ऊर्जा ही अगले स्तर के उपभोक्ता तक पहुँचती है (शेष $90\\%$ ऊष्मा में खर्च हो जाती है)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (1 अंक)", "isPYQ": true, "q": "अनेक आहार शृंखलाओं के आपसी जाल को क्या कहते हैं तथा ओज़ोन परत को हानि पहुँचाने वाले मुख्य रसायन का नाम लिखिए।", "a": "• आहार जाल (Food Web)<br>• मुख्य रसायन: क्लोरोफ्लुओरो कार्बन (CFCs)"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "जैविक आवर्धन (Biological Magnification) क्या है? समझाइए।", "a": "आहार शृंखला में अजैव-निम्नीकरणीय हानिकारक रसायनों (जैसे कीटनाशक DDT) का प्रवेश होकर प्रत्येक उच्च पोषी स्तर पर उनकी सांद्रता का क्रमिक रूप से बढ़ते जाना जैविक आवर्धन कहलाता है। मनुष्य शीर्षस्थ होने के कारण इससे सर्वाधिक प्रभावित होता है।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "ओज़ोन परत क्या है तथा यह किस प्रकार अपक्षयित हो रही है?", "a": "ओज़ोन ($O_3$) समताप मंडल में स्थित परत है जो सूर्य से आने वाली हानिकारक पराबैंगनी (UV) किरणों से पृथ्वी की रक्षा करती है (त्वचा कैंसर से बचाती है)। रेफ्रिजरेटर व अग्निशमन में प्रयुक्त CFCs गैसों के कारण इसका क्षय हो रहा है।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "अजैव-निम्नीकरणीय कचरा निपटान के दो उपाय लिखिए तथा डिस्पोजेबल प्लास्टिक/कुल्हड़ की तुलना में कागज़ के कप का उपयोग क्यों बेहतर है?", "a": "• उपाय: गीले व सूखे कचरे का पृथक्करण तथा 3R सिद्धांत (Reduce, Reuse, Recycle) अपनाना।<br>• कागज़ के कप जैव-निम्नीकरणीय एवं पुनर्चक्रण योग्य हैं तथा कुल्हड़ की तरह उर्वर मिट्टी की हानि नहीं करते।"}]};
+
+    let currentMode = "fc"; // 'fc' or 'qa'
+    let currentChapter = 1;
+    let currentDeck = [];
+    let currentIndex = 0;
+    let statusFilter = "all"; // 'all' | 'board' | 'known' | 'review'
+    let qaFilter = "all"; // 'all' | 'pyq' | 'book'
+    let soundEnabled = true;
+
+    const STORAGE_KEY_STATUS = "gyanu_rbse10_sci_all13_status_v2";
+    const STORAGE_KEY_THEME = "gyanu_rbse10_sci_all13_theme_v2";
+    let cardStatusMap = {};
+    try {
+      cardStatusMap = JSON.parse(localStorage.getItem(STORAGE_KEY_STATUS) || "{}");
+    } catch (e) { cardStatusMap = {}; }
+
+    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+
+    function playSound(type) {
+      if (!soundEnabled) return;
+      try {
+        if (!audioCtx) audioCtx = new AudioCtx();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        const now = audioCtx.currentTime;
+        if (type === "flip") {
+          osc.frequency.setValueAtTime(330, now);
+          osc.frequency.exponentialRampToValueAtTime(540, now + 0.08);
+          gain.gain.setValueAtTime(0.08, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
+        } else if (type === "known") {
+          osc.frequency.setValueAtTime(523.25, now);
+          osc.frequency.setValueAtTime(659.25, now + 0.07);
+          gain.gain.setValueAtTime(0.12, now);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.24);
+        }
+        osc.start(now);
+        osc.stop(now + 0.25);
+      } catch (e) {}
+    }
+
+    function formatMathAndChem(str) {
+      if (!str) return "";
+      return str.replace(/\$([^$]+)\$/g, (_, math) => {
+        let cleaned = math
+          .replace(/\\text\{([^}]+)\}/g, "$1")
+          .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, "($1/$2)")
+          .replace(/\\rightarrow/g, "→")
+          .replace(/\\xrightarrow\{[^}]*\}/g, "→")
+          .replace(/\\downarrow/g, "↓")
+          .replace(/\\times/g, "×")
+          .replace(/\\propto/g, "∝")
+          .replace(/\\Omega/g, "Ω")
+          .replace(/\\mu/g, "μ")
+          .replace(/\\angle/g, "∠")
+          .replace(/\\cdot/g, "·")
+          .replace(/\\circ/g, "°")
+          .replace(/\\infty/g, "∞")
+          .replace(/\\implies/g, "⇒")
+          .replace(/\\mathbf\{([^}]+)\}/g, "$1")
+          .replace(/\\dots/g, "...")
+          .replace(/\\_/g, "_")
+          .replace(/_\{([^}]+)\}/g, "<sub>$1</sub>")
+          .replace(/_([0-9a-zA-Z]+)/g, "<sub>$1</sub>")
+          .replace(/\^\{([^}]+)\}/g, "<sup>$1</sup>")
+          .replace(/\^([0-9a-zA-Z+-]+)/g, "<sup>$1</sup>")
+          .replace(/\\%/g, "%");
+        return `<span class="formula-pill">${cleaned}</span>`;
+      });
+    }
+
+    function cleanSpeechText(str) {
+      if (!str) return "";
+      return str.replace(/<[^>]+>/g, " ").replace(/\$/g, "").replace(/\\[a-zA-Z]+/g, " ");
+    }
+
+    function switchMode(mode) {
+      currentMode = mode;
+      document.getElementById("tabFlashcards").classList.toggle("active", mode === "fc");
+      document.getElementById("tabQA").classList.toggle("active", mode === "qa");
+      document.getElementById("flashcardSection").style.display = (mode === "fc") ? "flex" : "none";
+      document.getElementById("fcStatsContainer").style.display = (mode === "fc") ? "block" : "none";
+      document.getElementById("qaFilterBar").style.display = (mode === "qa") ? "grid" : "none";
+      document.getElementById("qaSection").style.display = (mode === "qa") ? "flex" : "none";
+      document.getElementById("gridBtn").style.display = (mode === "fc") ? "inline-flex" : "none";
+      applyFilters();
+    }
+
+    function changeChapter() {
+      currentChapter = parseInt(document.getElementById("chapterSelect").value, 10);
+      currentIndex = 0;
+      applyFilters();
+    }
+
+    function setQAFilter(f) {
+      qaFilter = f;
+      document.getElementById("qaBtnAll").classList.toggle("active", f === "all");
+      document.getElementById("qaBtnPYQ").classList.toggle("active", f === "pyq");
+      document.getElementById("qaBtnBook").classList.toggle("active", f === "book");
+      applyFilters();
+    }
+
+    function updateStatsUI() {
+      const chCards = masterFlashcards[currentChapter] || [];
+      let knownCount = 0, reviewCount = 0, boardCount = 0;
+      chCards.forEach((c, idx) => {
+        const key = `${currentChapter}_${idx}`;
+        if (cardStatusMap[key] === "known") knownCount++;
+        if (cardStatusMap[key] === "review") reviewCount++;
+        if (c.badge && c.badge.includes("Board Exam")) boardCount++;
+      });
+
+      document.getElementById("countTotal").innerText = chCards.length;
+      document.getElementById("countBoard").innerText = boardCount;
+      document.getElementById("countKnown").innerText = knownCount;
+      document.getElementById("countReview").innerText = reviewCount;
+
+      document.getElementById("pillAll").classList.toggle("active-filter", statusFilter === "all");
+      document.getElementById("pillBoard").classList.toggle("active-filter", statusFilter === "board");
+      document.getElementById("pillKnown").classList.toggle("active-filter", statusFilter === "known");
+      document.getElementById("pillReview").classList.toggle("active-filter", statusFilter === "review");
+    }
+
+    function applyFilters() {
+      const query = document.getElementById("searchBox").value.toLowerCase().trim();
+      if (currentMode === "fc") {
+        const chCards = masterFlashcards[currentChapter] || [];
+        currentDeck = [];
+        chCards.forEach((card, originalIdx) => {
+          const key = `${currentChapter}_${originalIdx}`;
+          const st = cardStatusMap[key];
+          const isBoard = card.badge && card.badge.includes("Board Exam");
+          const matchesStatus =
+            (statusFilter === "all") ||
+            (statusFilter === "board" && isBoard) ||
+            (statusFilter === "known" && st === "known") ||
+            (statusFilter === "review" && st === "review");
+          const matchesSearch = !query || card.q.toLowerCase().includes(query) || card.a.toLowerCase().includes(query) || (card.badge && card.badge.toLowerCase().includes(query));
+          if (matchesStatus && matchesSearch) {
+            currentDeck.push({ ...card, originalIdx });
+          }
+        });
+        const labelMap = {
+          all: `अध्याय ${currentChapter} (सभी फ्लैश कार्ड्स)`,
+          board: `🏆 अध्याय ${currentChapter} (बोर्ड परीक्षा प्रश्न)`,
+          known: `✅ अध्याय ${currentChapter} (याद किए गए)`,
+          review: `⏳ अध्याय ${currentChapter} (रिवीजन कार्ड्स)`
+        };
+        document.getElementById("subTopicLabel").innerText = labelMap[statusFilter] || `अध्याय ${currentChapter}`;
+        currentIndex = 0;
+        renderCard();
+      } else {
+        renderQAList(query);
+      }
+    }
+
+    function renderCard() {
+      const cardEl = document.getElementById("flashcard");
+      const frontFace = document.getElementById("cardFrontFace");
+      cardEl.classList.remove("is-flipped");
+      document.getElementById("hintBox").classList.remove("show");
+      updateStatsUI();
+
+      if (currentDeck.length === 0) {
+        document.getElementById("cardNumberBadge").innerText = "#0";
+        document.getElementById("vipBadge").style.display = "none";
+        frontFace.classList.remove("board-special-card");
+        document.getElementById("statusIndicator").innerHTML = "";
+        document.getElementById("questionDisplay").innerText =
+          statusFilter === "review"
+            ? "🎉 इस अध्याय में कोई भी कार्ड 'फिर से पढ़ें' में नहीं है! 'कुल कार्ड्स' पर टैप करें।"
+            : "खोज या फ़िल्टर से मेल खाता कोई कार्ड नहीं मिला।";
+        document.getElementById("answerDisplay").innerText = "कृपया ऊपर 'कुल कार्ड्स' चुनें।";
+        document.getElementById("cardCounterText").innerText = "0 / 0";
+        document.getElementById("progressBar").style.width = "0%";
+        return;
+      }
+
+      if (currentIndex >= currentDeck.length) currentIndex = 0;
+      const current = currentDeck[currentIndex];
+      const key = `${currentChapter}_${current.originalIdx}`;
+
+      setTimeout(() => {
+        document.getElementById("cardNumberBadge").innerText = `कार्ड #${current.originalIdx + 1}`;
+        document.getElementById("cardNumberBadgeBack").innerText = `कार्ड #${current.originalIdx + 1}`;
+
+        // Selective Board Exam Year Tag Logic
+        const vipEl = document.getElementById("vipBadge");
+        if (current.badge && current.badge.trim() !== "") {
+          vipEl.innerText = current.badge;
+          vipEl.style.display = "inline-block";
+          if (current.badge.includes("Board Exam")) {
+            frontFace.classList.add("board-special-card");
+            document.getElementById("vipBadgeBack").innerText = `✓ ${current.badge} उत्तर`;
+          } else {
+            frontFace.classList.remove("board-special-card");
+            document.getElementById("vipBadgeBack").innerText = "✓ सटीक बोर्ड उत्तर";
+          }
+        } else {
+          vipEl.style.display = "none";
+          frontFace.classList.remove("board-special-card");
+          document.getElementById("vipBadgeBack").innerText = "✓ सटीक उत्तर";
+        }
+
+        // Dynamic Auto-Scaling Font Size based on text length
+        const qEl = document.getElementById("questionDisplay");
+        qEl.className = "q-text";
+        if (current.q.length > 90) qEl.classList.add("long-q");
+        else if (current.q.length > 55) qEl.classList.add("medium-q");
+        qEl.innerHTML = formatMathAndChem(current.q);
+
+        const aEl = document.getElementById("answerDisplay");
+        aEl.className = "a-text";
+        if (current.a.length > 45) aEl.classList.add("medium-a");
+        aEl.innerHTML = formatMathAndChem(current.a);
+
+        // Helpful Hint
+        const plainAns = current.a.replace(/\$/g, "");
+        const hintPreview = plainAns.length > 6
+          ? `उत्तर के पहले अक्षर: "${plainAns.substring(0, Math.min(10, plainAns.length))}..."`
+          : `संकेत: इसका उत्तर ${plainAns.length} अक्षरों/अंकों का है!`;
+        document.getElementById("hintBox").innerHTML = `<strong>💡 ऋषि सर की हिंट:</strong> ${hintPreview}`;
+
+        const statusEl = document.getElementById("statusIndicator");
+        const st = cardStatusMap[key];
+        if (st === "known") statusEl.innerHTML = `<span style="background:#dcfce7;color:#15803d;padding:3px 9px;border-radius:12px;font-size:0.72rem;font-weight:800;">✅ याद है</span>`;
+        else if (st === "review") statusEl.innerHTML = `<span style="background:#ffedd5;color:#c2410c;padding:3px 9px;border-radius:12px;font-size:0.72rem;font-weight:800;">⏳ रिवीजन</span>`;
+        else statusEl.innerHTML = "";
+
+        document.getElementById("cardCounterText").innerText = `${currentIndex + 1} / ${currentDeck.length}`;
+        const pct = ((currentIndex + 1) / currentDeck.length) * 100;
+        document.getElementById("progressBar").style.width = `${pct}%`;
+      }, 80);
+    }
+
+    function renderQAList(query) {
+      const container = document.getElementById("qaSection");
+      container.innerHTML = "";
+      const list = masterQAData[currentChapter] || [];
+      const filtered = list.filter(item => {
+        const matchesType =
+          (qaFilter === "all") ||
+          (qaFilter === "pyq" && item.isPYQ) ||
+          (qaFilter === "book" && !item.isPYQ);
+        const matchesQuery = !query || item.q.toLowerCase().includes(query) || item.a.toLowerCase().includes(query) || item.cat.toLowerCase().includes(query);
+        return matchesType && matchesQuery;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `<div class="qa-card"><div class="qa-question">कोई प्रश्न नहीं मिला। कृपया खोज शब्द या फ़िल्टर बदलें।</div></div>`;
+        return;
+      }
+
+      filtered.forEach((item, idx) => {
+        const div = document.createElement("div");
+        div.className = "qa-card" + (item.isPYQ ? " pyq-highlight" : "");
+        div.innerHTML = `
+          <span class="qa-cat-badge">${item.cat}</span>
+          <div class="qa-question">
+            <span>प्र.${idx + 1}: ${formatMathAndChem(item.q)}</span>
+            <button class="icon-action-btn" onclick="speakRawText('${encodeURIComponent(cleanSpeechText(item.q + ' उत्तर: ' + item.a))}')" title="सुनें">🔊</button>
+          </div>
+          <div class="qa-answer"><strong>उत्तर:</strong> ${formatMathAndChem(item.a)}</div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function flipCard() {
+      if (currentDeck.length === 0) return;
+      playSound("flip");
+      document.getElementById("flashcard").classList.toggle("is-flipped");
+    }
+
+    function nextCard() {
+      if (currentDeck.length === 0) return;
+      playSound("flip");
+      currentIndex = (currentIndex + 1) % currentDeck.length;
+      renderCard();
+    }
+
+    function prevCard() {
+      if (currentDeck.length === 0) return;
+      playSound("flip");
+      currentIndex = (currentIndex - 1 + currentDeck.length) % currentDeck.length;
+      renderCard();
+    }
+
+    function shuffleDeck() {
+      if (currentDeck.length <= 1) return;
+      for (let i = currentDeck.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [currentDeck[i], currentDeck[j]] = [currentDeck[j], currentDeck[i]];
+      }
+      currentIndex = 0;
+      showToast("🔀 कार्ड्स शफल कर दिए गए हैं!");
+      renderCard();
+    }
+
+    function toggleHint(e) {
+      e.stopPropagation();
+      if (currentDeck.length === 0) return;
+      document.getElementById("hintBox").classList.toggle("show");
+    }
+
+    function markCardStatus(status) {
+      if (currentDeck.length === 0) return;
+      const current = currentDeck[currentIndex];
+      const key = `${currentChapter}_${current.originalIdx}`;
+      cardStatusMap[key] = status;
+      try { localStorage.setItem(STORAGE_KEY_STATUS, JSON.stringify(cardStatusMap)); } catch (e) {}
+
+      if (status === "known") {
+        playSound("known");
+        const totalKnown = Object.values(cardStatusMap).filter(v => v === "known").length;
+        if (totalKnown % 10 === 0) {
+          launchConfetti();
+          showToast(`🎉 शाबाश! आपने ${totalKnown} कार्ड्स याद कर लिए हैं!`);
+        }
+      } else {
+        playSound("flip");
+      }
+
+      setTimeout(() => {
+        if (statusFilter !== "all" && statusFilter !== "board" && statusFilter !== status) {
+          applyFilters();
+        } else {
+          nextCard();
+        }
+      }, 180);
+    }
+
+    function setStatusFilter(f) {
+      statusFilter = f;
+      applyFilters();
+    }
+
+    function speakCard(e, side) {
+      e.stopPropagation();
+      if (currentDeck.length === 0 || !("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const current = currentDeck[currentIndex];
+      const text = cleanSpeechText(side === "q" ? current.q : current.a);
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "hi-IN";
+      utter.rate = 0.95;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function speakRawText(encoded) {
+      if (!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(decodeURIComponent(encoded));
+      utter.lang = "hi-IN";
+      utter.rate = 0.95;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function shareOnWhatsApp(e) {
+      e.stopPropagation();
+      if (currentDeck.length === 0) return;
+      const current = currentDeck[currentIndex];
+      const badgeTxt = current.badge ? ` (${current.badge})` : "";
+      const msg = `🧠 *ज्ञानू AI विज्ञान चैलेंज (By Rishi Sir)*\n📘 *कक्षा 10वीं RBSE विज्ञान - अध्याय ${currentChapter}${badgeTxt}*\n\n❓ *प्रश्न:* ${cleanSpeechText(current.q)}\n\nक्या आपको इसका उत्तर पता है? Gyanu AI पर सभी 13 अध्यायों का अभ्यास करें!`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, "_blank");
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+      const isDark = document.body.classList.contains("dark-mode");
+      try { localStorage.setItem(STORAGE_KEY_THEME, isDark ? "dark" : "light"); } catch (e) {}
+      document.getElementById("themeBtn").innerText = isDark ? "☀️ Light Mode" : "🌙 Night Mode";
+    }
+
+    function toggleSound() {
+      soundEnabled = !soundEnabled;
+      document.getElementById("soundBtn").innerText = soundEnabled ? "🔊 Sound On" : "🔇 Muted";
+    }
+
+    function resetProgress() {
+      if (confirm("क्या आप सभी अध्यायों की सेव की गई प्रगति (Progress) रीसेट करना चाहते हैं?")) {
+        cardStatusMap = {};
+        try { localStorage.removeItem(STORAGE_KEY_STATUS); } catch (e) {}
+        statusFilter = "all";
+        applyFilters();
+        showToast("🔄 प्रगति सफलतापूर्वक रीसेट हो गई!");
+      }
+    }
+
+    function openGridModal() {
+      const container = document.getElementById("gridNumbersContainer");
+      container.innerHTML = "";
+      const chCards = masterFlashcards[currentChapter] || [];
+      document.getElementById("modalTitleText").innerText = `🔢 अध्याय ${currentChapter} के सभी ${chCards.length} कार्ड्स (🏆 = बोर्ड प्रश्न)`;
+      chCards.forEach((card, idx) => {
+        const key = `${currentChapter}_${idx}`;
+        const div = document.createElement("div");
+        div.className = "num-cell";
+        if (cardStatusMap[key] === "known") div.classList.add("cell-known");
+        if (cardStatusMap[key] === "review") div.classList.add("cell-review");
+        const isBoard = card.badge && card.badge.includes("Board Exam");
+        if (isBoard) div.classList.add("cell-board");
+        if (currentDeck[currentIndex] && currentDeck[currentIndex].originalIdx === idx) {
+          div.classList.add("cell-current");
+        }
+        div.innerText = isBoard ? `#${idx + 1}🏆` : `#${idx + 1}`;
+        div.onclick = () => {
+          statusFilter = "all";
+          document.getElementById("searchBox").value = "";
+          applyFilters();
+          const found = currentDeck.findIndex(d => d.originalIdx === idx);
+          if (found !== -1) currentIndex = found;
+          closeGridModal();
+          renderCard();
+        };
+        container.appendChild(div);
+      });
+      document.getElementById("gridModal").classList.add("open");
+    }
+
+    function closeGridModal() {
+      document.getElementById("gridModal").classList.remove("open");
+    }
+
+    function showToast(text) {
+      const toast = document.getElementById("milestoneToast");
+      toast.innerText = text;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2800);
+    }
+
+    function launchConfetti() {
+      const canvas = document.getElementById("confettiCanvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      const pieces = Array.from({ length: 60 }, () => ({
+        x: Math.random() * canvas.width,
+        y: Math.random() * -canvas.height * 0.5,
+        size: Math.random() * 6 + 4,
+        speedY: Math.random() * 3.5 + 2.5,
+        color: ["#f5821f", "#0052b4", "#22c55e", "#eab308", "#ec4899"][Math.floor(Math.random() * 5)]
+      }));
+      let frames = 0;
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        pieces.forEach(p => {
+          p.y += p.speedY;
+          ctx.fillStyle = p.color;
+          ctx.fillRect(p.x, p.y, p.size, p.size);
+        });
+        frames++;
+        if (frames < 85) requestAnimationFrame(draw);
+        else ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+      draw();
+    }
+
+    let touchStartX = 0;
+    const touchArea = document.getElementById("touchArea");
+    touchArea.addEventListener("touchstart", e => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    touchArea.addEventListener("touchend", e => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 50) {
+        if (diff < 0) nextCard();
+        else prevCard();
+      }
+    }, { passive: true });
+
+    (function init() {
+      try {
+        if (localStorage.getItem(STORAGE_KEY_THEME) === "dark") {
+          document.body.classList.add("dark-mode");
+          document.getElementById("themeBtn").innerText = "☀️ Light Mode";
+        }
+      } catch (e) {}
+      applyFilters();
+    })();
+  </script>
+</body>
+</html>
